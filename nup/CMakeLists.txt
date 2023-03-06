@@ -1,6 +1,6 @@
 set(LIB_NAME nup)
 
-add_library(${LIB_NAME} "")
+add_executable(${LIB_NAME} "")
 warning_as_error_enable(${LIB_NAME})
 
 include(GenerateExportHeader)
@@ -32,13 +32,18 @@ target_include_directories(${LIB_NAME} PUBLIC
 )
 
 # find_package(OpenSSL 3.0 REQUIRED)
-
+	
 set(glfw3_DIR "${PROJECT_BINARY_DIR}/external_deps/lib/cmake/glfw3" CACHE PATH "" FORCE)
 find_package(glfw3 REQUIRED)
+
+set(glfw3_DIR "${PROJECT_BINARY_DIR}/boost-prefix/src/boost/stage/lib/cmake/boost_timer-1.81.0" CACHE PATH "" FORCE)
+find_package(Boost REQUIRED)
+
 
 target_link_libraries(${LIB_NAME} PRIVATE
 	# OpenSSL::Crypto
 	# OpenSSL::SSL
 	glfw
+	Boost::headers
 )
 
