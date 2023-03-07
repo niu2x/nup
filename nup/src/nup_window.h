@@ -14,6 +14,8 @@ public:
 
     virtual void set_title(const string& title) = 0;
     virtual void set_size(const IntSize& size) = 0;
+    virtual IntSize size() const = 0;
+
     virtual void run() = 0;
     void set_frame_callback(FrameCallback cb) { frame_callback_ = cb; }
 

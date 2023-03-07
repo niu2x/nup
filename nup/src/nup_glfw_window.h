@@ -3,7 +3,6 @@
 
 #include "nup_window.h"
 #include "nup_alloc.h"
-
 struct GLFWwindow;
 
 namespace nup {
@@ -15,6 +14,7 @@ public:
 
     virtual void set_title(const string& title) override;
     virtual void set_size(const IntSize& size) override;
+    virtual IntSize size() const override;
     virtual void run() override;
 
 private:

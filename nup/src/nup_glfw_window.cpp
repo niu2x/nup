@@ -7,6 +7,13 @@
 
 namespace nup {
 
+IntSize GlfwWindow::size() const
+{
+    IntSize size;
+    glfwGetFramebufferSize(native_window_, &size.width, &size.height);
+    return size;
+}
+
 GlfwWindow::GlfwWindow()
 : native_window_(nullptr)
 {
@@ -32,12 +39,8 @@ void GlfwWindow::run()
 {
     while (!glfwWindowShouldClose(native_window_)) {
         glfwPollEvents();
-        // int width, height;
 
-        // glfwGetFramebufferSize(native_window_, &width, &height);
-        // glViewport(0, 0, width, height);
-        // glClear(GL_COLOR_BUFFER_BIT);
-        // glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
+        frame_callback_(0);
 
         glfwSwapBuffers(native_window_);
     }

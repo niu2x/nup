@@ -3,6 +3,7 @@
 
 #include "type.h"
 #include "nup_window.h"
+#include "nup_shader.h"
 
 namespace nup {
 
@@ -14,6 +15,7 @@ public:
 
 private:
     Ptr<WindowFactory> window_factory_;
+    Ptr<ShaderFactory> shader_factory_;
 };
 
 } // namespace nup
