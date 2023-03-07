@@ -23,10 +23,12 @@ list(APPEND TMP_CMAKE_ARGS "-DCMAKE_INSTALL_PREFIX=${PROJECT_BINARY_DIR}/externa
 list(APPEND TMP_CMAKE_ARGS "-DBUILD_SHARED_LIBS=OFF")
 
 ExternalProject_Add(boost
-    GIT_REPOSITORY https://github.com/boostorg/boost
-    GIT_TAG        boost-1.81.0
+    GIT_REPOSITORY https://gitee.com/add358/boost
+    GIT_TAG        1.71.0
     GIT_PROGRESS   ${TMP_CMAKE_ARGS}
     BUILD_IN_SOURCE TRUE
-    BUILD_COMMAND  "${PROJECT_SOURCE_DIR}/tools/build_boost.sh"
+    CONFIGURE_COMMAND ""
+    BUILD_COMMAND  ""
+    # BUILD_COMMAND  "${PROJECT_SOURCE_DIR}/tools/build_boost.sh"
     INSTALL_COMMAND ""
 )

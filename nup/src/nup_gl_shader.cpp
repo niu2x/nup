@@ -47,17 +47,20 @@ Ptr<Shader> GLShaderFactory::create_render_shader(
     glShaderSource(v_id, 1, &vc, NULL);
     glCompileShader(v_id);
     checkCompileErrors(v_id, "VERTEX");
+    NUP_CHECK_GL_ERROR();
 
     auto f_id = glCreateShader(GL_FRAGMENT_SHADER);
     glShaderSource(f_id, 1, &fc, NULL);
     glCompileShader(f_id);
     checkCompileErrors(f_id, "FRAGMENT");
+    NUP_CHECK_GL_ERROR();
 
     // shader Program
     glAttachShader(shader->native_id(), v_id);
     glAttachShader(shader->native_id(), f_id);
     glLinkProgram(shader->native_id());
     checkCompileErrors(shader->native_id(), "PROGRAM");
+    NUP_CHECK_GL_ERROR();
 
     return shader;
 }
@@ -72,11 +75,13 @@ Ptr<Shader> GLShaderFactory::create_compute_shader(const string& cs)
     glShaderSource(compute, 1, &cShaderCode, NULL);
     glCompileShader(compute);
     checkCompileErrors(compute, "COMPUTE");
+    NUP_CHECK_GL_ERROR();
 
     // shader Program
     glAttachShader(shader->native_id(), compute);
     glLinkProgram(shader->native_id());
     checkCompileErrors(shader->native_id(), "PROGRAM");
+    NUP_CHECK_GL_ERROR();
 
     return shader;
 }

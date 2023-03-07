@@ -171,4 +171,12 @@ private:
 #define NUP_MUTEX_DEFAULT      NUP_MUTEX(default_mutex_)
 #define NUP_SCOPE_LOCK_DEFAULT NUP_SCOPE_LOCK(default_mutex_)
 
+#define NUP_CHECK_GL_ERROR()                                                   \
+    ({                                                                         \
+        GLenum __error = glGetError();                                         \
+        if (__error)                                                           \
+            printf("OpenGL error 0x%04X in %s %d\n", __error, __FUNCTION__,    \
+                __LINE__);                                                     \
+    })
+
 #endif
