@@ -1,7 +1,10 @@
 #include "nup_window.h"
 
 namespace nup {
-Window::Window() { }
+Window::Window()
+{
+    frame_callback_ = [](double) {};
+}
 Window::~Window() { }
 
 WindowFactory::WindowFactory() { }

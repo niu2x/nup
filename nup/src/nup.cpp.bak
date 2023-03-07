@@ -290,13 +290,15 @@ int main(void)
     CHECK_GL_ERROR();
 
     while (!glfwWindowShouldClose(window)) {
-        int width, height;
-        glfwGetFramebufferSize(window, &width, &height);
-        glViewport(0, 0, width, height);
-        glClear(GL_COLOR_BUFFER_BIT);
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
-        glfwSwapBuffers(window);
         glfwPollEvents();
+        int width, height;
+        
+        // glfwGetFramebufferSize(window, &width, &height);
+        // glViewport(0, 0, width, height);
+        // glClear(GL_COLOR_BUFFER_BIT);
+        // glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);        
+
+        glfwSwapBuffers(window);
     }
 
     glfwDestroyWindow(window);
