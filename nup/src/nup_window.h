@@ -5,7 +5,7 @@
 
 namespace nup {
 
-class Window : private boost::noncopyable {
+class Window : private noncopyable {
 public:
     using FrameCallback = std::function<void(double)>;
 
@@ -25,7 +25,7 @@ protected:
 private:
 };
 
-class WindowFactory : private boost::noncopyable {
+class WindowFactory : private noncopyable {
 public:
     WindowFactory();
     virtual ~WindowFactory() = 0;

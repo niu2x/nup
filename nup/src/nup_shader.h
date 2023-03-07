@@ -4,14 +4,14 @@
 
 namespace nup {
 
-class Shader : private boost::noncopyable {
+class Shader : private noncopyable {
 public:
     Shader() { }
     virtual ~Shader() = 0;
     virtual void use() = 0;
 };
 
-class ShaderFactory : private boost::noncopyable {
+class ShaderFactory : private noncopyable {
 public:
     ShaderFactory() { }
     virtual ~ShaderFactory() { }

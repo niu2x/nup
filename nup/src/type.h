@@ -9,6 +9,7 @@
 #include <atomic>
 #include <memory>
 #include <exception>
+#include <typeinfo>
 #include <type_traits>
 
 #include <boost/noncopyable.hpp>
@@ -17,6 +18,10 @@
 #include "nup_alloc.h"
 
 namespace nup {
+
+using TYPE_INFO = const std::type_info&;
+
+using noncopyable = boost::noncopyable;
 
 template <class Param>
 void unused(Param param)
@@ -111,7 +116,7 @@ template <class T>
 using Ptr = std::shared_ptr<T>;
 
 template <class T>
-class Singleton : private boost::noncopyable {
+class Singleton : private noncopyable {
 public:
     using TYPE = T;
 
