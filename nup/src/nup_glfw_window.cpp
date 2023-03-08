@@ -58,7 +58,7 @@ GlfwWindow::~GlfwWindow()
     }
 }
 
-void GlfwWindow::set_title(const string& title) { unused(title); }
+void GlfwWindow::set_title(const String& title) { unused(title); }
 
 void GlfwWindow::set_size(const IntSize& size) { unused(size); }
 

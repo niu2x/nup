@@ -15,9 +15,9 @@ class ShaderFactory : private noncopyable {
 public:
     ShaderFactory() { }
     virtual ~ShaderFactory() { }
-    virtual Ptr<Shader> create_render_shader(const string& vs, const string& fs)
+    virtual Ptr<Shader> create_render_shader(const String& vs, const String& fs)
         = 0;
-    virtual Ptr<Shader> create_compute_shader(const string& cs) = 0;
+    virtual Ptr<Shader> create_compute_shader(const String& cs) = 0;
 };
 
 } // namespace nup

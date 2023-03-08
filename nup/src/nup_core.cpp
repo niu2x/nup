@@ -14,7 +14,7 @@ struct vertex {
     float u, v;
 };
 
-static string shader = R"RAW(
+static String shader = R"RAW(
 
 #version 430 core
 layout (local_size_x = 1, local_size_y = 1, local_size_z = 1) in;
@@ -30,7 +30,7 @@ void main() {
 
 )RAW";
 
-const string vertex_shader = R"RAW(
+const String vertex_shader = R"RAW(
 
 #version 430 core
 layout (location = 0) in vec3 aPos;
@@ -47,7 +47,7 @@ void main()
 
 )RAW";
 
-const string fragment_shader = R"RAW(
+const String fragment_shader = R"RAW(
 
 #version 430 core
 out vec4 FragColor;

@@ -12,7 +12,7 @@ public:
     Window();
     virtual ~Window() = 0;
 
-    virtual void set_title(const string& title) = 0;
+    virtual void set_title(const String& title) = 0;
     virtual void set_size(const IntSize& size) = 0;
     virtual IntSize size() const = 0;
 

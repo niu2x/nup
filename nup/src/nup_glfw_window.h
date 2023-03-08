@@ -12,7 +12,7 @@ public:
     GlfwWindow();
     virtual ~GlfwWindow();
 
-    virtual void set_title(const string& title) override;
+    virtual void set_title(const String& title) override;
     virtual void set_size(const IntSize& size) override;
     virtual IntSize size() const override;
     virtual void run() override;

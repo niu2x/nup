@@ -1,7 +1,9 @@
 #include "nup_gl_shader.h"
 #include <iostream>
 
-static void checkCompileErrors(unsigned int shader, std::string type)
+namespace nup {
+
+static void checkCompileErrors(unsigned int shader, const String& type)
 {
     int success;
     char infoLog[1024];
@@ -30,12 +32,11 @@ static void checkCompileErrors(unsigned int shader, std::string type)
     }
 }
 
-namespace nup {
 GLShader::GLShader() { ID_ = glCreateProgram(); }
 GLShader::~GLShader() { glDeleteProgram(ID_); }
 
 Ptr<Shader> GLShaderFactory::create_render_shader(
-    const string& vs, const string& fs)
+    const String& vs, const String& fs)
 {
 
     auto shader = NUP_MAKE_PTR(GLShader);
@@ -65,7 +66,7 @@ Ptr<Shader> GLShaderFactory::create_render_shader(
     return shader;
 }
 
-Ptr<Shader> GLShaderFactory::create_compute_shader(const string& cs)
+Ptr<Shader> GLShaderFactory::create_compute_shader(const String& cs)
 {
 
     auto shader = NUP_MAKE_PTR(GLShader);

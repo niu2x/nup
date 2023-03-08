@@ -6,6 +6,7 @@
 #include <thread>
 #include <mutex>
 #include <functional>
+#include <vector>
 #include <atomic>
 #include <memory>
 #include <exception>
@@ -29,7 +30,12 @@ void unused(Param param)
     (void)param;
 }
 
-using string = std::string;
+using String = std::string;
+
+template <class T>
+using Vector = std::vector<T>;
+
+using MemoryBlock = Vector<uint8_t>;
 
 class Interator {
 public:
@@ -150,7 +156,7 @@ protected:
 
 class exception : public std::exception {
 public:
-    exception(const string& msg)
+    exception(const String& msg)
     : message_(msg)
     {
     }
@@ -158,7 +164,7 @@ public:
     virtual const char* what() const noexcept { return message_.c_str(); }
 
 private:
-    string message_;
+    String message_;
 };
 
 } // namespace nup

@@ -25,8 +25,8 @@ public:
     virtual ~GLShaderFactory() { }
 
     virtual Ptr<Shader> create_render_shader(
-        const string& vs, const string& fs) override;
-    virtual Ptr<Shader> create_compute_shader(const string& cs) override;
+        const String& vs, const String& fs) override;
+    virtual Ptr<Shader> create_compute_shader(const String& cs) override;
 };
 
 } // namespace nup
