@@ -1,6 +1,10 @@
 #ifndef NUP_TYPE_H
 #define NUP_TYPE_H
 
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 #include <string>
 #include <map>
 #include <thread>
@@ -167,10 +171,43 @@ private:
     String message_;
 };
 
+struct MemoryAreaRef {
+    void* base;
+    size_t size;
+};
+
+extern const MemoryAreaRef empty_memory_area_ref;
+
+enum class Error {
+    OK = 0,
+    END_OF_FILE,
+};
+
+using E = Error;
+
+template <class T1, class T2>
+auto min(const T1& t1, const T2& t2)
+{
+    return std::min(t1, t2);
+}
+
+template <class T1, class T2>
+auto max(const T1& t1, const T2& t2)
+{
+    return std::max(t1, t2);
+}
+
 } // namespace nup
 
 #define NUP_ABORT(message) NUP_THROW(exception(message))
 #define NUP_THROW(e)       throw e;
+
+#define NUP_ASSERT(cond, message)                                              \
+    {                                                                          \
+        if (!(cond)) {                                                         \
+            NUP_ABORT(message);                                                \
+        }                                                                      \
+    }
 
 #define NUP_CURRENT_THREAD_ID() std::this_thread::get_id()
 #define NUP_THREAD_ID           std::decay_t<decltype(CURRENT_THREAD_ID())>

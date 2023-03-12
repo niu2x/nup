@@ -1,7 +1,7 @@
 #ifndef NUP_H
 #define NUP_H
 
-#include "type.h"
+#include "nup_type.h"
 #include "nup_window.h"
 #include "nup_shader.h"
 

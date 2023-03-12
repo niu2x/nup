@@ -2,7 +2,7 @@
 
 namespace nup {
 
-MemoryAreaRef empty_memory_area_ref = { nullptr, 0 };
+const MemoryAreaRef empty_memory_area_ref = { nullptr, 0 };
 
 Data::Data()
 : mem_(nullptr)
@@ -26,10 +26,10 @@ Data::Data(MemoryAreaRef r)
 
 Data::~Data() { }
 
-void* Data::ptr() const
+uint8_t* Data::ptr() const
 {
     if (weak_)
-        return mem_ref_.base;
+        return (uint8_t*)(mem_ref_.base);
     else
         return mem_ ? mem_->data() : nullptr;
 }
@@ -40,6 +40,15 @@ size_t Data::size() const
         return mem_ref_.size;
     else
         return mem_ ? mem_->size() : 0;
+}
+
+void Data::resize(size_t size)
+{
+    mem_->resize(size);
+    if (weak_) {
+        memcpy(mem_->data(), mem_ref_.base, std::min(size, mem_ref_.size));
+    }
+    weak_ = false;
 }
 
 } // namespace nup

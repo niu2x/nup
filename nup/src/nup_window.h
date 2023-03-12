@@ -1,7 +1,7 @@
 #ifndef NUP_WINDOWS_H
 #define NUP_WINDOWS_H
 
-#include "type.h"
+#include "nup_type.h"
 
 namespace nup {
 

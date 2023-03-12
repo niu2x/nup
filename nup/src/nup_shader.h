@@ -1,6 +1,6 @@
 #ifndef NUP_SHADER_H
 #define NUP_SHADER_H
-#include "type.h"
+#include "nup_type.h"
 
 namespace nup {
 

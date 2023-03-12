@@ -1,7 +1,7 @@
 #ifndef NUP_TEXTURE_H
 #define NUP_TEXTURE_H
 
-#include "type.h"
+#include "nup_type.h"
 
 namespace nup {
 
