@@ -17,7 +17,25 @@ public:
     : error_(e)
     {
     }
+
+    Result(const Result&) = default;
+    Result& operator=(const Result&) = default;
+
+    template <class U>
+    Result(const Result<U>& other)
+    {
+        NUP_ASSERT(!other, "not allowed");
+        error_ = other.error();
+    }
+
     ~Result() { }
+
+    operator bool() const { return error_ == E::OK; }
+
+    Error error() const { return error_; }
+
+    const T& operator*() const { return data_; }
+    T& operator*() { return data_; }
 
 private:
     T data_;

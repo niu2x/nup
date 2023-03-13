@@ -13,6 +13,16 @@ Result<size_t> ReadStream::read(void* buf, size_t n)
     return _read(buf, n);
 }
 
+Result<char> ReadStream::read_char()
+{
+    char c;
+    auto ret = read(&c, 1);
+    if (ret) {
+        return c;
+    }
+    return ret;
+}
+
 WriteStream::WriteStream() { }
 WriteStream::~WriteStream() { }
 
@@ -39,6 +49,7 @@ bool MemoryReadStream::eof() const { return read_pos_ >= data_.size(); }
 FileReadStream::FileReadStream(Ptr<FileInterface> file)
 : file_(file)
 {
+    NUP_ASSERT(file_->readable(), "is not readable");
 }
 
 FileReadStream::~FileReadStream() { }

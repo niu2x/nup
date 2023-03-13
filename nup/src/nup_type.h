@@ -22,6 +22,8 @@
 
 #include "nup_alloc.h"
 
+#define NUP_INLINE BOOST_FORCEINLINE
+
 namespace nup {
 
 using TYPE_INFO = const std::type_info&;

@@ -147,6 +147,7 @@ Core::Core()
 {
     window_factory_ = NUP_MAKE_PTR(GlfwWindowFactory);
     shader_factory_ = NUP_MAKE_PTR(GLShaderFactory);
+    file_factory_ = NUP_MAKE_PTR(FileFactory);
 }
 
 Core::~Core()

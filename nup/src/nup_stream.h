@@ -16,6 +16,8 @@ public:
     Result<size_t> read(void* buf, size_t n);
     virtual bool eof() const = 0;
 
+    Result<char> read_char();
+
 protected:
     virtual Result<size_t> _read(void* buf, size_t n) = 0;
 };
