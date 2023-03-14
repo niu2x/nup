@@ -28,7 +28,7 @@ ExternalProject_Add(boost
     GIT_PROGRESS   ${TMP_CMAKE_ARGS}
     BUILD_IN_SOURCE TRUE
     CONFIGURE_COMMAND ""
-    BUILD_COMMAND  ""
-    # BUILD_COMMAND  "${PROJECT_SOURCE_DIR}/tools/build_boost.sh"
+    # BUILD_COMMAND  ""
+    BUILD_COMMAND  "${PROJECT_SOURCE_DIR}/tools/build_boost.sh"
     INSTALL_COMMAND ""
 )

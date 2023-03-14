@@ -1,4 +1,6 @@
 #!/bin/bash
 
-./bootstrap.sh
-./b2
+# ./bootstrap.sh
+# ./b2
+
+rm -rf version;
