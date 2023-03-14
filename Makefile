@@ -3,8 +3,10 @@ build-linux:
 	cmake --build build
 
 build-android:
-	cmake -S . -DTARGET_PLATFORM=Android -DCMAKE_TOOLChAIN_FILE=/opt/android-sdk/ndk/21.2.6472646/build/cmake/android.toolchain.cmake -B build 
-	cmake --build build
+	./tools/build_android.sh
+# 	cmake -S . -DTARGET_PLATFORM=Android -DCMAKE_TOOLChAIN_FILE=/opt/android-sdk/ndk/21.2.6472646/build/cmake/android.toolchain.cmake -B build 
+# 	cmake --build build
+
 
 change-version:
 	find . -name CMakeLists.txt|while read item; do \
