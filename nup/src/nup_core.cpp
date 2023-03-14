@@ -148,10 +148,13 @@ Core::Core()
     window_factory_ = NUP_MAKE_PTR(GlfwWindowFactory);
     shader_factory_ = NUP_MAKE_PTR(GLShaderFactory);
     file_factory_ = NUP_MAKE_PTR(FileFactory);
+    file_stream_factory_ = NUP_MAKE_PTR(FileStreamFactory, file_factory_);
 }
 
 Core::~Core()
 {
+    file_stream_factory_ = nullptr;
+    file_factory_ = nullptr;
     shader_factory_ = nullptr;
     window_factory_ = nullptr;
 }

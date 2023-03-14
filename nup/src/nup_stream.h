@@ -25,7 +25,8 @@ protected:
 class WriteStream : private noncopyable {
 public:
     WriteStream();
-    virtual ~WriteStream() = 0;
+    virtual ~WriteStream();
+    virtual void write(const void* buf, size_t n) = 0;
 };
 
 class MemoryReadStream : public ReadStream {
@@ -55,6 +56,33 @@ protected:
 
 private:
     Ptr<FileInterface> file_;
+};
+
+class FileWriteStream : public WriteStream {
+public:
+    FileWriteStream(Ptr<FileInterface> file);
+    virtual ~FileWriteStream();
+    virtual void write(const void* buf, size_t n) override;
+
+private:
+    Ptr<FileInterface> file_;
+};
+
+class StreamFactory : private noncopyable {
+public:
+    StreamFactory();
+    virtual ~StreamFactory() = 0;
+};
+
+class FileStreamFactory : StreamFactory {
+public:
+    FileStreamFactory(Ptr<FileInterfaceFactory> file_factory);
+    virtual ~FileStreamFactory();
+    Ptr<ReadStream> create_file_read_stream(const String& pathname);
+    Ptr<WriteStream> create_file_write_stream(const String& pathname);
+
+private:
+    Ptr<FileInterfaceFactory> file_factory_;
 };
 
 } // namespace nup

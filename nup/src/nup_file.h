@@ -19,7 +19,7 @@ public:
 
     void rewind() { seek(S_BEGIN, 0); }
     Result<size_t> read(void* buf, size_t n);
-    void write(void* buf, size_t n);
+    void write(const void* buf, size_t n);
 
 public:
     virtual bool eof() const = 0;
@@ -30,7 +30,7 @@ public:
 
 protected:
     virtual Result<size_t> _read(void* buf, size_t n) = 0;
-    virtual void _write(void* buf, size_t n) = 0;
+    virtual void _write(const void* buf, size_t n) = 0;
 };
 
 class File : public FileInterface {
@@ -55,7 +55,7 @@ public:
 
 protected:
     virtual Result<size_t> _read(void* buf, size_t n) override;
-    virtual void _write(void* buf, size_t n) override;
+    virtual void _write(const void* buf, size_t n) override;
 
 private:
     FILE* fp_;
@@ -75,6 +75,7 @@ class FileFactory : public FileInterfaceFactory {
 public:
     FileFactory() { }
     virtual ~FileFactory() { }
+
     virtual Ptr<FileInterface> create_file(
         const String& path, int mode = File::O_READ) override;
 };

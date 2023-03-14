@@ -14,7 +14,7 @@ Result<size_t> FileInterface::read(void* buf, size_t n)
     return _read(buf, n);
 }
 
-void FileInterface::write(void* buf, size_t n)
+void FileInterface::write(const void* buf, size_t n)
 {
     NUP_ASSERT(writable(), "file is not writable");
     _write(buf, n);
@@ -29,6 +29,7 @@ File::~File() { close(); }
 bool File::open(const String& path, int mode)
 {
     NUP_ASSERT(!fp_, "fp_ is not nullptr");
+    mode_ = mode;
     fp_ = fopen(path.c_str(), mode == O_READ ? "rb" : "wb");
     return fp_ != nullptr;
 }
@@ -68,7 +69,7 @@ Result<size_t> File::_read(void* buf, size_t n)
     return fread(buf, 1, n, fp_);
 }
 
-void File::_write(void* buf, size_t n)
+void File::_write(const void* buf, size_t n)
 {
     NUP_ASSERT(n == fwrite(buf, 1, n, fp_), "write failed");
 }

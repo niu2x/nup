@@ -1,4 +1,5 @@
 #include "nup_stream.h"
+#include "nup_core.h"
 
 namespace nup {
 
@@ -60,5 +61,39 @@ Result<size_t> FileReadStream::_read(void* buf, size_t n)
 }
 
 bool FileReadStream::eof() const { return file_->eof(); }
+
+FileWriteStream::FileWriteStream(Ptr<FileInterface> file)
+: file_(file)
+{
+    NUP_ASSERT(file_->writable(), "is not writable");
+}
+
+FileWriteStream::~FileWriteStream() { }
+
+void FileWriteStream::write(const void* buf, size_t n) { file_->write(buf, n); }
+
+FileStreamFactory::FileStreamFactory(Ptr<FileInterfaceFactory> file_factory)
+: file_factory_(file_factory)
+{
+}
+
+FileStreamFactory::~FileStreamFactory() { }
+
+Ptr<ReadStream> FileStreamFactory::create_file_read_stream(
+    const String& pathname)
+{
+    auto file = file_factory_->create_file(pathname);
+    return file ? NUP_MAKE_PTR(FileReadStream, file) : nullptr;
+}
+
+Ptr<WriteStream> FileStreamFactory::create_file_write_stream(
+    const String& pathname)
+{
+    auto file = file_factory_->create_file(pathname, File::O_WRITE);
+    return file ? NUP_MAKE_PTR(FileWriteStream, file) : nullptr;
+}
+
+StreamFactory::StreamFactory() { }
+StreamFactory::~StreamFactory() { }
 
 } // namespace nup
