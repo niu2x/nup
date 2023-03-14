@@ -17,4 +17,4 @@ change-version:
 clean: 
 	git clean -fdx
 
-.PHONY: build change-version clean
+.PHONY: build change-version clean build-android

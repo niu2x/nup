@@ -1,15 +1,19 @@
 set(LIB_NAME nup)
 
-add_executable(${LIB_NAME} "")
-warning_as_error_enable(${LIB_NAME})
+if(TARGET_PLATFORM STREQUAL "Linux")
+	add_executable(${LIB_NAME} "")
+else()
+	add_library(${LIB_NAME} SHARED "")
+	include(GenerateExportHeader)
+	generate_export_header(${LIB_NAME}
+		EXPORT_FILE_NAME include/${LIB_NAME}/api.h
+		EXPORT_MACRO_NAME NUP_API
+		DEPRECATED_MACRO_NAME DEPRECATED_API
+		INCLUDE_GUARD_NAME NUP_API_H
+	)
+endif()
 
-include(GenerateExportHeader)
-generate_export_header(${LIB_NAME}
-	EXPORT_FILE_NAME include/${LIB_NAME}/api.h
-	EXPORT_MACRO_NAME NUP_API
-	DEPRECATED_MACRO_NAME DEPRECATED_API
-	INCLUDE_GUARD_NAME NUP_API_H
-)
+warning_as_error_enable(${LIB_NAME})
 
 target_compile_definitions(${LIB_NAME} PRIVATE ${LIB_NAME}_EXPORTS)
 
@@ -45,9 +49,8 @@ target_include_directories(${LIB_NAME} PUBLIC
 set(glfw3_DIR "${PROJECT_BINARY_DIR}/external_deps/lib/cmake/glfw3" CACHE PATH "" FORCE)
 find_package(glfw3 REQUIRED)
 
-set(glfw3_DIR "${PROJECT_BINARY_DIR}/boost-prefix/src/boost/stage/lib/cmake/boost_timer-1.81.0" CACHE PATH "" FORCE)
+# set(Boost_DIR "${PROJECT_BINARY_DIR}/boost-prefix/src/boost/stage/lib/cmake/boost_timer-1.81.0" CACHE PATH "" FORCE)
 find_package(Boost REQUIRED)
-
 
 target_link_libraries(${LIB_NAME} PRIVATE
 	# OpenSSL::Crypto
