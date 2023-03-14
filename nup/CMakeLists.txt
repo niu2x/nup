@@ -19,15 +19,24 @@ set_target_properties(${LIB_NAME} PROPERTIES
 	VISIBILITY_INLINES_HIDDEN ON
 )
 
+list(APPEND SOURCE_DIRECTORIES "src/*.cpp")
+
+if(TARGET_PLATFORM STREQUAL "Linux")
+	list(APPEND SOURCE_DIRECTORIES "src/linux/*.cpp")
+	list(APPEND SOURCE_DIRECTORIES "src/glfw/*.cpp")
+endif()
+
 file(GLOB source 
-	src/*.cpp
+	${SOURCE_DIRECTORIES}
 )
+
+
 target_sources(${LIB_NAME} PRIVATE
 	${source}
 )
 
 target_include_directories(${LIB_NAME} PUBLIC
-	include
+	src/
 	${CMAKE_CURRENT_BINARY_DIR}/include
 )
 

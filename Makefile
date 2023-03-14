@@ -1,7 +1,9 @@
-build:
-	cmake -S . -B build \
-		-DBUILD_SHARED_LIBS=ON \
-		-DOpenSSL_ROOT=/home/niu2x/project/openssl/dist/usr/local/ 
+build-linux:
+	cmake -S . -DTARGET_PLATFORM=Linux -B build
+	cmake --build build
+
+build-android:
+	cmake -S . -DTARGET_PLATFORM=Android -DCMAKE_TOOLChAIN_FILE=/opt/android-sdk/ndk/21.2.6472646/build/cmake/android.toolchain.cmake -B build 
 	cmake --build build
 
 change-version:
