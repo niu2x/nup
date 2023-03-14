@@ -1,3 +1,0 @@
-repository='https://gitee.com/add358/boost'
-module=''
-tag='origin'
