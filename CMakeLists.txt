@@ -6,6 +6,9 @@ if(TARGET_PLATFORM STREQUAL "Linux")
 	set(NUP_USE_GL_4_3 ON)
 endif()
 
+if(TARGET_PLATFORM STREQUAL "Android")
+	set(NUP_USE_GLES2_3_2 ON)
+endif()
 
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)

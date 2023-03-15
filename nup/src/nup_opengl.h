@@ -7,4 +7,8 @@
     #include "gl_4.3/gl.h"
 #endif
 
+#if defined(NUP_USE_GLES2_3_2)
+    #include "gles2_3.2/gles2.h"
+#endif
+
 #endif
