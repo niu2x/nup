@@ -1,8 +1,13 @@
 #include "nup_core.h"
-#include "nup_glfw_window.h"
+#include "nup_config.h"
+
+#if defined(NUP_USE_GLFW)
+    #include "nup_glfw_window.h"
+#endif
+
 #include "nup_gl_shader.h"
 #include "nup_any.h"
-#include "glad_gl.h"
+#include "nup_opengl.h"
 
 namespace nup {
 
@@ -145,7 +150,10 @@ void Core::run()
 
 Core::Core()
 {
+#if defined(NUP_USE_GLFW)
     window_factory_ = NUP_MAKE_PTR(GlfwWindowFactory);
+#endif
+
     shader_factory_ = NUP_MAKE_PTR(GLShaderFactory);
     file_factory_ = NUP_MAKE_PTR(FileFactory);
     file_stream_factory_ = NUP_MAKE_PTR(FileStreamFactory, file_factory_);

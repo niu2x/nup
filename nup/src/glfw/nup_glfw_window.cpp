@@ -1,7 +1,7 @@
 #include "nup_glfw_window.h"
 
-#define GLAD_GL_IMPLEMENTATION
-#include "glad_gl.h"
+#include "nup_opengl.h"
+
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 

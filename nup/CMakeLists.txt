@@ -15,7 +15,7 @@ endif()
 
 warning_as_error_enable(${LIB_NAME})
 
-target_compile_definitions(${LIB_NAME} PRIVATE ${LIB_NAME}_EXPORTS)
+# target_compile_definitions(${LIB_NAME} PRIVATE ${LIB_NAME}_EXPORTS)
 
 set_target_properties(${LIB_NAME} PROPERTIES
 	C_VISIBILITY_PRESET hidden
@@ -24,16 +24,27 @@ set_target_properties(${LIB_NAME} PROPERTIES
 )
 
 list(APPEND SOURCE_DIRECTORIES "src/*.cpp")
+set(LIBS "")
+
+
+if(NUP_USE_GLFW)
+	list(APPEND SOURCE_DIRECTORIES "src/glfw/*.cpp")
+
+	set(glfw3_DIR "${PROJECT_BINARY_DIR}/external_deps/lib/cmake/glfw3" CACHE PATH "" FORCE)
+	find_package(glfw3 REQUIRED)
+	list(APPEND LIBS glfw)
+endif()
+
+
 
 if(TARGET_PLATFORM STREQUAL "Linux")
 	list(APPEND SOURCE_DIRECTORIES "src/linux/*.cpp")
-	list(APPEND SOURCE_DIRECTORIES "src/glfw/*.cpp")
 endif()
+
 
 file(GLOB source 
 	${SOURCE_DIRECTORIES}
 )
-
 
 target_sources(${LIB_NAME} PRIVATE
 	${source}
@@ -46,16 +57,11 @@ target_include_directories(${LIB_NAME} PRIVATE
 )
 
 # find_package(OpenSSL 3.0 REQUIRED)
-
-
-if(TARGET_PLATFORM STREQUAL "Linux")
-	set(glfw3_DIR "${PROJECT_BINARY_DIR}/external_deps/lib/cmake/glfw3" CACHE PATH "" FORCE)
-	find_package(glfw3 REQUIRED)
-endif()
-
 target_link_libraries(${LIB_NAME} PRIVATE
 	# OpenSSL::Crypto
 	# OpenSSL::SSL
-	glfw
+	${LIBS}
+	
 )
 
+configure_file(src/nup_config.h.in include/nup_config.h @ONLY)

@@ -2,7 +2,7 @@
 #define NUP_GL_SHADER_H
 
 #include "nup_shader.h"
-#include "glad_gl.h"
+#include "nup_opengl.h"
 
 namespace nup {
 

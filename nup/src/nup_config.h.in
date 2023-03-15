@@ -1,0 +1,7 @@
+#ifndef NUP_CONFIG_H
+#define NUP_CONFIG_H
+
+#cmakedefine NUP_USE_GLFW
+#cmakedefine NUP_USE_GL_4_3
+
+#endif
