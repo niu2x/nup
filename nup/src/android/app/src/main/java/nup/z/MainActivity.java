@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Used to load the 'z' library on application startup.
     static {
-//        System.loadLibrary("z");
+       System.loadLibrary("nup");
     }
 
     private ActivityMainBinding binding;
