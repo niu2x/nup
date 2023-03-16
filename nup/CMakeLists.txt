@@ -41,6 +41,10 @@ if(TARGET_PLATFORM STREQUAL "Linux")
 	list(APPEND SOURCE_DIRECTORIES "src/linux/*.cpp")
 endif()
 
+if(TARGET_PLATFORM STREQUAL "Android")
+	list(APPEND SOURCE_DIRECTORIES "src/android/cpp/*.cpp")
+endif()
+
 
 file(GLOB source 
 	${SOURCE_DIRECTORIES}
