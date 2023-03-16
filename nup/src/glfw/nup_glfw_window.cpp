@@ -31,7 +31,9 @@ GlfwWindow::GlfwWindow()
     native_window_ = glfwCreateWindow(640, 480, "", NULL, NULL);
 
     glfwMakeContextCurrent(native_window_);
+
     gladLoadGL(glfwGetProcAddress);
+
     glfwSwapInterval(1);
 }
 

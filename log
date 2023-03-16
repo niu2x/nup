@@ -1,0 +1,1219 @@
+--------- beginning of main
+03-16 14:48:24.871   837   891 W AString : ctor got NULL, using empty string instead
+03-16 14:48:24.872   837   891 I sensors-hal-SensorSavedChannel: [1119,5843,5269,-43621,-163596,-204656]==>gyro_temp.json
+03-16 14:48:24.872   837   891 W AString : ctor got NULL, using empty string instead
+03-16 14:48:24.872   837   891 I sensors-hal-SensorSavedChannel: [-625,3389,-2711]==>gyro_bias.json
+03-16 14:48:24.895  1361  1415 D SwtpMonitorThread: read swtp_status_buf: 0
+03-16 14:48:24.968  1052  1052 D sensors-hal-oplus_sensor_fb: scp_ramdump_enabled: persist.sys.enable_mtk_scp_dump enabled
+03-16 14:48:24.970  1052  1052 D sensors-hal-oplus_sensor_fb: scp_ramdump_enabled: persist.sys.enable_mtk_scp_dump enabled
+--------- beginning of system
+03-16 14:48:25.273  1539  3733 D ActivityManager: getProcessesInErrorState callingUid=10279, CallingPid=30213
+03-16 14:48:25.777  1539  3733 D ActivityManager: getProcessesInErrorState callingUid=10279, CallingPid=30213
+03-16 14:48:25.842   827   958 I hwcomposer: [HWCDisplay] [Display_0 (type:1)] fps:0.165198,dur:6053.33,max:6053.33,min:6053.33  
+03-16 14:48:26.126   851   871 D power@timer: [mtkPowerTimer] visRead:0
+03-16 14:48:26.126   954   973 D ccci_mdinit: (1):monitor_time_update_thread round:4875 ########
+03-16 14:48:26.281  1539  3733 D ActivityManager: getProcessesInErrorState callingUid=10279, CallingPid=30213
+03-16 14:48:26.471 24630 24630 I AstScreen.InfoFlowLog.NewsStyleTopImageRight: selfStatExpose, mIsExpose=false
+03-16 14:48:26.784  1539  3733 D ActivityManager: getProcessesInErrorState callingUid=10279, CallingPid=30213
+03-16 14:48:27.288  1539  3733 D ActivityManager: getProcessesInErrorState callingUid=10279, CallingPid=30213
+03-16 14:48:27.672  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2275, tid:1889
+03-16 14:48:27.672   946  1321 D VRR [OTI]: handleIdle from 1 to 0
+03-16 14:48:27.672   946  1321 D VRR [OTI-HW]: isStateReady 0
+03-16 14:48:27.672   946  1321 D VRR [OTI-HW]: rate range: min {id=0, hwcId=0, fps=60.00, width=1080, height=2400 group=-1} cur {id=0, hwcId=0, fps=60.00, width=1080, height=2400 group=-1} max {id=1, hwcId=1, fps=90.00, width=1080, height=2400 group=-1}
+03-16 14:48:27.672   946  1321 D VRR [OTI-HW]: restore sys rate.
+03-16 14:48:27.672   946  1321 D SurfaceFlinger: VRR [SurfaceFlinger] changeRefreshRateLocked: 90.00fps event: 1 
+03-16 14:48:27.672   946  1321 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredActiveMode: 90.00fps event: 1 
+03-16 14:48:27.674  1539  2113 D OGG_Detector: D:done mCurrStatus: 0
+03-16 14:48:27.675   851   931 I libPowerHal: [perfLockRel] hdl:2275, idx:0
+03-16 14:48:27.675  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2275, dur:0, num:4, tid:1889
+03-16 14:48:27.675   851   931 I libPowerHal: system_server: hard user limit set cpu freq: -1 -1 -1 -1 -1 -1
+03-16 14:48:27.675   851   931 I libPowerHal: system_server: set gpu opp level max: 0
+03-16 14:48:27.675   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:27.676  1539  1889 I mtkpower_client: ret_hdl:2277
+03-16 14:48:27.677   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:27.677  2546  3055 I iopgp   : Iopgp: TRANSACTION_IOPGP_ON_KEY_DOWN sequence_id = 28 pkg_name = nup.z ret = 0
+03-16 14:48:27.677   916   916 D ORMS_HAL: OrmsHalService write file /proc/sys/kernel/input_boost_enabled - 1.
+03-16 14:48:27.678  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2277, tid:1889
+03-16 14:48:27.678  2546  3055 D iopgp   : cannot find a compiledtrace, need to start tracing on intentstart.
+03-16 14:48:27.678  2546  3055 D iopgp   : Iopgp: Decide the action on keydown event done in 0ms.
+03-16 14:48:27.678  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2277, dur:0, num:14, tid:1889
+03-16 14:48:27.679   851   931 I libPowerHal: [perfLockRel] hdl:2277, idx:0
+03-16 14:48:27.679   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:27.680  1539  1889 I mtkpower_client: ret_hdl:2278
+03-16 14:48:27.681   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: 2000000 -1 2200000 -1 2284000 -1
+03-16 14:48:27.686   827   958 I hwcomposer: [HWC] (0) displaySetActiveConfig config:1  
+03-16 14:48:27.688   827   958 I hwcomposer: [HWCDisplay] [Display_0 (type:1)] fps:0.541672,dur:1846.13,max:1846.13,min:1846.13  
+03-16 14:48:27.693  1539  1737 D VRR [OPlusRefreshRateService]: onConfigChanged physicalDisplayId: 0 modeId: 1
+03-16 14:48:27.693   946  1321 D VRR [OTI-HW]: isStateReady 0
+03-16 14:48:27.693   946  1321 D VRR [OTI-HW]: rate range: min {id=0, hwcId=0, fps=60.00, width=1080, height=2400 group=-1} cur {id=1, hwcId=1, fps=90.00, width=1080, height=2400 group=-1} max {id=1, hwcId=1, fps=90.00, width=1080, height=2400 group=-1}
+03-16 14:48:27.693   946  1321 D VRR [OTI-HW]: keep rate.
+03-16 14:48:27.736   851   931 I libPowerHal: [perfLockRel] hdl:2276, idx:1
+03-16 14:48:27.736   851   931 I libPowerHal: [PD] MTKPOWER_HINT_APP_TOUCH update cmd:3408600 param:0
+03-16 14:48:27.755  2546  3055 I iopgp   : Iopgp: TRANSACTION_IOPGP_ON_INTENT_STARTED sequence_id = 28 pkg_name = nup.z class_name = nup.z.MainActivity
+03-16 14:48:27.756  2546  3055 I iopgp   : Iopgp::starttracing
+03-16 14:48:27.756  2546  3055 D iopgp   : Create Perfetto handle 29
+03-16 14:48:27.757  1539  3733 E system_server: No package ID 7f found for ID 0x7f0f025d.
+03-16 14:48:27.757   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:27.757  1539  3733 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=nup.z/.MainActivity bnds=[800,1035][1052,1321] mCallingUid=10178} from uid 10178
+03-16 14:48:27.757   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:27.758  1539  3733 D MultiApp.CMAService: changeIntentIfNeed --- from launcher
+03-16 14:48:27.758  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2278, tid:1889
+03-16 14:48:27.758  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2278, dur:0, num:14, tid:1889
+03-16 14:48:27.758   851   869 I mtkpower@impl: [check_work_req] i:0, msg:1 hdl:2278, wait
+03-16 14:48:27.758   851   931 I libPowerHal: [perfLockRel] hdl:2278, idx:0
+03-16 14:48:27.758   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: -1 -1 -1 -1 -1 -1
+03-16 14:48:27.758   851   931 I libPowerHal: [PD] system_server update cmd:1410000 param:0
+03-16 14:48:27.759   851   931 I libPowerHal: [PD] system_server update cmd:1c3c000, param:1
+03-16 14:48:27.759  1045  1045 I perfetto: ing_service_impl.cc:912 Configured tracing session 29, #sources:1, duration:5000 ms, #buffers:1, total buffer size:5120 KB, total sessions:1, uid:1000 session name: ""
+03-16 14:48:27.759   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:27.759  1043  1043 I perfetto: probes_producer.cc:243  Ftrace setup (target_buf=29)
+03-16 14:48:27.759  1539  3733 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=3762 attached=false
+03-16 14:48:27.759  1539  3733 D OplusZoomWindowManagerService: onConfigurationChanged rotation not changed - prevRotation: 0
+03-16 14:48:27.760  1539  1889 I mtkpower_client: ret_hdl:2279
+03-16 14:48:27.761  1539  3733 I OplusScreenSecurityMask: onStackAdded task = Task{3dad39f #3762 type=standard ?? U=0 visible=false mode=fullscreen translucent=true sz=0} record = null displayId = 0
+03-16 14:48:27.761  1539  3733 I OplusScreenSecurityMask: onStackAdded task = Task{3dad39f #3762 type=standard A=10278:nup.z U=0 visible=false mode=fullscreen translucent=true sz=0} record = null displayId = 0
+03-16 14:48:27.762  1539  3733 D CompatibilityChangeReporter: Compat change id reported: 174042980; UID 10278; state: DISABLED
+03-16 14:48:27.762  1539  3733 D CompatibilityChangeReporter: Compat change id reported: 184838306; UID 10278; state: DISABLED
+03-16 14:48:27.762  1539  3733 D CompatibilityChangeReporter: Compat change id reported: 185004937; UID 10278; state: DISABLED
+03-16 14:48:27.762   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: 2000000 -1 2200000 -1 2284000 -1
+03-16 14:48:27.762  1539  3733 D CompatibilityChangeReporter: Compat change id reported: 181136395; UID 10278; state: DISABLED
+03-16 14:48:27.762  1539  3733 D CompatibilityChangeReporter: Compat change id reported: 174042936; UID 10278; state: DISABLED
+03-16 14:48:27.763  1539  3733 E WindowManager: makeSurface ActivityRecord{ca0bcec u0 nup.z/.MainActivity t3762} windowType 2
+03-16 14:48:27.764  1539  3733 D TaskExtImpl: add ActivityRecord{ca0bcec u0 nup.z/.MainActivity t3762} to mActivityRecordSum = Counter{ nup.z/.MainActivity(1) }
+03-16 14:48:27.765  1539  3733 D CompatibilityChangeReporter: Compat change id reported: 168419799; UID 10278; state: DISABLED
+03-16 14:48:27.765   851   870 I mtkpower@impl: [setMode] type:5, enabled:1
+03-16 14:48:27.765  1539  3733 D ActivityTaskManager: getStartingWindowType: newTask=true, taskSwitch=true, processRunning=false, allowTaskSnapshot=true, activityCreated=false, snapshot=null, record:ActivityRecord{ca0bcec u0 nup.z/.MainActivity t3762}
+03-16 14:48:27.766  1539  3733 D OplusStartingWindowManager: window attributes color: 0 icon null duration 0 brandImage null
+03-16 14:48:27.766  1539  3733 V OplusZoomWindowManagerService: windowMode: 0 ,stack: Task{3dad39f #3762 type=standard A=10278:nup.z U=0 visible=true mode=fullscreen translucent=true sz=1}
+03-16 14:48:27.767  1539  3733 I PowerHalWrapper: <amsBoostResume> last:com.android.launcher, next:nup.z 
+03-16 14:48:27.768   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:27.768   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:27.768  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2279, tid:1889
+03-16 14:48:27.768  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2279, dur:0, num:16, tid:1889
+03-16 14:48:27.769   946  2952 I SurfaceFlinger: [SF client] NEW(0xb4000074d0d65580) for (2222:com.android.systemui)
+03-16 14:48:27.769   851   869 I mtkpower@impl: [check_work_req] i:0, msg:1 hdl:2279, wait
+03-16 14:48:27.770  2488  2488 I Quality : Skipped: true 1
+03-16 14:48:27.770   851   931 I libPowerHal: [perfLockRel] hdl:2279, idx:0
+03-16 14:48:27.770   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: -1 -1 -1 -1 -1 -1
+03-16 14:48:27.770   851   931 I libPowerHal: [PD] system_server update cmd:1410000 param:0
+03-16 14:48:27.772  2222  2358 D WindowManager: Add to mViews: android.widget.FrameLayout{4fe892b V.E...... ......I. 0,0-0,0},pkg= nup.z
+03-16 14:48:27.772 24630 24727 I AstScreen.AtmosphereManager: windowState : 3   not care about this state!!
+03-16 14:48:27.773  1539  3733 V SensorManager: call sensorServiceCommonInterface name: setScreenShotDisable
+03-16 14:48:27.773   851   931 I libPowerHal: [PD] system_server update cmd:1c3c000, param:1
+03-16 14:48:27.773  1539  3733 D SensorService: SensorService sensorServiceCommonInterface = setScreenShotDisable
+03-16 14:48:27.773  1539  3733 D SensorServiceImpl: SensorServiceExtImpl sensorServiceCommonInterface funcName= setScreenShotDisable , flag =0, status =0
+03-16 14:48:27.773  2222  2358 D ViewRootImpl[z]: hardware acceleration = true, sRendererEnabled = true, forceHwAccelerated = false
+03-16 14:48:27.773  1539  3733 I OplusHansManager : front pkg: nup.z, uid: 10278, prev pkg: com.android.launcher, prev uid: 10178
+03-16 14:48:27.774  1539  2770 I OplusHansManager : notifyAppGoForeground, uid=10278
+03-16 14:48:27.774  1539  3733 V SensorManager: call sensorServiceCommonInterface name: setScreenShotDisable
+03-16 14:48:27.774  1539  3733 D SensorService: SensorService sensorServiceCommonInterface = setScreenShotDisable
+03-16 14:48:27.774  1539  3733 D SensorServiceImpl: SensorServiceExtImpl sensorServiceCommonInterface funcName= setScreenShotDisable , flag =0, status =0
+03-16 14:48:27.774  1539  2237 I Osense-DecisionMaker: notifySceneToPolicy...SCENE_APP_SWITCH
+03-16 14:48:27.774  1539  2237 D Osense-DecisionMaker: getCurrentSysStats, memMb: 6919
+03-16 14:48:27.774  1539  2770 I OplusHansManager : enter FastFreezer, frontApp: 10278, frozen uids: [], important uids: [10279]
+03-16 14:48:27.774  1539  3733 V SensorManager: call sensorServiceCommonInterface name: setScreenShotDisable
+03-16 14:48:27.775  1539  3733 D SensorService: SensorService sensorServiceCommonInterface = setScreenShotDisable
+03-16 14:48:27.775  1539  3733 D SensorServiceImpl: SensorServiceExtImpl sensorServiceCommonInterface funcName= setScreenShotDisable , flag =0, status =0
+03-16 14:48:27.775  1539  2770 I OplusHansManager : notifyAppGoBackground, uid=10178
+03-16 14:48:27.775  1539  2237 I Osense-DecisionMaker: scene: SCENE_APP_SWITCH, excutingPolicy: freezer
+03-16 14:48:27.775  1539  2450 I OplusResourcePreloadManager: resume pkg: nup.z, uid:10278, prev pkg: com.android.launcher, prev uid: 10178
+03-16 14:48:27.776   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:27.776  1539  3733 I PowerHalWrapper: amsBoostNotify pid:2488,activity:com.android.launcher.Launcher, package:com.android.launcher, mProcessCreatePacknup.z 
+03-16 14:48:27.777  1539  3733 I PowerHalWrapper: state: 0 
+03-16 14:48:27.777  1539  3733 I PowerHalWrapper: amsBoostNotify AMS_BOOST_PROCESS_CREATE_BOOST:false 
+03-16 14:48:27.779  1539  1889 I mtkpower_client: ret_hdl:2280
+03-16 14:48:27.780  1539  2314 W WindowManager: Changing focus from Window{6b59f98 u0 com.android.launcher/com.android.launcher.Launcher} to null displayId=0 Callers=com.android.server.wm.RootWindowContainer.updateFocusedWindowLocked:492 com.android.server.wm.WindowManagerService.updateFocusedWindowLocked:6010 com.android.server.wm.WindowManagerService.relayoutWindow:2600 com.android.server.wm.Session.relayout:247 
+03-16 14:48:27.781  1539  2314 D Theia.NoFocusWindow: FocusWindowErrorScene CheckFreezeScreen
+03-16 14:48:27.782   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: 2000000 -1 2600000 -1 2600000 -1
+03-16 14:48:27.783  1539  2989 D OplusDisplayPolicy: nup.z, no change cutoutMode: 0
+03-16 14:48:27.786  1539  2989 D OplusDisplayPolicy: nup.z, no change cutoutMode: 0
+03-16 14:48:27.786   946  2952 I BufferQueueDebug: [Splash Screen nup.z#0](this:0xb4000074d0db9998,id:-1,api:0,p:-1,c:-1) BufferQueue core=(946:/system/bin/surfaceflinger)
+03-16 14:48:27.787  1539  3733 I FocusResolver: updateFocusedWindow,  on display 0, reason: NO_WINDOW, result:   FocusedWindows: <none>
+03-16 14:48:27.788  2222  2358 I BufferQueueConsumer: [](id:8ae0000006a,api:0,p:-1,c:2222) connect: controlledByApp=false
+03-16 14:48:27.788  2222  2358 I BLASTBufferQueue: [ViewRootImpl[z]#86] constructor()
+03-16 14:48:27.789  2222  2948 I BufferQueueProducer: [ViewRootImpl[z]#86(BLAST Consumer)86](id:8ae0000006a,api:1,p:2222,c:2222) connect: api=1 producerControlledByApp=true
+03-16 14:48:27.789  1539  1691 I PowerHalWrapper: amsBoostProcessCreate package:nup.z 
+03-16 14:48:27.789  1539  1691 D SBE-LaunchIdentify: SBE boost:nup.z begin
+03-16 14:48:27.790  1043  1043 I perfetto: ftrace_procfs.cc:206    enabled ftrace in /sys/kernel/tracing/
+03-16 14:48:27.790  1539  1691 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10278; state: DISABLED
+03-16 14:48:27.790  1539  1691 D CompatibilityChangeReporter: Compat change id reported: 177438394; UID 10278; state: DISABLED
+03-16 14:48:27.790  1539  1691 D CompatibilityChangeReporter: Compat change id reported: 135772972; UID 10278; state: DISABLED
+03-16 14:48:27.790  1539  1691 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10278; state: ENABLED
+03-16 14:48:27.790  1539  2314 D ActivityManager: getProcessesInErrorState callingUid=10279, CallingPid=30213
+03-16 14:48:27.790  1539  1711 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10278; state: ENABLED
+03-16 14:48:27.791  2546  3055 I iopgp   : Iopgp: TRANSACTION_IOPGP_ON_ACTIVITY_LAUNCHED sequence_id = 28 title = 
+03-16 14:48:27.792  1539  1724 W System.err: android.os.DeadObjectException
+03-16 14:48:27.792  1539  1724 W System.err: 	at android.os.BinderProxy.transactNative(Native Method)
+03-16 14:48:27.792  1539  1724 W System.err: 	at android.os.BinderProxy.transact(BinderProxy.java:641)
+03-16 14:48:27.792  1539  1724 W System.err: 	at com.oplus.heimdall.ITraceListener$Stub$Proxy.onNotify(ITraceListener.java:99)
+03-16 14:48:27.792  1539  1724 W System.err: 	at com.android.server.oplus.heimdall.service.TraceService.notifyListener(TraceService.java:151)
+03-16 14:48:27.792  1539  1724 W System.err: 	at com.android.server.oplus.heimdall.service.TraceService.notify(TraceService.java:130)
+03-16 14:48:27.792  1539  1724 W System.err: 	at com.android.server.oplus.heimdall.trace.TraceFileObserver.onEvent(TraceFileObserver.java:29)
+03-16 14:48:27.792  1539  1724 W System.err: 	at android.os.FileObserver$ObserverThread.onEvent(FileObserver.java:166)
+03-16 14:48:27.792  1539  1724 W System.err: 	at android.os.FileObserver$ObserverThread.observe(Native Method)
+03-16 14:48:27.792  1539  1724 W System.err: 	at android.os.FileObserver$ObserverThread.run(FileObserver.java:116)
+03-16 14:48:27.793  1539  1737 D VRR [OPlusRefreshRateService]: handleConfigIdChange physicalDisplayId: 0 configId: 1
+03-16 14:48:27.796  1539  1692 D OplusSplitScreenManagerService: isDragToSplitState mOplusSpiltScreenDnDUI is null, just return!
+03-16 14:48:27.796  1539  1692 D OplusSplitScreenManagerService: isDragToSplitState mOplusSpiltScreenDnDUI is null, just return!
+03-16 14:48:27.796  1539  1692 D OplusSplitScreenManagerService: isDragToSplitState mOplusSpiltScreenDnDUI is null, just return!
+03-16 14:48:27.796  1539  1692 D OplusSplitScreenManagerService: isDragToSplitState mOplusSpiltScreenDnDUI is null, just return!
+03-16 14:48:27.796   946   946 D OplusLayer: setBuffer sequence=1939, name=Splash Screen nup.z#0
+03-16 14:48:27.796   946   946 I OplusLayer: VRR [FRTC] update from -1 to 0
+03-16 14:48:27.797  2222 16746 D SurfaceComposerClient: VRR [FRTC] client handle [bufferId:18446744073709551615 framenumber:0] [ffffffff, ffffffff]
+03-16 14:48:27.797   946   998 E surfaceflinger: == MALI DEBUG ===eglp_winsys_populate_image_templates ==12288
+03-16 14:48:27.799  1539  1692 E WindowManager: makeSurface WallpaperWindowToken{5d8cd4 token=android.os.Binder@edad227} windowType 2013
+03-16 14:48:27.800   804   804 D Zygote  : Forked child process 9707
+03-16 14:48:27.801  1539  1711 I ActivityManager: Start proc 9707:nup.z/u0a278 for pre-top-activity {nup.z/nup.z.MainActivity}
+03-16 14:48:27.803  1539  1692 I WindowStateExtImpl: onSurfaceShowChange show = true mPackageName = nup.z parentPkgName = nup.z
+03-16 14:48:27.804  2488  2488 E SimulationInteractor: tryGetAnimationPainterInstance error:com.oplus.painteranimationpanel.api.AnimPainterInstance
+03-16 14:48:27.804  2488  2488 D IconConfigParser: parseConfig::icon config =: IconConfig = [ isForeign : false,theme : 2,iconSize : 5000,iconShape : 0,foregroundSize : 5600,artPlusOn : 0,iconRadius ：36,darkModeIcon:1,localSpecial:false ]
+03-16 14:48:27.804   946  1600 I BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+03-16 14:48:27.805  2488  2488 D IconConfigParser: parseConfig::icon config =: IconConfig = [ isForeign : false,theme : 2,iconSize : 5000,iconShape : 0,foregroundSize : 5600,artPlusOn : 0,iconRadius ：36,darkModeIcon:1,localSpecial:false ]
+03-16 14:48:27.812  9707  9707 I nup.z   : Late-enabling -Xcheck:jni
+03-16 14:48:27.820   946   946 D OplusLayer: ~Layer() sequence=1933, name=Surface(name=8e6b5fd StatusBar)/@0x41a9836 - animation-leash of insets_animation#0 0xb4000074b725e800
+03-16 14:48:27.820   946   946 D OplusLayer: ~Layer() sequence=1934, name=Surface(name=2e9a99 NavigationBar0)/@0x8100a4 - animation-leash of insets_animation#0 0xb4000074b7261000
+03-16 14:48:27.830  9707  9707 E nup.z   : Unknown bits set in runtime_flags: 0x40000000
+03-16 14:48:27.834 26777 26797 I adbd    : jdwp connection from 9707
+03-16 14:48:27.837  9707  9707 D ProcessState: Binder ioctl to enable oneway spam detection failed: Invalid argument
+03-16 14:48:27.840  9707  9707 I OneTrace: Mark active for pid=9707? true
+03-16 14:48:27.840  9707  9707 D cutils-dev: otrace_set_tracing_enabled? true
+03-16 14:48:27.842  1539  3733 V ActivityManager: New death recipient com.android.server.am.ActivityManagerService$AppDeathRecipient@9a818ab for thread android.os.BinderProxy@358cb08
+03-16 14:48:27.849  1539  3733 D OplusDexOptimizeManager: Do not in AppLaunchOptList!
+03-16 14:48:27.851  1539  3733 I OplusAppSwitchManagerService: appswitch hasProcess ActivityRecord{ca0bcec u0 nup.z/.MainActivity t3762}
+03-16 14:48:27.851  1539  3733 I OplusJoystickManager: handleApplicationSwitch deprecated!
+03-16 14:48:27.851  1539  3733 I OplusAppSwitchManagerService: appswitch hasProcess ActivityRecord{ca0bcec u0 nup.z/.MainActivity t3762}
+03-16 14:48:27.851  1539  3733 I PowerHalWrapper: amsBoostNotify pid:9707,activity:nup.z.MainActivity, package:nup.z, mProcessCreatePacknup.z 
+03-16 14:48:27.851  1539  3733 I PowerHalWrapper: state: 1 
+03-16 14:48:27.851  1539  3733 I PowerHalWrapper: amsBoostNotify AMS_BOOST_PROCESS_CREATE_BOOST:true 
+03-16 14:48:27.851  1539  3733 I InputDispatcher: setFocusedApplication displayId=0 ActivityRecord{ca0bcec u0 nup.z/.MainActivity t3762}
+03-16 14:48:27.851  1539  2620 D OplusEapManager: mTargetExitName :com.android.launcher
+03-16 14:48:27.852  1539  2620 V DCSEX-AppSwitchManager: OnAppSwitchObserver: onAppExit, resuming = nup.z, target = com.android.launcher, is ResumingFirstStart =  true, is ResumingMultiApp =  false, extensionInfo =  Bundle[{taskId=3762, uid=10278}]
+03-16 14:48:27.852  1539  2620 D VRR [OPlusFrontAppManager]: OnAppSwitchObserver: onAppExit , info.targetName = com.android.launcher
+03-16 14:48:27.852  1539  2620 D VRR [OPlusFrontAppManager]: packageName: null
+03-16 14:48:27.852  1539  5828 D DCSEX-AppLaunchEventRecorder: onAppSwitch from = com.android.launcher to = nup.z
+03-16 14:48:27.852  1539  1737 D VRR [OPlusRefreshRateService]: handleFrontAppChange pkgName: null
+03-16 14:48:27.852  1539  1737 D VRR [OPlusExternalRefreshRateManager]: setFrontPackageName pkgName: null CurPkgName: com.android.launcher
+03-16 14:48:27.852   851   931 I libPowerHal: [perfNotifyAppState] foreground:nup.z, pid:9707, uid:10278
+03-16 14:48:27.852   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:27.852  1539  1691 D OplusKeepAliveManager: TOP_APP is ProcessRecord{bed9797 9707:nup.z/u0a278} uid is 10278
+03-16 14:48:27.852  1539  1719 E OplusThermalStats: Error getting package info: nup.z
+03-16 14:48:27.852  9707  9707 D cutils-dev: properties changed in otrace_seq_number_changed!
+03-16 14:48:27.852   851   931 I UxUtility: notifyForegroundApp pack:nup.z, uid:10278
+03-16 14:48:27.853   851   931 I TouchUtility: notifyAppState error = NULL
+03-16 14:48:27.853   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:27.853  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2280, tid:1889
+03-16 14:48:27.853  1539  2620 D OplusEapManager: mTargetEnterName :nup.z
+03-16 14:48:27.853  1539  2620 V DCSEX-AppSwitchManager: OnAppSwitchObserver: onAppEnter, launchedFrom =  com.android.launcher, target =  nup.z, is firstStart =  true, is multiApp =  false, extensionInfo =  Bundle[{taskId=3762, pid=9707, uid=10278}]
+03-16 14:48:27.853  1539  2620 D VRR [OPlusFrontAppManager]: OnAppSwitchObserver: onAppEnter , info.targetName = nup.z
+03-16 14:48:27.853  1539  2620 D VRR [OPlusFrontAppManager]: packageName: nup.z
+03-16 14:48:27.853   851   869 I mtkpower@impl: [notifyAppState] pc:1, com.android.launcher => nup.z
+03-16 14:48:27.854  1539  1737 D VRR [OPlusRefreshRateService]: handleFrontAppChange pkgName: nup.z
+03-16 14:48:27.854  1539  1737 D VRR [OPlusExternalRefreshRateManager]: setFrontPackageName pkgName: nup.z CurPkgName: null
+03-16 14:48:27.854  2580  6622 W Battery : ThermalControlUtils: mForegroundPkg=nup.z
+03-16 14:48:27.855  3326 20532 D OplusAtlas.OplusAtlasEventDispatch: setEvent:atlas_event_on_foreground_activities_changed info:pid:9707,uid:10278,hasForegroundActivities:1
+03-16 14:48:27.855  3326  3580 D OplusAtlas.OplusAudioScene: callback success event:atlas_event_on_foreground_activities_changed eventInfo:pid:9707,uid:10278,hasForegroundActivities:1
+03-16 14:48:27.855  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2280, dur:0, num:16, tid:1889
+03-16 14:48:27.855  4047 10983 V DeepThinker: ProcessManager: onForegroundActivitiesChanged pid:9707, uid:10278, foregroundActivities:true
+03-16 14:48:27.856  1539  1866 E AthenaService: MemoryGuardAction: handleAppChange
+03-16 14:48:27.857   851   869 I mtkpower@impl: [check_work_req] i:0, msg:1 hdl:2280, wait
+03-16 14:48:27.857  3326  3801 D OplusAtlas.OplusMessageHandler: handleMessage: Msg { when=-1ms what=2 obj=com.oplus.atlas.OplusAtlasEvent@e95fe2e target=com.oplus.atlas.OplusMessageHandler$MyHandler }
+03-16 14:48:27.857 22986 23001 D ZoomAppController: ignore onAppEnter: mCurrentZoomInfo is null
+03-16 14:48:27.858   851   931 I libPowerHal: [perfLockRel] hdl:2280, idx:0
+03-16 14:48:27.858   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: -1 -1 -1 -1 -1 -1
+03-16 14:48:27.858   851   931 I libPowerHal: [PD] system_server update cmd:2020000 param:1
+03-16 14:48:27.858   851   931 I libPowerHal: [PD] system_server update cmd:1410000 param:0
+03-16 14:48:27.859 22940 28934 I obrain  : app forground called:nup.z
+03-16 14:48:27.859   851   931 I libPowerHal: [PD] system_server update cmd:1c3c000, param:1
+03-16 14:48:27.859   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:27.859   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:27.859   874   874 I CameraMidasService: The size of PowerFactor is 120 ,The size of PowerFactors is 0, The memory size of PowerFactors is 0
+03-16 14:48:27.859   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:27.859   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:27.859   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:27.859   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:27.859   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:27.860   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:27.860   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:27.860   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:27.860   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:27.860   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:27.860   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:27.860   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:27.860   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:27.860   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:27.860  1539  4477 D OplusNetworkStatsServiceEx: getNetworkStatsFromProviders 0, NetworkStats: elapsedRealtime=0
+03-16 14:48:27.860  1539  2989 D OplusPowerMonitor: OplusWakeLockInfo{binderhash=259967621flags=1, tag=RILJ_ACK_WL, duration=197, starttime=258497333, packageName='com.android.phone', uid=1001, pid=2452}
+03-16 14:48:27.860  1539  4477 D OplusNetworkStatsServiceEx: getNetworkStatsFromProviders 1, NetworkStats: elapsedRealtime=0
+03-16 14:48:27.860   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:27.860   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:27.860   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:27.860  1539  1889 I mtkpower_client: ret_hdl:2281
+03-16 14:48:27.860   874   874 I CameraMidasService: getExplorerInfo The size of ExplorerInfo is 200 ,The size of ExplorerInfo is 0, The memory size of ExplorerInfo is 0
+03-16 14:48:27.860   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:27.860   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:27.860   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:27.861  1539  2098 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2524}, nlmsg_type{27()}, nlmsg_flags{0())}, nlmsg_seq{0}, nlmsg_pid{100862002} }
+03-16 14:48:27.861  3376  3403 D midasd  : rm 444, fcc 3928, pchq 842, reset 45, level 12, usb 475
+03-16 14:48:27.861   588   588 I hwservicemanager: getTransport: Cannot find entry vendor.oplus.hardware.handlefactory@1.0::IHandleFactory/default in either framework or device VINTF manifest.
+03-16 14:48:27.861   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:27.861   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:27.861   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:27.861 22940 28932 E HandleFactory: Failed to get IHandleFactory hal service, null
+03-16 14:48:27.861  9707  9707 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10278; state: ENABLED
+03-16 14:48:27.861   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: 2000000 -1 2600000 -1 2600000 -1
+03-16 14:48:27.861  9707  9707 I oplus.android.OplusFrameworkFactoryImpl: get feature:IOplusAutoResolutionFeature
+03-16 14:48:27.861  9707  9707 I oplus.android.OplusFrameworkFactoryImpl: getOplusAutoResolutionFeature
+03-16 14:48:27.862  2580  6622 W Battery : ThermalControllHandler: tempLevel=2,userMode=2,gameUserMode=-1,appType=-1,envTempType=0,appStates=[]
+03-16 14:48:27.863   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:27.863   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:27.863   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:27.863   588   588 I hwservicemanager: getTransport: Cannot find entry vendor.oplus.hardware.handlefactory@1.0::IHandleFactory/default in either framework or device VINTF manifest.
+03-16 14:48:27.863   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:27.863   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:27.863   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:27.863 22940 28922 E HandleFactory: Failed to get IHandleFactory hal service, null
+03-16 14:48:27.863   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:27.863   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:27.863   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:27.864   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:27.864   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:27.864   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:27.864   588   588 I hwservicemanager: getTransport: Cannot find entry vendor.oplus.hardware.handlefactory@1.0::IHandleFactory/default in either framework or device VINTF manifest.
+03-16 14:48:27.864  2580  6622 W Battery : ThermalControllHandler: tempGear=2,configItemName=common_config
+03-16 14:48:27.864  2580  4827 W Battery : ThermalControllHandler: MSG_THERMAL_CONTROL_CATEGORY_CHANGED
+03-16 14:48:27.864 22940 28932 E HandleFactory: Failed to get IHandleFactory hal service, null
+03-16 14:48:27.866  1539  4477 D OplusGameRotationService: lockRotationInGame: change state to 0
+03-16 14:48:27.873  9707  9707 W libc    : Access denied finding property "ro.odm.prev.product.name"
+03-16 14:48:27.874  9707  9707 D LoadedApk: mApplicationInfo overrideDisplayId:null
+03-16 14:48:27.875  3377  3409 E oiface  : get gpu freq table failed
+03-16 14:48:27.876  3377  3409 E oiface  : get gpu freq table failed
+03-16 14:48:27.876  1539  4477 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:27.876  1539  4477 D OplusAppListInterceptManager: shouldFilterTask::packageName = nup.z
+03-16 14:48:27.876  1539  4477 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:27.876  1539  4477 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.tencent.mm
+03-16 14:48:27.888   946   946 D OplusSurfaceFlinger: RESOLUTION > bounds(0,0,1080,2400), frame(0,0,1080,2400) FHD(1080, 2400), QHD(1080, 2400) mCurrentResolution=2 orientation = 0
+03-16 14:48:27.935  1539  1555 W System  : A resource failed to call release. 
+03-16 14:48:27.936  1539  1555 W System  : A resource failed to call release. 
+03-16 14:48:27.936  1539  1555 W System  : A resource failed to call release. 
+03-16 14:48:27.936  1539  1555 W System  : A resource failed to call release. 
+03-16 14:48:27.954  9707  9707 I Quality : LaunchTime2.0: nup.z createOrUpdateClassLoaderLocked took time: 79
+03-16 14:48:27.958  9707  9707 V GraphicsEnvironment: ANGLE Developer option for 'nup.z' set to: 'default'
+03-16 14:48:27.958  9707  9707 V GraphicsEnvironment: App is not on the allowlist for updatable production driver.
+03-16 14:48:27.961  9707  9707 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+03-16 14:48:27.961  9707  9707 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+03-16 14:48:27.974  9707  9707 I Quality : BindApplication: nup.z
+03-16 14:48:27.976   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:27.976   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:27.977  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2281, tid:1889
+03-16 14:48:27.977  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2281, dur:0, num:16, tid:1889
+03-16 14:48:27.977   851   931 I libPowerHal: [perfLockRel] hdl:2281, idx:0
+03-16 14:48:27.978   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: -1 -1 -1 -1 -1 -1
+03-16 14:48:27.978   851   931 I libPowerHal: [PD] system_server update cmd:2020000 param:1
+03-16 14:48:27.978   851   931 I libPowerHal: [PD] system_server update cmd:1410000 param:0
+03-16 14:48:27.979   851   931 I libPowerHal: [PD] system_server update cmd:1c3c000, param:1
+03-16 14:48:27.979   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:27.980  1539  1889 I mtkpower_client: ret_hdl:2282
+03-16 14:48:27.980  1539  4477 W ActivityManager: setGlThreads detect 9707 9728
+03-16 14:48:27.980   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: 2000000 -1 2600000 -1 2600000 -1
+03-16 14:48:27.984  9707  9730 E nup.z   : Loaded layer handle (1517116873652850839) for layer /my_product/lib64/libcolorx-loader.so
+03-16 14:48:27.985  9707  9730 E nup.z   : Looking for entrypoint ColorX_Check
+03-16 14:48:27.985  9707  9730 E nup.z   : Found ColorX_Check for /my_product/lib64/libcolorx-loader.so
+03-16 14:48:27.985  9707  9730 E nup.z   : Check failed
+03-16 14:48:27.986  9707  9730 D libMEOW : meow new tls: 0xb40000760c6bf540
+03-16 14:48:27.986  9707  9730 D libMEOW : meow reload base cfg path: na
+03-16 14:48:27.986  9707  9730 D libMEOW : meow reload overlay cfg path: na
+03-16 14:48:27.986  9707  9730 W QT      : qt_process_init() called
+03-16 14:48:27.986  9707  9730 E QT      : [QT]file does not exist
+03-16 14:48:27.987  9707  9730 W QT      : Support!!
+03-16 14:48:27.987  9707  9730 E QT      : [QT]file does not exist
+03-16 14:48:27.988  9707  9730 D libMEOW : applied 1 plugins for [nup.z]:
+03-16 14:48:27.988  9707  9730 D libMEOW :   plugin 1: [libMEOW_gift.so]:
+03-16 14:48:27.989  9707  9730 D libMEOW : meow delete tls: 0xb40000760c6bf540
+03-16 14:48:28.012  9707  9707 E MultiApp.Impl: OplusMultiAppImpl
+03-16 14:48:28.013  9707  9707 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+03-16 14:48:28.033  9707  9707 I oplus.android.OplusFrameworkFactoryImpl: Unknow feature:IOplusTextViewRTLUtilForUG
+03-16 14:48:28.040  1539  4477 W OplusNavigationBarUtil: color navigation bar util isn't init.
+03-16 14:48:28.045  9707  9707 D ScrollOptimizationHelper: can't find the config file for optimizaiton
+03-16 14:48:28.045  9707  9707 D ScrollOptimizationHelper: will not debug for debug is false
+03-16 14:48:28.045  9707  9707 I oplus.android.OplusFrameworkFactoryImpl: get feature:IOplusDynamicVsyncFeature
+03-16 14:48:28.045  9707  9707 I oplus.android.OplusFrameworkFactoryImpl: get feature:IOplusDynamicVsyncFeature
+03-16 14:48:28.045  9707  9707 I oplus.android.OplusFrameworkFactoryImpl: get feature:IOplusDynamicVsyncFeature
+03-16 14:48:28.047  9707  9707 D AndroidRuntime: Shutting down VM
+--------- beginning of crash
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: FATAL EXCEPTION: main
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: Process: nup.z, PID: 9707
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{nup.z/nup.z.MainActivity}: android.view.InflateException: Binary XML file line #31 in android:layout/screen_toolbar: Binary XML file line #31 in android:layout/screen_toolbar: Error inflating class com.android.internal.widget.ActionBarContainer
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3813)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3975)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:135)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2377)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:233)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:344)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8205)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:589)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1071)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: Caused by: android.view.InflateException: Binary XML file line #31 in android:layout/screen_toolbar: Binary XML file line #31 in android:layout/screen_toolbar: Error inflating class com.android.internal.widget.ActionBarContainer
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: Caused by: android.view.InflateException: Binary XML file line #31 in android:layout/screen_toolbar: Error inflating class com.android.internal.widget.ActionBarContainer
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: Caused by: java.lang.reflect.InvocationTargetException
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at java.lang.reflect.Constructor.newInstance0(Native Method)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:343)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.view.LayoutInflater.createView(LayoutInflater.java:858)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:1014)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:965)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1144)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:1105)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:686)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:538)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:485)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at com.android.internal.policy.DecorView.onResourcesLoaded(DecorView.java:2370)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at com.android.internal.policy.PhoneWindow.generateLayout(PhoneWindow.java:2688)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at com.android.internal.policy.PhoneWindow.installDecor(PhoneWindow.java:2751)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at com.android.internal.policy.PhoneWindow.getDecorView(PhoneWindow.java:2156)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at nup.z.MainActivity.onCreate(MainActivity.java:32)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:8130)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:8110)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1343)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3782)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3975)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:135)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2377)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:233)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:344)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8205)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:589)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1071)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: Caused by: java.lang.UnsupportedOperationException: Failed to resolve attribute at index 13: TypedValue{t=0x2/d=0x1010433 a=1}
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.content.res.TypedArray.getDrawableForDensity(TypedArray.java:998)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.content.res.TypedArray.getDrawable(TypedArray.java:982)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.view.View.<init>(View.java:5559)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.view.ViewGroup.<init>(ViewGroup.java:707)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.widget.FrameLayout.<init>(FrameLayout.java:99)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.widget.FrameLayout.<init>(FrameLayout.java:94)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at android.widget.FrameLayout.<init>(FrameLayout.java:89)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	at com.android.internal.widget.ActionBarContainer.<init>(ActionBarContainer.java:57)
+03-16 14:48:28.049  9707  9707 E AndroidRuntime: 	... 31 more
+03-16 14:48:28.051  1539  2429 D OplusAppStartupMonitor: notifyUnstableAppInfo: Bundle[{unstableTime=1678949308051, reason=crash, userId=0, safecenter=unstable, exceptionMsg=Failed to resolve attribute at index 13: TypedValue{t=0x2/d=0x1010433 a=1}, exceptionClass=java.lang.UnsupportedOperationException, packageName=nup.z, unstable_restrict_switch=true}]
+03-16 14:48:28.051   851   931 D RilUtility: notify_rild_crash_pid_set certPid:-1, crash:9707, scn:0x0
+03-16 14:48:28.051  3847  5195 I Athena  : StartupManager: onUpdateUnstableRecord: unstable crash!
+03-16 14:48:28.052  1539  4477 D OplusAmsUtilsFeatrue: detectExceptionsForOIDT type:0
+03-16 14:48:28.053  1539  4477 W ActivityTaskManager:   Force finishing activity nup.z/.MainActivity
+03-16 14:48:28.053   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:28.053  1539  9731 I DropBoxManagerService: add tag=data_app_crash isTagEnabled=true flags=0x2
+03-16 14:48:28.053  1539  4477 I InputDispatcher: setFocusedApplication displayId=0 ActivityRecord{80da386 u0 com.android.launcher/.Launcher t5}
+03-16 14:48:28.054  1539  4477 V OplusZoomWindowManagerService: prepareZoomTransition: curStack=Task{3dad39f #3762 type=standard A=10278:nup.z U=0 visible=false mode=fullscreen translucent=true sz=1}   nextStackTask{8761cfd #1 type=home ?? U=0 visible=true mode=fullscreen translucent=true sz=1}
+03-16 14:48:28.054   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:28.054  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2282, tid:1889
+03-16 14:48:28.054  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2282, dur:0, num:16, tid:1889
+03-16 14:48:28.054   851   931 I libPowerHal: [perfLockRel] hdl:2282, idx:0
+03-16 14:48:28.054   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: -1 -1 -1 -1 -1 -1
+03-16 14:48:28.054   851   931 I libPowerHal: [PD] system_server update cmd:2020000 param:1
+03-16 14:48:28.054   851   931 I libPowerHal: [PD] system_server update cmd:1410000 param:0
+03-16 14:48:28.054   851   931 I libPowerHal: [PD] system_server update cmd:1c3c000, param:1
+03-16 14:48:28.055   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:28.055  1539  9731 D DropBoxManagerService: file :: /data/system/dropbox/data_app_crash@1678949308054.txt
+03-16 14:48:28.055  1539  9731 W AES     : Exception Log handling...
+03-16 14:48:28.055  1539  9731 W AES     : Skipped - do not care third party apk
+03-16 14:48:28.055  1539  1889 I mtkpower_client: ret_hdl:2283
+03-16 14:48:28.055   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:28.055   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: 2000000 -1 2600000 -1 2600000 -1
+03-16 14:48:28.056   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:28.056  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2283, tid:1889
+03-16 14:48:28.056  1539  9581 W OplusSelfProtectManager: pkg[com.oplus.crashbox] not in policy list
+03-16 14:48:28.056  1539  1717 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.stats.service.DropBoxEntryAddedReceiver
+03-16 14:48:28.056  1539  1717 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+03-16 14:48:28.057  9707  9707 I Process : Sending signal. PID: 9707 SIG: 9
+03-16 14:48:28.057  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2283, dur:0, num:16, tid:1889
+03-16 14:48:28.057  1539  1691 I Quality : LaunchTime2.0: nup.z/.MainActivity 1 289
+03-16 14:48:28.058  2546  3055 I iopgp   : Iopgp: TRANSACTION_IOPGP_ON_ACTIVITY_LAUNCH_CANCELLED sequence_id = 28 title = 
+03-16 14:48:28.058  2546  3055 I iopgp   : Iopgp::abort tracing.
+03-16 14:48:28.058   851   931 I libPowerHal: [perfLockRel] hdl:2283, idx:0
+03-16 14:48:28.058   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: -1 -1 -1 -1 -1 -1
+03-16 14:48:28.058   851   931 I libPowerHal: [PD] system_server update cmd:2020000 param:1
+03-16 14:48:28.058   851   931 I libPowerHal: [PD] system_server update cmd:1410000 param:0
+03-16 14:48:28.059   851   931 I libPowerHal: [PD] system_server update cmd:1c3c000, param:1
+03-16 14:48:28.059   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:28.060  1539  1889 I mtkpower_client: ret_hdl:2284
+03-16 14:48:28.060   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: 2000000 -1 2200000 -1 2284000 -1
+03-16 14:48:28.061  1539  4477 D OplusKeepAliveManager: TOP_APP is ProcessRecord{a2922be 2488:com.android.launcher/u0a178} uid is 10178
+03-16 14:48:28.061  1539  1719 E OplusThermalStats: Error getting package info: com.android.launcher
+03-16 14:48:28.076  1539  1558 V ActivityManager: Death received in com.android.server.am.ActivityManagerService$AppDeathRecipient@9a818ab for thread android.os.BinderProxy@358cb08
+03-16 14:48:28.077   804   804 I Zygote  : Process 9707 exited due to signal 9 (Killed)
+03-16 14:48:28.077  1539  1712 I libprocessgroup: Successfully killed process cgroup uid 10278 pid 9707 in 0ms
+03-16 14:48:28.077  1539  1558 D TheiaManager: com.android.server.wm.OplusWindowManagerService@12e5a04 getDeclaredField : com.android.server.wm.WindowManagerService.mRoot
+03-16 14:48:28.077  1539  1558 D TheiaManager: com.android.server.wm.RootWindowContainer@1d0a782 callDeclaredMethod : com.android.server.wm.RootWindowContainer.getTopFocusedDisplayContent param[] null args[]null
+03-16 14:48:28.078  1539  1558 D TheiaManager: Display 0 info=DisplayInfo{"内置屏幕", displayId 0", displayGroupId 0, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS, FLAG_TRUSTED, real 1080 x 2400, largest app 2161 x 2161, smallest app 1080 x 973, appVsyncOff 7955555, presDeadline 17488889, mode 2, defaultMode 1, modes [{id=1, width=1080, height=2400, fps=60.0, alternativeRefreshRates=[90.0]}, {id=2, width=1080, height=2400, fps=90.0, alternativeRefreshRates=[60.0]}], hdrCapabilities HdrCapabilities{mSupportedHdrTypes=[2, 3, 4], mMaxLuminance=500.0, mMaxAverageLuminance=500.0, mMinLuminance=0.0}, userDisabledHdrTypes [], minimalPostProcessingSupported false, rotation 0, state ON, type INTERNAL, uniqueId "local:0", app 1080 x 2161, density 480 (409.432 x 409.127) dpi, layerStack 0, colorMode 0, supportedColorModes [0], address {port=0}, deviceProductInfo null, removeMode 0, refreshRateOverride 0.0, brightnessMinimum 0.0, brightnessMaximum 1.0, brightnessDefault 2746.0} rootTasks=[WindowedMagnification:0:31@191709037, HideDisplayCutout:32:55@173726168, Leaf:56:57@90235067, HideDisplayCutout:58:99@123302592, Leaf:100:100@198716483] getDeclaredField : com.android.server.wm.DisplayContent.mFocusedApp
+03-16 14:48:28.078  1539  1558 D TheiaManager: ActivityRecord{80da386 u0 com.android.launcher/.Launcher t5} callDeclaredMethod : com.android.server.wm.ActivityRecord.getPid param[] null args[]null
+03-16 14:48:28.079  1539  1558 E TheiaManager: [tagL]: calling catchLog()..., focusedPid:2488 pids:[2488]
+03-16 14:48:28.079  1539  1558 D TheiaManager: No stackTrace found in args
+03-16 14:48:28.079  1539  1558 D TheiaManager: KEY:logTypeVALUE:ApplicationFGCrash
+03-16 14:48:28.079  1539  1558 D TheiaManager: KEY:deadMomentVALUE:1678949308077
+03-16 14:48:28.079  1539  1558 D TheiaManager: KEY:appNameVALUE:NUP
+03-16 14:48:28.079  1539  1558 D TheiaManager: KEY:packageVersionVALUE:1.0
+03-16 14:48:28.079  1539  1558 D TheiaManager: KEY:packageNameVALUE:nup.z
+03-16 14:48:28.079  1539  5695 D TheiaSocketClient: TheiaSend receive content : 4298113028:ApplicationFGCrash:1678949308079
+03-16 14:48:28.079  1539  5695 D TheiaSocketClient: send message success
+03-16 14:48:28.079  1539  1558 D TheiaCrashMonitor: nup.zcrash
+03-16 14:48:28.079  1322  5930 I theia_socket: recv 4298113028:ApplicationFGCrash:1678949308079
+03-16 14:48:28.079  1539  1558 I ActivityManager: Process nup.z (pid 9707) has died: fg  TOP 
+03-16 14:48:28.079  1322  5930 I theia_socket: nowEvent is not KeyEvent
+03-16 14:48:28.079  1539  1558 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1177 com.android.server.am.OplusExtraActivityManagerService.setKeyLockModeNormal:51 com.android.server.am.ActivityManagerServiceExtImpl.setKeyLockModeNormal:803 com.android.server.am.ActivityManagerService.appDiedLocked:3421 com.android.server.am.ActivityManagerService$AppDeathRecipient.binderDied:1536 
+03-16 14:48:28.082  4047  7932 V DeepThinker: ProcessManager: onProcessDied pid:9707, uid:10278
+03-16 14:48:28.083  1539  1558 D OplusStartingWindowManager: interceptRemoveStartingWindow activity.packageName=nup.z isSnapshot=false mStartingSurfaceRunnable=null
+03-16 14:48:28.083  1539  1558 D OplusSplitScreenManagerService: notifyRemoveStartingWindow mOplusSpiltScreenDnDUI is null, just return!
+03-16 14:48:28.084  1539  1558 I OplusHansManager : front pkg: com.android.launcher, uid: 10178, prev pkg: nup.z, prev uid: 10278
+03-16 14:48:28.084   851   931 D RilUtility: notify_rild_crash_pid_set certPid:-1, crash:9707, scn:0x0
+03-16 14:48:28.085  2222  2948 I BufferQueueProducer: [ViewRootImpl[z]#86(BLAST Consumer)86](id:8ae0000006a,api:1,p:2222,c:2222) disconnect: api 1
+03-16 14:48:28.086  1539  2770 I OplusHansManager : onUidGone(), 10278 nup.z exit SM
+03-16 14:48:28.086  1539  2770 I OplusHansManager : notifyAppGoForeground, uid=10178
+03-16 14:48:28.086  1539  2770 I OplusHansManager : notifyAppGoBackground, uid=10278
+03-16 14:48:28.087  1539  1558 D TaskExtImpl: addColorModeOnResume resume=true pkg = com.android.launcher
+03-16 14:48:28.088  2222  2948 E BLASTBufferQueue: BLASTBufferItemConsumer::onDisconnect()
+03-16 14:48:28.088  2222  2358 D View    : [Warning] assignParent to null: this = android.widget.FrameLayout{4fe892b V.E...... ........ 0,0-1080,2400}
+03-16 14:48:28.089  2222  2358 V OplusZoomWindowDecorViewHelper: removeZoomView
+03-16 14:48:28.089  2222  2358 I BLASTBufferQueue: [ViewRootImpl[z]#86] destructor()
+03-16 14:48:28.089  2222  2358 I BufferQueueConsumer: [ViewRootImpl[z]#86(BLAST Consumer)86](id:8ae0000006a,api:0,p:-1,c:2222) disconnect
+03-16 14:48:28.090  1539  2237 I Osense-DecisionMaker: notifySceneToPolicy...SCENE_LAUNCHER
+03-16 14:48:28.090  1539  2237 D Osense-DecisionMaker: getCurrentSysStats, memMb: 6883
+03-16 14:48:28.091  1539  2450 I OplusResourcePreloadManager: resume pkg: com.android.launcher, uid:10178, prev pkg: nup.z, prev uid: 10278
+03-16 14:48:28.094  2488  2571 E Parcel  : Reading a NULL string not supported here.
+03-16 14:48:28.096  1539  2989 W InputManager-JNI: Input channel object '985fb31 Splash Screen nup.z (client)' was disposed without first being removed with the input manager!
+03-16 14:48:28.096  1539  2989 D WindowManager: setParent old=ActivityRecord{ca0bcec u0 nup.z/.MainActivity t3762 f} isExiting},new=null,this window=Window{985fb31 u0 Splash Screen nup.z EXITING},callers=com.android.server.wm.WindowContainer.removeChild:634 com.android.server.wm.ActivityRecord.removeChild:4074 com.android.server.wm.ActivityRecord.removeChild:389 com.android.server.wm.WindowContainer.removeImmediately:686 com.android.server.wm.WindowState.removeImmediately:2518 com.android.server.wm.WindowState.removeIfPossible:2714 
+03-16 14:48:28.096  1539  2989 I WindowStateExtImpl: onSurfaceShowChange show = false mPackageName = nup.z parentPkgName = nup.z
+03-16 14:48:28.098  1539  2989 W WindowManager: Changing focus from null to Window{6b59f98 u0 com.android.launcher/com.android.launcher.Launcher} displayId=0 Callers=com.android.server.wm.RootWindowContainer.updateFocusedWindowLocked:492 com.android.server.wm.WindowManagerService.updateFocusedWindowLocked:6010 com.android.server.wm.WindowState.removeIfPossible:2723 com.android.server.wm.WindowState.removeIfPossible:2584 
+03-16 14:48:28.098  1539  2989 D Theia.NoFocusWindow: FocusWindowErrorScene cancelCheckFreezeScreen
+03-16 14:48:28.098  1539  3733 D OplusDisplayPolicy: com.android.launcher, change system app cutoutMode: oplus always
+03-16 14:48:28.101   851   870 I mtkpower@impl: [setMode] type:5, enabled:0
+03-16 14:48:28.101  1539  1558 I PowerHalWrapper: amsBoostStop AMS_BOOST_PACK_SWITCH:true, AMS_BOOST_ACT_SWITCH:false, AMS_BOOST_PROCESS_CREATE:true 
+03-16 14:48:28.101   946   946 D OplusLayer: ~Layer() sequence=1938, name=985fb31 Splash Screen nup.z#0 0xb4000074b7300000
+03-16 14:48:28.101   946   946 D OplusLayer: ~Layer() sequence=1943, name=Surface(name=8e6b5fd StatusBar)/@0x41a9836 - animation-leash of insets_animation#1 0xb4000074b7302800
+03-16 14:48:28.101   946   946 D OplusLayer: ~Layer() sequence=1944, name=Surface(name=2e9a99 NavigationBar0)/@0x8100a4 - animation-leash of insets_animation#1 0xb4000074b724d000
+03-16 14:48:28.102  1539  1558 I FocusResolver: updateFocusedWindow, 6b59f98 com.android.launcher/com.android.launcher.Launcher on display 0, reason: Window became focusable. Previous reason: NO_WINDOW, result:   FocusedWindows:
+03-16 14:48:28.102  1539  1558 I FocusResolver:     displayId=0, name='6b59f98 com.android.launcher/com.android.launcher.Launcher'
+03-16 14:48:28.102   946   946 I BufferQueueDebug: [Splash Screen nup.z#0](this:0xb4000074d0db9998,id:-1,api:0,p:-1,c:946) onDestructor()
+03-16 14:48:28.102   946   946 D OplusLayer: ~Layer() sequence=1939, name=Splash Screen nup.z#0 0xb4000074d0db7000
+03-16 14:48:28.102  2222  4588 I BLASTBufferQueue: releaseBufferCallbackThunk bufferId:9543417332503 framenumber:1 blastBufferQueue is dead
+03-16 14:48:28.103  1539  1558 D InputMethodManagerService: isSecurity: attribute.packageName=com.android.launcher mCurMethodId=com.sohu.inputmethod.sogouoem/.SogouIME
+03-16 14:48:28.103  1539  1558 D InputMethodManagerService: isSecurity= false (  enable=true needShow=false inBlackList=false isExist=true )
+03-16 14:48:28.104  1539  1691 I VRR [OPlusRefreshRateManager]: hasADFRFeature return false
+03-16 14:48:28.105  1539  1691 I DisplayManagerService: Comparing display specs: baseModeId=2 allowGroupSwitching=false primaryRefreshRateRange=[0 90] appRequestRefreshRateRange=[0 90] vrrPolicy=POLICY_DEFAULT, existing: baseModeId=1 allowGroupSwitching=false primaryRefreshRateRange=[0 90] appRequestRefreshRateRange=[0 90] vrrPolicy=POLICY_DEFAULT
+03-16 14:48:28.109  2580  4894 E AbnormalAppMonitor_service: findReport =  false
+03-16 14:48:28.109  2580  4894 E AbnormalAppMonitor_service: handleCrash, no info matched, try update!
+03-16 14:48:28.110   946  1600 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredDisplayModeSpecs, from process 1539
+03-16 14:48:28.110   946   946 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredDisplayModeSpecsInternal: default mode ID: 1, allowGroupSwitching = 0, primary range: [0.00fps 90.00fps], app request range: [0.00fps 90.00fps]
+03-16 14:48:28.110   946   946 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredDisplayModeSpecsInternal: 1 (90.00fps)
+03-16 14:48:28.110   946   946 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredActiveMode: 90.00fps event: 1 
+03-16 14:48:28.110   946  1600 E HWComposer: getSupportedContentTypes: getSupportedContentTypes failed for display 0: Unsupported (8)
+03-16 14:48:28.110  1539  1737 D VRR [OPlusRefreshRateService]: onConfigChanged physicalDisplayId: 0 modeId: 1
+03-16 14:48:28.112  2488  2571 E Parcel  : Reading a NULL string not supported here.
+03-16 14:48:28.116 24589 24887 W oaps_host: OapsProvider query, callingPkg = com.oplus.battery, callingPid = 2580, uriMap = {path=/support, scheme=oaps, sgtp=1, base_pkg=android, host=mk, tp=/dtd, enterId=38}
+03-16 14:48:28.120  2488  2571 E Parcel  : Reading a NULL string not supported here.
+03-16 14:48:28.122  2488  2571 E Parcel  : Reading a NULL string not supported here.
+03-16 14:48:28.183  1539  3946 V OplusZoomWindowManagerService: onAnimationFinished:  r = ActivityRecord{80da386 u0 com.android.launcher/.Launcher t5}
+03-16 14:48:28.183  1539  3946 I OplusAppSwitchManagerService:  handleAppVisible , r = ActivityRecord{80da386 u0 com.android.launcher/.Launcher t5}
+03-16 14:48:28.184  1539  3946 V OplusZoomWindowManagerService: onAnimationFinished:  r = ActivityRecord{ca0bcec u0 nup.z/.MainActivity t3762 f} isExiting}
+03-16 14:48:28.187  1539  1691 I VRR [OPlusRefreshRateManager]: hasADFRFeature return false
+03-16 14:48:28.187  1539  1691 I DisplayManagerService: Comparing display specs: baseModeId=1 allowGroupSwitching=false primaryRefreshRateRange=[0 90] appRequestRefreshRateRange=[0 90] vrrPolicy=POLICY_DEFAULT, existing: baseModeId=2 allowGroupSwitching=false primaryRefreshRateRange=[0 90] appRequestRefreshRateRange=[0 90] vrrPolicy=POLICY_DEFAULT
+03-16 14:48:28.190   946  1600 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredDisplayModeSpecs, from process 1539
+03-16 14:48:28.190   946   946 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredDisplayModeSpecsInternal: default mode ID: 0, allowGroupSwitching = 0, primary range: [0.00fps 90.00fps], app request range: [0.00fps 90.00fps]
+03-16 14:48:28.190   946   946 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredDisplayModeSpecsInternal: 1 (90.00fps)
+03-16 14:48:28.190   946   946 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredActiveMode: 90.00fps event: 1 
+03-16 14:48:28.191  1539  1737 D VRR [OPlusRefreshRateService]: onConfigChanged physicalDisplayId: 0 modeId: 1
+03-16 14:48:28.191   946  1600 E HWComposer: getSupportedContentTypes: getSupportedContentTypes failed for display 0: Unsupported (8)
+03-16 14:48:28.193  1539  1692 D WindowManager: setParent old=Task{3dad39f #3762 type=standard A=10278:nup.z U=0 visible=false mode=fullscreen translucent=true sz=0},new=null,this window=ActivityRecord{ca0bcec u0 nup.z/.MainActivity t3762 f}},callers=com.android.server.wm.WindowContainer.removeChild:634 com.android.server.wm.Task.removeChild:1857 com.android.server.wm.Task.removeChild:1836 com.android.server.wm.WindowContainer.removeImmediately:686 com.android.server.wm.WindowToken.removeImmediately:376 com.android.server.wm.ActivityRecord.removeImmediately:3878 
+03-16 14:48:28.194  1539  1692 D OplusMirageWindowManagerService: onTaskRemoved displayid:0 taskId:3762 callers:com.android.server.wm.TaskDisplayArea.removeChildTask:425 com.android.server.wm.TaskDisplayArea.removeChild:414 com.android.server.wm.WindowContainer.removeImmediately:686 com.android.server.wm.Task.removeImmediately:3369 com.android.server.wm.Task.removeIfPossible:1049 
+03-16 14:48:28.194  1539  1692 I OplusScreenSecurityMask: onStackRemoved task = Task{3dad39f #3762 type=standard A=10278:nup.z U=0 visible=false mode=fullscreen translucent=true sz=0} record = null displayId = 0
+03-16 14:48:28.194  1539  1692 D WindowManager: setParent old=DefaultTaskDisplayArea@38247582,new=null,this window=Task{3dad39f #3762 type=standard A=10278:nup.z U=0 visible=false mode=fullscreen translucent=true sz=0},callers=com.android.server.wm.WindowContainer.removeChild:634 com.android.server.wm.TaskDisplayArea.removeChildTask:427 com.android.server.wm.TaskDisplayArea.removeChild:414 com.android.server.wm.WindowContainer.removeImmediately:686 com.android.server.wm.Task.removeImmediately:3369 com.android.server.wm.Task.removeIfPossible:1049 
+03-16 14:48:28.194  1539  1692 D TaskExtImpl: remove ActivityRecord{ca0bcec u0 nup.z/.MainActivity t-1 f}} to mActivityRecordSum = Counter{ }
+03-16 14:48:28.195  1539  1692 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=3762 attached=false
+03-16 14:48:28.195  1539  1692 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=3762 attached=false
+03-16 14:48:28.198  1539  3946 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:28.198  1539  3946 D OplusAppListInterceptManager: shouldFilterTask::packageName = nup.z
+03-16 14:48:28.198  1539  3946 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:28.198  1539  3946 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.tencent.mm
+03-16 14:48:28.198  1539  3946 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:28.198  1539  3946 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.heytap.browser
+03-16 14:48:28.199  1539  2323 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:28.199  1539  2323 D OplusAppListInterceptManager: shouldFilterTask::packageName = nup.z
+03-16 14:48:28.199  1539  2323 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:28.199  1539  2323 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.tencent.mm
+03-16 14:48:28.199  1539  2323 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:28.199  1539  2323 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.heytap.browser
+03-16 14:48:28.202   946   946 D OplusLayer: ~Layer() sequence=1947, name=Task=3762#1 0xb4000074d059f800
+03-16 14:48:28.203   946   946 D OplusLayer: ~Layer() sequence=1937, name=ActivityRecord{ca0bcec u0 nup.z/.MainActivity#0 0xb4000074b7263800
+03-16 14:48:28.291  1539  1737 D VRR [OPlusRefreshRateService]: handleConfigIdChange physicalDisplayId: 0 configId: 1
+03-16 14:48:28.292  1539  2323 D ActivityManager: getProcessesInErrorState callingUid=10279, CallingPid=30213
+03-16 14:48:28.353  1539  9436 W OplusSelfProtectManager: pkg[com.oplus.crashbox] not in policy list
+03-16 14:48:28.355  2580  2905 D AppSwitchListener: onAppEnter: Uid = 10278
+03-16 14:48:28.356  2580  2905 W AuthDialogHelper: checkNotificationSwitchFirst() called with: context = [com.oplus.notification.NotificationCenterService@600ae95], pkg = [nup.z], uid = [10278], userId = [0], init checker
+03-16 14:48:28.357  2580  2905 E AuthDialogHelper: CheckNotificationCanBeSetSecond: check nup.z , Notification master switch on, unable to pop dialog
+03-16 14:48:28.553  1539  1691 W ActivityTaskManager: Activity top resumed state loss timeout for ActivityRecord{ca0bcec u0 nup.z/.MainActivity t-1 f}}
+03-16 14:48:28.554  1539  1691 I OplusJoystickManager: handleApplicationSwitch deprecated!
+03-16 14:48:28.554  1539  2620 D OplusEapManager: mTargetExitName :nup.z
+03-16 14:48:28.554  1539  2620 V DCSEX-AppSwitchManager: OnAppSwitchObserver: onAppExit, resuming = com.android.launcher, target = nup.z, is ResumingFirstStart =  false, is ResumingMultiApp =  false, extensionInfo =  Bundle[{taskId=5, uid=10178}]
+03-16 14:48:28.554  1539  1691 I PowerHalWrapper: amsBoostNotify pid:2488,activity:com.android.launcher.Launcher, package:com.android.launcher, mProcessCreatePacknup.z 
+03-16 14:48:28.554  1539  1691 I PowerHalWrapper: state: 1 
+03-16 14:48:28.555  1539  1691 I PowerHalWrapper: amsBoostNotify AMS_BOOST_PROCESS_CREATE_BOOST:true 
+03-16 14:48:28.555  1539  2620 D VRR [OPlusFrontAppManager]: OnAppSwitchObserver: onAppExit , info.targetName = nup.z
+03-16 14:48:28.555  1539  2620 D VRR [OPlusFrontAppManager]: packageName: null
+03-16 14:48:28.555  1539  5828 D DCSEX-AppLaunchEventRecorder: onAppSwitch from = nup.z to = com.android.launcher
+03-16 14:48:28.555  1539  1737 D VRR [OPlusRefreshRateService]: handleFrontAppChange pkgName: null
+03-16 14:48:28.555   851   931 I libPowerHal: [perfNotifyAppState] foreground:com.android.launcher, pid:2488, uid:10178
+03-16 14:48:28.555  1539  1737 D VRR [OPlusExternalRefreshRateManager]: setFrontPackageName pkgName: null CurPkgName: nup.z
+03-16 14:48:28.556   851   931 I UxUtility: notifyForegroundApp pack:com.android.launcher, uid:10178
+03-16 14:48:28.556   851   931 I TouchUtility: notifyAppState error = NULL
+03-16 14:48:28.556   851   869 I mtkpower@impl: [notifyAppState] pc:0, nup.z => com.android.launcher
+03-16 14:48:28.556  1539  2620 D OplusEapManager: mTargetEnterName :com.android.launcher
+03-16 14:48:28.556  1539  2620 V DCSEX-AppSwitchManager: OnAppSwitchObserver: onAppEnter, launchedFrom =  null, target =  com.android.launcher, is firstStart =  false, is multiApp =  false, extensionInfo =  Bundle[{taskId=5, pid=2488, uid=10178}]
+03-16 14:48:28.556  2580  6622 D AppSwitchListener: onAppExit() called !
+03-16 14:48:28.556  1539  2620 D VRR [OPlusFrontAppManager]: OnAppSwitchObserver: onAppEnter , info.targetName = com.android.launcher
+03-16 14:48:28.556  1539  2620 D VRR [OPlusFrontAppManager]: packageName: com.android.launcher
+03-16 14:48:28.556  1539  1737 D VRR [OPlusRefreshRateService]: handleFrontAppChange pkgName: com.android.launcher
+03-16 14:48:28.556  1539  1737 D VRR [OPlusExternalRefreshRateManager]: setFrontPackageName pkgName: com.android.launcher CurPkgName: null
+03-16 14:48:28.557  2580  6625 W Battery : ThermalControlUtils: mForegroundPkg=com.android.launcher
+03-16 14:48:28.557 22986 23002 D ZoomAppController: ignore onAppEnter: mCurrentZoomInfo is null
+03-16 14:48:28.558  1539  1866 E AthenaService: MemoryGuardAction: handleAppChange
+03-16 14:48:28.558 22940 28934 I obrain  : app forground called:com.android.launcher
+03-16 14:48:28.559   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:28.559   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:28.559   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:28.559   874   874 I CameraMidasService: The size of PowerFactor is 120 ,The size of PowerFactors is 0, The memory size of PowerFactors is 0
+03-16 14:48:28.559   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:28.559   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:28.559   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:28.559   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:28.559  1539  3983 D OplusPowerMonitor: OplusWakeLockInfo{binderhash=117959190flags=1, tag=*launch*, duration=244, starttime=258517324, packageName='android', uid=1000, pid=1539}
+03-16 14:48:28.559   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:28.559   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:28.560   588   588 I hwservicemanager: getTransport: Cannot find entry vendor.oplus.hardware.handlefactory@1.0::IHandleFactory/default in either framework or device VINTF manifest.
+03-16 14:48:28.560   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:28.560   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:28.560   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:28.560   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:28.560   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:28.560   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:28.560  3376  3403 D midasd  : rm 444, fcc 3928, pchq 842, reset 45, level 12, usb 475
+03-16 14:48:28.560 22940 28932 E HandleFactory: Failed to get IHandleFactory hal service, null
+03-16 14:48:28.560   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:28.560   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:28.560   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:28.560   874   874 I CameraMidasService: getExplorerInfo The size of ExplorerInfo is 200 ,The size of ExplorerInfo is 0, The memory size of ExplorerInfo is 0
+03-16 14:48:28.560   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:28.560   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:28.560   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:28.561   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:28.561   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:28.561   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:28.561   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:28.561   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:28.561   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:28.561   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:28.561   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:28.561   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:28.561   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:28.561   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:28.561   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:28.562  1539  2314 D OplusGameRotationService: lockRotationInGame: change state to 0
+03-16 14:48:28.562   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:28.562   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:28.562   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:28.563   588   588 I hwservicemanager: getTransport: Cannot find entry vendor.oplus.hardware.handlefactory@1.0::IHandleFactory/default in either framework or device VINTF manifest.
+03-16 14:48:28.563 22940 28922 E HandleFactory: Failed to get IHandleFactory hal service, null
+03-16 14:48:28.563   588   588 I hwservicemanager: getTransport: Cannot find entry vendor.oplus.hardware.handlefactory@1.0::IHandleFactory/default in either framework or device VINTF manifest.
+03-16 14:48:28.564 22940 28932 E HandleFactory: Failed to get IHandleFactory hal service, null
+03-16 14:48:28.565  2580  6625 W Battery : ThermalControllHandler: tempLevel=2,userMode=2,gameUserMode=-1,appType=-1,envTempType=0,appStates=[]
+03-16 14:48:28.565  3377  3409 E oiface  : get gpu freq table failed
+03-16 14:48:28.565  2580  6625 W Battery : ThermalControllHandler: tempGear=2,configItemName=common_config
+03-16 14:48:28.565  2580  4827 W Battery : ThermalControllHandler: MSG_THERMAL_CONTROL_CATEGORY_CHANGED
+03-16 14:48:28.566  3377  3409 E oiface  : get gpu freq table failed
+03-16 14:48:28.661   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:28.662  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2284, tid:1889
+03-16 14:48:28.662  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2284, dur:0, num:4, tid:1889
+03-16 14:48:28.663   851   931 I libPowerHal: [perfLockRel] hdl:2284, idx:0
+03-16 14:48:28.664   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: -1 -1 -1 -1 -1 -1
+03-16 14:48:28.664   851   931 I libPowerHal: [PD] system_server update cmd:2020000 param:1
+03-16 14:48:28.664   851   931 I libPowerHal: [PD] system_server update cmd:1410000 param:0
+03-16 14:48:28.666   851   931 I libPowerHal: [PD] system_server update cmd:1c3c000, param:1
+03-16 14:48:28.666   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:28.669  1539  1889 I mtkpower_client: ret_hdl:2285
+03-16 14:48:28.795  1539  3946 D ActivityManager: getProcessesInErrorState callingUid=10279, CallingPid=30213
+03-16 14:48:28.880   827   958 I hwcomposer: [HWCDisplay] [Display_0 (type:1)] fps:52.851734,dur:1192.01,max:475.09,min:9.30  
+03-16 14:48:28.976  1539  2770 I OplusHansManager : exit FastFreezer, unfreeze uids: [] thaw: [], reason: exitFF
+03-16 14:48:28.979  1539  2770 I OplusHansManager : notify state machine event=FF_EXIT to uids=[10279]
+03-16 14:48:29.132   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:29.133  1539  2113 D OGG_Detector: D:done mCurrStatus: 0
+03-16 14:48:29.133   916   916 D ORMS_HAL: OrmsHalService write file /proc/sys/kernel/input_boost_enabled - 1.
+03-16 14:48:29.134  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2285, tid:1889
+03-16 14:48:29.136  2546  3055 I iopgp   : Iopgp: TRANSACTION_IOPGP_ON_KEY_DOWN sequence_id = 29 pkg_name = nup.z ret = 0
+03-16 14:48:29.137  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2285, dur:0, num:14, tid:1889
+03-16 14:48:29.137   851   869 I mtkpower@impl: [check_work_req] i:1, msg:1 hdl:2285, wait
+03-16 14:48:29.138  2546  3055 D iopgp   : cannot find a compiledtrace, need to start tracing on intentstart.
+03-16 14:48:29.139  2546  3055 D iopgp   : Iopgp: Decide the action on keydown event done in 2ms.
+03-16 14:48:29.140   851   931 I libPowerHal: [perfLockRel] hdl:2285, idx:0
+03-16 14:48:29.140   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:29.142  1539  1889 I mtkpower_client: ret_hdl:2287
+03-16 14:48:29.143   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: 2000000 -1 2200000 -1 2284000 -1
+03-16 14:48:29.200   851   931 I libPowerHal: [perfLockRel] hdl:2286, idx:1
+03-16 14:48:29.200   851   931 I libPowerHal: [PD] MTKPOWER_HINT_APP_TOUCH update cmd:3408600 param:0
+03-16 14:48:29.206  2546  3055 I iopgp   : Iopgp: TRANSACTION_IOPGP_ON_INTENT_STARTED sequence_id = 29 pkg_name = nup.z class_name = nup.z.MainActivity
+03-16 14:48:29.206  1539  2314 E system_server: No package ID 7f found for ID 0x7f0f025d.
+03-16 14:48:29.206  1539  2314 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=nup.z/.MainActivity bnds=[801,1035][1053,1321] mCallingUid=10178} from uid 10178
+03-16 14:48:29.206  2546  3055 I iopgp   : Iopgp::starttracing
+03-16 14:48:29.206  1539  2314 D MultiApp.CMAService: changeIntentIfNeed --- from launcher
+03-16 14:48:29.206   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:29.207  2546  3055 D iopgp   : Create Perfetto handle 30
+03-16 14:48:29.207  1539  2314 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=3763 attached=false
+03-16 14:48:29.207   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:29.207  1539  2314 D OplusZoomWindowManagerService: onConfigurationChanged rotation not changed - prevRotation: 0
+03-16 14:48:29.207  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2287, tid:1889
+03-16 14:48:29.207  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2287, dur:0, num:14, tid:1889
+03-16 14:48:29.208  1539  2314 I OplusScreenSecurityMask: onStackAdded task = Task{e0ac8e6 #3763 type=standard ?? U=0 visible=false mode=fullscreen translucent=true sz=0} record = null displayId = 0
+03-16 14:48:29.208  1539  2314 I OplusScreenSecurityMask: onStackAdded task = Task{e0ac8e6 #3763 type=standard A=10278:nup.z U=0 visible=false mode=fullscreen translucent=true sz=0} record = null displayId = 0
+03-16 14:48:29.208  1045  1045 I perfetto: ing_service_impl.cc:912 Configured tracing session 30, #sources:1, duration:5000 ms, #buffers:1, total buffer size:5120 KB, total sessions:2, uid:1000 session name: ""
+03-16 14:48:29.208  1539  2314 E WindowManager: makeSurface ActivityRecord{bb1ce27 u0 nup.z/.MainActivity t3763} windowType 2
+03-16 14:48:29.209  1043  1043 I perfetto: probes_producer.cc:243  Ftrace setup (target_buf=30)
+03-16 14:48:29.209  1539  2314 D TaskExtImpl: add ActivityRecord{bb1ce27 u0 nup.z/.MainActivity t3763} to mActivityRecordSum = Counter{ nup.z/.MainActivity(1) }
+03-16 14:48:29.209   851   870 I mtkpower@impl: [setMode] type:5, enabled:1
+03-16 14:48:29.210  1539  2314 D ActivityTaskManager: getStartingWindowType: newTask=true, taskSwitch=true, processRunning=false, allowTaskSnapshot=true, activityCreated=false, snapshot=null, record:ActivityRecord{bb1ce27 u0 nup.z/.MainActivity t3763}
+03-16 14:48:29.210   851   931 I libPowerHal: [perfLockRel] hdl:2287, idx:0
+03-16 14:48:29.210  1539  2314 D OplusStartingWindowManager: window attributes color: 0 icon null duration 0 brandImage null
+03-16 14:48:29.210   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: -1 -1 -1 -1 -1 -1
+03-16 14:48:29.210   851   931 I libPowerHal: [PD] system_server update cmd:1410000 param:0
+03-16 14:48:29.210  1539  2314 V OplusZoomWindowManagerService: windowMode: 0 ,stack: Task{e0ac8e6 #3763 type=standard A=10278:nup.z U=0 visible=true mode=fullscreen translucent=true sz=1}
+03-16 14:48:29.211  1539  2314 I PowerHalWrapper: <amsBoostResume> last:com.android.launcher, next:nup.z 
+03-16 14:48:29.211   851   931 I libPowerHal: [PD] system_server update cmd:1c3c000, param:1
+03-16 14:48:29.211   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:29.212  1539  1889 I mtkpower_client: ret_hdl:2288
+03-16 14:48:29.213   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:29.213   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: 2000000 -1 2200000 -1 2284000 -1
+03-16 14:48:29.213   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:29.214  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2288, tid:1889
+03-16 14:48:29.215  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2288, dur:0, num:16, tid:1889
+03-16 14:48:29.215   946  1600 I SurfaceFlinger: [SF client] NEW(0xb4000074d0d97640) for (2222:com.android.systemui)
+03-16 14:48:29.215   851   931 I libPowerHal: [perfLockRel] hdl:2288, idx:0
+03-16 14:48:29.216   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: -1 -1 -1 -1 -1 -1
+03-16 14:48:29.216   851   931 I libPowerHal: [PD] system_server update cmd:1410000 param:0
+03-16 14:48:29.217   851   931 I libPowerHal: [PD] system_server update cmd:1c3c000, param:1
+03-16 14:48:29.217   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:29.217  1539  1889 I mtkpower_client: ret_hdl:2289
+03-16 14:48:29.217 24630 24819 I AstScreen.AtmosphereManager: windowState : 3   not care about this state!!
+03-16 14:48:29.218  1539  3946 V SensorManager: call sensorServiceCommonInterface name: setScreenShotDisable
+03-16 14:48:29.218  1539  3946 D SensorService: SensorService sensorServiceCommonInterface = setScreenShotDisable
+03-16 14:48:29.218  1539  3946 D SensorServiceImpl: SensorServiceExtImpl sensorServiceCommonInterface funcName= setScreenShotDisable , flag =0, status =0
+03-16 14:48:29.218  1539  3946 I OplusHansManager : front pkg: nup.z, uid: 10278, prev pkg: com.android.launcher, prev uid: 10178
+03-16 14:48:29.218  1539  2770 I OplusHansManager : notifyAppGoForeground, uid=10278
+03-16 14:48:29.218  1539  2770 I OplusHansManager : Fast Freezer interval is less than 10000
+03-16 14:48:29.218  1539  2770 I OplusHansManager : notifyAppGoBackground, uid=10178
+03-16 14:48:29.218  2222  2358 D WindowManager: Add to mViews: android.widget.FrameLayout{e0d3fcc V.E...... ......I. 0,0-0,0},pkg= nup.z
+03-16 14:48:29.218  1539  3946 V SensorManager: call sensorServiceCommonInterface name: setScreenShotDisable
+03-16 14:48:29.219  1539  2237 I Osense-DecisionMaker: notifySceneToPolicy...SCENE_APP_SWITCH
+03-16 14:48:29.219  1539  3946 D SensorService: SensorService sensorServiceCommonInterface = setScreenShotDisable
+03-16 14:48:29.219  1539  3946 D SensorServiceImpl: SensorServiceExtImpl sensorServiceCommonInterface funcName= setScreenShotDisable , flag =0, status =0
+03-16 14:48:29.219  1539  2237 D Osense-DecisionMaker: getCurrentSysStats, memMb: 6915
+03-16 14:48:29.219  1539  3946 V SensorManager: call sensorServiceCommonInterface name: setScreenShotDisable
+03-16 14:48:29.219  1539  3946 D SensorService: SensorService sensorServiceCommonInterface = setScreenShotDisable
+03-16 14:48:29.219  1539  3946 D SensorServiceImpl: SensorServiceExtImpl sensorServiceCommonInterface funcName= setScreenShotDisable , flag =0, status =0
+03-16 14:48:29.219  1539  2237 I Osense-DecisionMaker: scene: SCENE_APP_SWITCH, excutingPolicy: freezer
+03-16 14:48:29.219  1539  2450 I OplusResourcePreloadManager: resume pkg: nup.z, uid:10278, prev pkg: com.android.launcher, prev uid: 10178
+03-16 14:48:29.220   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: 2000000 -1 2600000 -1 2600000 -1
+03-16 14:48:29.220  2222  2358 D ViewRootImpl[z]: hardware acceleration = true, sRendererEnabled = true, forceHwAccelerated = false
+03-16 14:48:29.221  1539  3946 I PowerHalWrapper: amsBoostNotify pid:2488,activity:com.android.launcher.Launcher, package:com.android.launcher, mProcessCreatePacknup.z 
+03-16 14:48:29.221  1539  3946 I PowerHalWrapper: state: 0 
+03-16 14:48:29.221  1539  3946 I PowerHalWrapper: amsBoostNotify AMS_BOOST_PROCESS_CREATE_BOOST:false 
+03-16 14:48:29.222  1539  2323 D OplusDisplayPolicy: nup.z, no change cutoutMode: 0
+03-16 14:48:29.224  1539  1691 I PowerHalWrapper: amsBoostProcessCreate package:nup.z 
+03-16 14:48:29.224  1539  1691 D SBE-LaunchIdentify: SBE boost:nup.z begin
+03-16 14:48:29.225  1539  1691 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10278; state: DISABLED
+03-16 14:48:29.225  1539  1691 D CompatibilityChangeReporter: Compat change id reported: 177438394; UID 10278; state: DISABLED
+03-16 14:48:29.225  1539  1691 D CompatibilityChangeReporter: Compat change id reported: 135772972; UID 10278; state: DISABLED
+03-16 14:48:29.225  1539  1691 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10278; state: ENABLED
+03-16 14:48:29.225  1539  1711 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10278; state: ENABLED
+03-16 14:48:29.226  2546  3055 I iopgp   : Iopgp: TRANSACTION_IOPGP_ON_ACTIVITY_LAUNCHED sequence_id = 29 title = 
+03-16 14:48:29.226  1539  3983 D OplusDisplayPolicy: nup.z, no change cutoutMode: 0
+03-16 14:48:29.226   946  2952 I BufferQueueDebug: [Splash Screen nup.z#0](this:0xb4000074b7268998,id:-1,api:0,p:-1,c:-1) BufferQueue core=(946:/system/bin/surfaceflinger)
+03-16 14:48:29.228  1539  3983 W WindowManager: Changing focus from Window{6b59f98 u0 com.android.launcher/com.android.launcher.Launcher} to null displayId=0 Callers=com.android.server.wm.RootWindowContainer.updateFocusedWindowLocked:492 com.android.server.wm.WindowManagerService.updateFocusedWindowLocked:6010 com.android.server.wm.WindowManagerService.relayoutWindow:2600 com.android.server.wm.Session.relayout:247 
+03-16 14:48:29.229  1539  3983 D Theia.NoFocusWindow: FocusWindowErrorScene CheckFreezeScreen
+03-16 14:48:29.229  2222  2358 I BufferQueueConsumer: [](id:8ae0000006b,api:0,p:-1,c:2222) connect: controlledByApp=false
+03-16 14:48:29.230  2222  2358 I BLASTBufferQueue: [ViewRootImpl[z]#87] constructor()
+03-16 14:48:29.230  2222  2948 I BufferQueueProducer: [ViewRootImpl[z]#87(BLAST Consumer)87](id:8ae0000006b,api:1,p:2222,c:2222) connect: api=1 producerControlledByApp=true
+03-16 14:48:29.234   804   804 D Zygote  : Forked child process 9739
+03-16 14:48:29.235  1539  2314 I FocusResolver: updateFocusedWindow,  on display 0, reason: NO_WINDOW, result:   FocusedWindows: <none>
+03-16 14:48:29.236  1539  1711 I ActivityManager: Start proc 9739:nup.z/u0a278 for pre-top-activity {nup.z/nup.z.MainActivity}
+03-16 14:48:29.238  1539  1692 D OplusSplitScreenManagerService: isDragToSplitState mOplusSpiltScreenDnDUI is null, just return!
+03-16 14:48:29.239  1539  1692 D OplusSplitScreenManagerService: isDragToSplitState mOplusSpiltScreenDnDUI is null, just return!
+03-16 14:48:29.239  1539  1692 D OplusSplitScreenManagerService: isDragToSplitState mOplusSpiltScreenDnDUI is null, just return!
+03-16 14:48:29.239  1539  1692 D OplusSplitScreenManagerService: isDragToSplitState mOplusSpiltScreenDnDUI is null, just return!
+03-16 14:48:29.241  9739  9739 I nup.z   : Late-enabling -Xcheck:jni
+03-16 14:48:29.241  1539  1692 E WindowManager: makeSurface WallpaperWindowToken{5d8cd4 token=android.os.Binder@edad227} windowType 2013
+03-16 14:48:29.244  1539  1692 I WindowStateExtImpl: onSurfaceShowChange show = true mPackageName = nup.z parentPkgName = nup.z
+03-16 14:48:29.245   946  3268 I BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+03-16 14:48:29.246   946   946 D OplusLayer: setBuffer sequence=1951, name=Splash Screen nup.z#0
+03-16 14:48:29.246   946   946 I OplusLayer: VRR [FRTC] update from -1 to 0
+03-16 14:48:29.246  2222 18436 D SurfaceComposerClient: VRR [FRTC] client handle [bufferId:18446744073709551615 framenumber:0] [ffffffff, ffffffff]
+03-16 14:48:29.247   946   998 E surfaceflinger: == MALI DEBUG ===eglp_winsys_populate_image_templates ==12288
+03-16 14:48:29.247  2488  2488 E SimulationInteractor: tryGetAnimationPainterInstance error:com.oplus.painteranimationpanel.api.AnimPainterInstance
+03-16 14:48:29.247   946   946 D OplusLayer: ~Layer() sequence=1945, name=Surface(name=8e6b5fd StatusBar)/@0x41a9836 - animation-leash of insets_animation#0 0xb4000074b7254800
+03-16 14:48:29.247   946   946 D OplusLayer: ~Layer() sequence=1946, name=Surface(name=2e9a99 NavigationBar0)/@0x8100a4 - animation-leash of insets_animation#0 0xb4000074b727b000
+03-16 14:48:29.247  2488  2488 D IconConfigParser: parseConfig::icon config =: IconConfig = [ isForeign : false,theme : 2,iconSize : 5000,iconShape : 0,foregroundSize : 5600,artPlusOn : 0,iconRadius ：36,darkModeIcon:1,localSpecial:false ]
+03-16 14:48:29.248  2488  2488 D IconConfigParser: parseConfig::icon config =: IconConfig = [ isForeign : false,theme : 2,iconSize : 5000,iconShape : 0,foregroundSize : 5600,artPlusOn : 0,iconRadius ：36,darkModeIcon:1,localSpecial:false ]
+03-16 14:48:29.262  9739  9739 E nup.z   : Unknown bits set in runtime_flags: 0x40000000
+03-16 14:48:29.266 26777 26797 I adbd    : jdwp connection from 9739
+03-16 14:48:29.267  9739  9739 D ProcessState: Binder ioctl to enable oneway spam detection failed: Invalid argument
+03-16 14:48:29.271  9739  9739 I OneTrace: Mark active for pid=9739? true
+03-16 14:48:29.271  9739  9739 D cutils-dev: otrace_set_tracing_enabled? true
+03-16 14:48:29.272  1539  2323 V ActivityManager: New death recipient com.android.server.am.ActivityManagerService$AppDeathRecipient@74f5134 for thread android.os.BinderProxy@9bb9b5d
+03-16 14:48:29.287  1539  2323 D OplusDexOptimizeManager: Do not in AppLaunchOptList!
+03-16 14:48:29.287  9739  9747 D cutils-dev: properties changed in otrace_seq_number_changed!
+03-16 14:48:29.288  1539  2323 I OplusAppSwitchManagerService: appswitch hasProcess ActivityRecord{bb1ce27 u0 nup.z/.MainActivity t3763}
+03-16 14:48:29.288  1539  2323 I OplusJoystickManager: handleApplicationSwitch deprecated!
+03-16 14:48:29.288  1539  2323 I OplusAppSwitchManagerService: appswitch hasProcess ActivityRecord{bb1ce27 u0 nup.z/.MainActivity t3763}
+03-16 14:48:29.288  1539  2323 I PowerHalWrapper: amsBoostNotify pid:9739,activity:nup.z.MainActivity, package:nup.z, mProcessCreatePacknup.z 
+03-16 14:48:29.288  1539  2323 I PowerHalWrapper: state: 1 
+03-16 14:48:29.289  1539  2323 I PowerHalWrapper: amsBoostNotify AMS_BOOST_PROCESS_CREATE_BOOST:true 
+03-16 14:48:29.289  1539  2323 I InputDispatcher: setFocusedApplication displayId=0 ActivityRecord{bb1ce27 u0 nup.z/.MainActivity t3763}
+03-16 14:48:29.289  1539  2620 D OplusEapManager: mTargetExitName :com.android.launcher
+03-16 14:48:29.289  1539  2620 V DCSEX-AppSwitchManager: OnAppSwitchObserver: onAppExit, resuming = nup.z, target = com.android.launcher, is ResumingFirstStart =  true, is ResumingMultiApp =  false, extensionInfo =  Bundle[{taskId=3763, uid=10278}]
+03-16 14:48:29.289   851   931 I libPowerHal: [perfNotifyAppState] foreground:nup.z, pid:9739, uid:10278
+03-16 14:48:29.289  1539  2620 D VRR [OPlusFrontAppManager]: OnAppSwitchObserver: onAppExit , info.targetName = com.android.launcher
+03-16 14:48:29.289  1539  2620 D VRR [OPlusFrontAppManager]: packageName: null
+03-16 14:48:29.289   851   931 I UxUtility: notifyForegroundApp pack:nup.z, uid:10278
+03-16 14:48:29.289   851   931 I TouchUtility: notifyAppState error = NULL
+03-16 14:48:29.289   851   869 I mtkpower@impl: [notifyAppState] pc:1, com.android.launcher => nup.z
+03-16 14:48:29.289  1539  1737 D VRR [OPlusRefreshRateService]: handleFrontAppChange pkgName: null
+03-16 14:48:29.289  1539  5828 D DCSEX-AppLaunchEventRecorder: onAppSwitch from = com.android.launcher to = nup.z
+03-16 14:48:29.290  1539  1691 D OplusKeepAliveManager: TOP_APP is ProcessRecord{abba36e 9739:nup.z/u0a278} uid is 10278
+03-16 14:48:29.290   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:29.290   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:29.290  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2289, tid:1889
+03-16 14:48:29.290  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2289, dur:0, num:16, tid:1889
+03-16 14:48:29.290   851   869 I mtkpower@impl: [check_work_req] i:0, msg:1 hdl:2289, wait
+03-16 14:48:29.290  1539  1719 E OplusThermalStats: Error getting package info: nup.z
+03-16 14:48:29.291  1539  2620 D OplusEapManager: mTargetEnterName :nup.z
+03-16 14:48:29.291  1539  2620 V DCSEX-AppSwitchManager: OnAppSwitchObserver: onAppEnter, launchedFrom =  com.android.launcher, target =  nup.z, is firstStart =  true, is multiApp =  false, extensionInfo =  Bundle[{taskId=3763, pid=9739, uid=10278}]
+03-16 14:48:29.291  1539  2620 D VRR [OPlusFrontAppManager]: OnAppSwitchObserver: onAppEnter , info.targetName = nup.z
+03-16 14:48:29.291  1539  2620 D VRR [OPlusFrontAppManager]: packageName: nup.z
+03-16 14:48:29.292  1539  1737 D VRR [OPlusExternalRefreshRateManager]: setFrontPackageName pkgName: null CurPkgName: com.android.launcher
+03-16 14:48:29.292  1539  1737 D VRR [OPlusRefreshRateService]: handleFrontAppChange pkgName: nup.z
+03-16 14:48:29.292  1539  1737 D VRR [OPlusExternalRefreshRateManager]: setFrontPackageName pkgName: nup.z CurPkgName: null
+03-16 14:48:29.292  4047  7932 V DeepThinker: ProcessManager: onForegroundActivitiesChanged pid:9739, uid:10278, foregroundActivities:true
+03-16 14:48:29.292  3326 19233 D OplusAtlas.OplusAtlasEventDispatch: setEvent:atlas_event_on_foreground_activities_changed info:pid:9739,uid:10278,hasForegroundActivities:1
+03-16 14:48:29.292 22986 23002 D ZoomAppController: ignore onAppEnter: mCurrentZoomInfo is null
+03-16 14:48:29.292   851   869 I mtkpower@impl: [check_work_req] i:0, msg:1 hdl:2289, wait
+03-16 14:48:29.292  3326  3580 D OplusAtlas.OplusAudioScene: callback success event:atlas_event_on_foreground_activities_changed eventInfo:pid:9739,uid:10278,hasForegroundActivities:1
+03-16 14:48:29.293  2580  6625 W Battery : ThermalControlUtils: mForegroundPkg=nup.z
+03-16 14:48:29.293  3326  3801 D OplusAtlas.OplusMessageHandler: handleMessage: Msg { when=-1ms what=2 obj=com.oplus.atlas.OplusAtlasEvent@ee36dcf target=com.oplus.atlas.OplusMessageHandler$MyHandler }
+03-16 14:48:29.295 22940 28934 I obrain  : app forground called:nup.z
+03-16 14:48:29.295   851   931 I libPowerHal: [perfLockRel] hdl:2289, idx:0
+03-16 14:48:29.296   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: -1 -1 -1 -1 -1 -1
+03-16 14:48:29.296   851   931 I libPowerHal: [PD] system_server update cmd:2020000 param:1
+03-16 14:48:29.296   588   588 I hwservicemanager: getTransport: Cannot find entry vendor.oplus.hardware.handlefactory@1.0::IHandleFactory/default in either framework or device VINTF manifest.
+03-16 14:48:29.296   851   931 I libPowerHal: [PD] system_server update cmd:1410000 param:0
+03-16 14:48:29.297  9739  9739 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10278; state: ENABLED
+03-16 14:48:29.297   851   931 I libPowerHal: [PD] system_server update cmd:1c3c000, param:1
+03-16 14:48:29.297  9739  9739 I oplus.android.OplusFrameworkFactoryImpl: get feature:IOplusAutoResolutionFeature
+03-16 14:48:29.297  9739  9739 I oplus.android.OplusFrameworkFactoryImpl: getOplusAutoResolutionFeature
+03-16 14:48:29.297 22940 28932 E HandleFactory: Failed to get IHandleFactory hal service, null
+03-16 14:48:29.297   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:29.298   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.298   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.298   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.299   874   874 I CameraMidasService: The size of PowerFactor is 120 ,The size of PowerFactors is 0, The memory size of PowerFactors is 0
+03-16 14:48:29.300  1539  3960 D OplusGameRotationService: lockRotationInGame: change state to 0
+03-16 14:48:29.300  1539  1889 I mtkpower_client: ret_hdl:2290
+03-16 14:48:29.300   874   874 I CameraMidasService: getExplorerInfo The size of ExplorerInfo is 200 ,The size of ExplorerInfo is 0, The memory size of ExplorerInfo is 0
+03-16 14:48:29.301   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: 2000000 -1 2600000 -1 2600000 -1
+03-16 14:48:29.301   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.301   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.301   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.302   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.302   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.302   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.302  1539  1866 E AthenaService: MemoryGuardAction: handleAppChange
+03-16 14:48:29.302   588   588 I hwservicemanager: getTransport: Cannot find entry vendor.oplus.hardware.handlefactory@1.0::IHandleFactory/default in either framework or device VINTF manifest.
+03-16 14:48:29.302   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.302   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.302   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.302 22940 28932 E HandleFactory: Failed to get IHandleFactory hal service, null
+03-16 14:48:29.302   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.303   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.303   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.303   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.303   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.303   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.303  1539  2323 D ActivityManager: getProcessesInErrorState callingUid=10279, CallingPid=30213
+03-16 14:48:29.303  3376  3403 D midasd  : rm 444, fcc 3928, pchq 842, reset 45, level 12, usb 475
+03-16 14:48:29.304  9739  9739 W libc    : Access denied finding property "ro.odm.prev.product.name"
+03-16 14:48:29.304   588   588 I hwservicemanager: getTransport: Cannot find entry vendor.oplus.hardware.handlefactory@1.0::IHandleFactory/default in either framework or device VINTF manifest.
+03-16 14:48:29.304 22940 28922 E HandleFactory: Failed to get IHandleFactory hal service, null
+03-16 14:48:29.305   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.305   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.305   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.305  2580  6625 W Battery : ThermalControllHandler: tempLevel=2,userMode=2,gameUserMode=-1,appType=-1,envTempType=0,appStates=[]
+03-16 14:48:29.305   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.305   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.305   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.306   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.306   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.306   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.306  9739  9739 D LoadedApk: mApplicationInfo overrideDisplayId:null
+03-16 14:48:29.307  2580  6625 W Battery : ThermalControllHandler: tempGear=2,configItemName=common_config
+03-16 14:48:29.307  2580  4827 W Battery : ThermalControllHandler: MSG_THERMAL_CONTROL_CATEGORY_CHANGED
+03-16 14:48:29.309   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.309   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.309   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.309   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.309   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.309   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.309   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.309   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.309   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.313  3377  3409 E oiface  : get gpu freq table failed
+03-16 14:48:29.316  3377  3409 E oiface  : get gpu freq table failed
+03-16 14:48:29.322  1539  3733 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:29.322  1539  3733 D OplusAppListInterceptManager: shouldFilterTask::packageName = nup.z
+03-16 14:48:29.322  1539  3733 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:29.322  1539  3733 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.tencent.mm
+03-16 14:48:29.387  9739  9739 I Quality : LaunchTime2.0: nup.z createOrUpdateClassLoaderLocked took time: 80
+03-16 14:48:29.392  9739  9739 V GraphicsEnvironment: ANGLE Developer option for 'nup.z' set to: 'default'
+03-16 14:48:29.392  9739  9739 V GraphicsEnvironment: App is not on the allowlist for updatable production driver.
+03-16 14:48:29.393  9739  9739 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+03-16 14:48:29.394  9739  9739 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+03-16 14:48:29.408  9739  9739 I Quality : BindApplication: nup.z
+03-16 14:48:29.410   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:29.410   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:29.411  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2290, tid:1889
+03-16 14:48:29.411  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2290, dur:0, num:16, tid:1889
+03-16 14:48:29.411   851   931 I libPowerHal: [perfLockRel] hdl:2290, idx:0
+03-16 14:48:29.412   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: -1 -1 -1 -1 -1 -1
+03-16 14:48:29.412   851   931 I libPowerHal: [PD] system_server update cmd:2020000 param:1
+03-16 14:48:29.412   851   931 I libPowerHal: [PD] system_server update cmd:1410000 param:0
+03-16 14:48:29.412   851   931 I libPowerHal: [PD] system_server update cmd:1c3c000, param:1
+03-16 14:48:29.412   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:29.413  1539  1889 I mtkpower_client: ret_hdl:2291
+03-16 14:48:29.413  1539  2323 W ActivityManager: setGlThreads detect 9739 9761
+03-16 14:48:29.414   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: 2000000 -1 2600000 -1 2600000 -1
+03-16 14:48:29.415  9739  9763 E nup.z   : Loaded layer handle (5282907851030647561) for layer /my_product/lib64/libcolorx-loader.so
+03-16 14:48:29.415  9739  9763 E nup.z   : Looking for entrypoint ColorX_Check
+03-16 14:48:29.416  9739  9763 E nup.z   : Found ColorX_Check for /my_product/lib64/libcolorx-loader.so
+03-16 14:48:29.416  9739  9763 E nup.z   : Check failed
+03-16 14:48:29.417  9739  9763 D libMEOW : meow new tls: 0xb40000760a4d5540
+03-16 14:48:29.417  9739  9763 D libMEOW : meow reload base cfg path: na
+03-16 14:48:29.417  9739  9763 D libMEOW : meow reload overlay cfg path: na
+03-16 14:48:29.417  9739  9763 W QT      : qt_process_init() called
+03-16 14:48:29.417  9739  9763 E QT      : [QT]file does not exist
+03-16 14:48:29.417  9739  9763 W QT      : Support!!
+03-16 14:48:29.418  9739  9763 E QT      : [QT]file does not exist
+03-16 14:48:29.418  9739  9763 D libMEOW : applied 1 plugins for [nup.z]:
+03-16 14:48:29.418  9739  9763 D libMEOW :   plugin 1: [libMEOW_gift.so]:
+03-16 14:48:29.419  9739  9763 D libMEOW : meow delete tls: 0xb40000760a4d5540
+03-16 14:48:29.441  9739  9739 E MultiApp.Impl: OplusMultiAppImpl
+03-16 14:48:29.442  9739  9739 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+03-16 14:48:29.460  9739  9739 I oplus.android.OplusFrameworkFactoryImpl: Unknow feature:IOplusTextViewRTLUtilForUG
+03-16 14:48:29.467  1539  3733 W OplusNavigationBarUtil: color navigation bar util isn't init.
+03-16 14:48:29.473  9739  9739 D ScrollOptimizationHelper: can't find the config file for optimizaiton
+03-16 14:48:29.473  9739  9739 D ScrollOptimizationHelper: will not debug for debug is false
+03-16 14:48:29.473  9739  9739 I oplus.android.OplusFrameworkFactoryImpl: get feature:IOplusDynamicVsyncFeature
+03-16 14:48:29.473  9739  9739 I oplus.android.OplusFrameworkFactoryImpl: get feature:IOplusDynamicVsyncFeature
+03-16 14:48:29.473  9739  9739 I oplus.android.OplusFrameworkFactoryImpl: get feature:IOplusDynamicVsyncFeature
+03-16 14:48:29.475  9739  9739 D AndroidRuntime: Shutting down VM
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: FATAL EXCEPTION: main
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: Process: nup.z, PID: 9739
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{nup.z/nup.z.MainActivity}: android.view.InflateException: Binary XML file line #31 in android:layout/screen_toolbar: Binary XML file line #31 in android:layout/screen_toolbar: Error inflating class com.android.internal.widget.ActionBarContainer
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3813)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3975)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:135)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2377)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:233)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:344)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8205)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:589)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1071)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: Caused by: android.view.InflateException: Binary XML file line #31 in android:layout/screen_toolbar: Binary XML file line #31 in android:layout/screen_toolbar: Error inflating class com.android.internal.widget.ActionBarContainer
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: Caused by: android.view.InflateException: Binary XML file line #31 in android:layout/screen_toolbar: Error inflating class com.android.internal.widget.ActionBarContainer
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: Caused by: java.lang.reflect.InvocationTargetException
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at java.lang.reflect.Constructor.newInstance0(Native Method)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:343)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.view.LayoutInflater.createView(LayoutInflater.java:858)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:1014)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:965)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1144)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:1105)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:686)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:538)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:485)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at com.android.internal.policy.DecorView.onResourcesLoaded(DecorView.java:2370)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at com.android.internal.policy.PhoneWindow.generateLayout(PhoneWindow.java:2688)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at com.android.internal.policy.PhoneWindow.installDecor(PhoneWindow.java:2751)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at com.android.internal.policy.PhoneWindow.getDecorView(PhoneWindow.java:2156)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at nup.z.MainActivity.onCreate(MainActivity.java:32)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:8130)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:8110)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1343)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3782)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3975)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:135)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2377)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:233)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:344)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8205)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:589)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1071)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: Caused by: java.lang.UnsupportedOperationException: Failed to resolve attribute at index 13: TypedValue{t=0x2/d=0x1010433 a=1}
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.content.res.TypedArray.getDrawableForDensity(TypedArray.java:998)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.content.res.TypedArray.getDrawable(TypedArray.java:982)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.view.View.<init>(View.java:5559)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.view.ViewGroup.<init>(ViewGroup.java:707)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.widget.FrameLayout.<init>(FrameLayout.java:99)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.widget.FrameLayout.<init>(FrameLayout.java:94)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at android.widget.FrameLayout.<init>(FrameLayout.java:89)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	at com.android.internal.widget.ActionBarContainer.<init>(ActionBarContainer.java:57)
+03-16 14:48:29.477  9739  9739 E AndroidRuntime: 	... 31 more
+03-16 14:48:29.479  1539  2429 D OplusAppStartupMonitor: notifyUnstableAppInfo: Bundle[{unstableTime=1678949309478, reason=crash, userId=0, safecenter=unstable, exceptionMsg=Failed to resolve attribute at index 13: TypedValue{t=0x2/d=0x1010433 a=1}, exceptionClass=java.lang.UnsupportedOperationException, packageName=nup.z, unstable_restrict_switch=true}]
+03-16 14:48:29.479  3847  5195 I Athena  : StartupManager: onUpdateUnstableRecord: unstable crash!
+03-16 14:48:29.479   851   931 D RilUtility: notify_rild_crash_pid_set certPid:-1, crash:9739, scn:0x0
+03-16 14:48:29.479  1539  3733 D OplusAmsUtilsFeatrue: detectExceptionsForOIDT type:0
+03-16 14:48:29.481  1539  3733 W ActivityTaskManager:   Force finishing activity nup.z/.MainActivity
+03-16 14:48:29.482  1539  9764 I DropBoxManagerService: add tag=data_app_crash isTagEnabled=true flags=0x2
+03-16 14:48:29.482   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:29.482  1539  3733 I InputDispatcher: setFocusedApplication displayId=0 ActivityRecord{80da386 u0 com.android.launcher/.Launcher t5}
+03-16 14:48:29.482   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:29.482  1539  3733 V OplusZoomWindowManagerService: prepareZoomTransition: curStack=Task{e0ac8e6 #3763 type=standard A=10278:nup.z U=0 visible=false mode=fullscreen translucent=true sz=1}   nextStackTask{8761cfd #1 type=home ?? U=0 visible=true mode=fullscreen translucent=true sz=1}
+03-16 14:48:29.482  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2291, tid:1889
+03-16 14:48:29.482  1539  9552 W OplusSelfProtectManager: pkg[com.oplus.crashbox] not in policy list
+03-16 14:48:29.483   851   931 I libPowerHal: [perfLockRel] hdl:2291, idx:0
+03-16 14:48:29.483  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2291, dur:0, num:16, tid:1889
+03-16 14:48:29.483   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: -1 -1 -1 -1 -1 -1
+03-16 14:48:29.483   851   931 I libPowerHal: [PD] system_server update cmd:2020000 param:1
+03-16 14:48:29.483   851   931 I libPowerHal: [PD] system_server update cmd:1410000 param:0
+03-16 14:48:29.483   851   931 I libPowerHal: [PD] system_server update cmd:1c3c000, param:1
+03-16 14:48:29.483   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:29.483  1539  1889 I mtkpower_client: ret_hdl:2292
+03-16 14:48:29.483  1539  9764 D DropBoxManagerService: file :: /data/system/dropbox/data_app_crash@1678949309482.txt
+03-16 14:48:29.484  1539  9764 W AES     : Exception Log handling...
+03-16 14:48:29.484  1539  9764 W AES     : Skipped - do not care third party apk
+03-16 14:48:29.484   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:29.484   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: 2000000 -1 2600000 -1 2600000 -1
+03-16 14:48:29.484   916   916 E ORMS_HAL: open /sys/devices/platform/soc/soc:oplus-omrg/oplus-omrg0/ruler_enable failed(No such file or directory)
+03-16 14:48:29.485  1539  1889 I mtkpower_client: perf_lock_rel, hdl:2292, tid:1889
+03-16 14:48:29.485  9739  9739 I Process : Sending signal. PID: 9739 SIG: 9
+03-16 14:48:29.486  1539  1889 I mtkpower_client: perf_lock_acq, hdl:2292, dur:0, num:16, tid:1889
+03-16 14:48:29.486   851   931 I libPowerHal: [perfLockRel] hdl:2292, idx:0
+03-16 14:48:29.487   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: -1 -1 -1 -1 -1 -1
+03-16 14:48:29.487   851   931 I libPowerHal: [PD] system_server update cmd:2020000 param:1
+03-16 14:48:29.487   851   931 I libPowerHal: [PD] system_server update cmd:1410000 param:0
+03-16 14:48:29.488  1539  1717 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.stats.service.DropBoxEntryAddedReceiver
+03-16 14:48:29.488   851   931 I libPowerHal: [PD] system_server update cmd:1c3c000, param:1
+03-16 14:48:29.488   851   931 I libPowerHal: [PD] system_server update cmd:2004100 param:2
+03-16 14:48:29.489  1539  3733 D OplusKeepAliveManager: TOP_APP is ProcessRecord{a2922be 2488:com.android.launcher/u0a178} uid is 10178
+03-16 14:48:29.489  1539  1719 E OplusThermalStats: Error getting package info: com.android.launcher
+03-16 14:48:29.489  1539  1889 I mtkpower_client: ret_hdl:2293
+03-16 14:48:29.489   851   931 I libPowerHal: system_server: cpu_ctrl set cpu freq: 2000000 -1 2200000 -1 2284000 -1
+03-16 14:48:29.490  1539  1691 I Quality : LaunchTime2.0: nup.z/.MainActivity 1 277
+03-16 14:48:29.494  1539  1717 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+03-16 14:48:29.498  1539  3983 V ActivityManager: Death received in com.android.server.am.ActivityManagerService$AppDeathRecipient@74f5134 for thread android.os.BinderProxy@9bb9b5d
+03-16 14:48:29.499  2546  3055 I iopgp   : Iopgp: TRANSACTION_IOPGP_ON_ACTIVITY_LAUNCH_CANCELLED sequence_id = 29 title = 
+03-16 14:48:29.499   804   804 I Zygote  : Process 9739 exited due to signal 9 (Killed)
+03-16 14:48:29.499  2546  3055 I iopgp   : Iopgp::abort tracing.
+03-16 14:48:29.499  1539  3983 D TheiaManager: com.android.server.wm.OplusWindowManagerService@12e5a04 getDeclaredField : com.android.server.wm.WindowManagerService.mRoot
+03-16 14:48:29.499  1539  3983 D TheiaManager: com.android.server.wm.RootWindowContainer@1d0a782 callDeclaredMethod : com.android.server.wm.RootWindowContainer.getTopFocusedDisplayContent param[] null args[]null
+03-16 14:48:29.499  1539  1712 I libprocessgroup: Successfully killed process cgroup uid 10278 pid 9739 in 0ms
+03-16 14:48:29.499  1539  3983 D TheiaManager: Display 0 info=DisplayInfo{"内置屏幕", displayId 0", displayGroupId 0, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS, FLAG_TRUSTED, real 1080 x 2400, largest app 2161 x 2161, smallest app 1080 x 973, appVsyncOff 7955555, presDeadline 17488889, mode 2, defaultMode 1, modes [{id=1, width=1080, height=2400, fps=60.0, alternativeRefreshRates=[90.0]}, {id=2, width=1080, height=2400, fps=90.0, alternativeRefreshRates=[60.0]}], hdrCapabilities HdrCapabilities{mSupportedHdrTypes=[2, 3, 4], mMaxLuminance=500.0, mMaxAverageLuminance=500.0, mMinLuminance=0.0}, userDisabledHdrTypes [], minimalPostProcessingSupported false, rotation 0, state ON, type INTERNAL, uniqueId "local:0", app 1080 x 2161, density 480 (409.432 x 409.127) dpi, layerStack 0, colorMode 0, supportedColorModes [0], address {port=0}, deviceProductInfo null, removeMode 0, refreshRateOverride 0.0, brightnessMinimum 0.0, brightnessMaximum 1.0, brightnessDefault 2746.0} rootTasks=[WindowedMagnification:0:31@191709037, HideDisplayCutout:32:55@173726168, Leaf:56:57@90235067, HideDisplayCutout:58:99@123302592, Leaf:100:100@198716483] getDeclaredField : com.android.server.wm.DisplayContent.mFocusedApp
+03-16 14:48:29.499  1539  3983 D TheiaManager: ActivityRecord{80da386 u0 com.android.launcher/.Launcher t5} callDeclaredMethod : com.android.server.wm.ActivityRecord.getPid param[] null args[]null
+03-16 14:48:29.499  1539  3983 E TheiaManager: [tagL]: calling catchLog()..., focusedPid:2488 pids:[2488]
+03-16 14:48:29.499  1539  3983 D TheiaManager: No stackTrace found in args
+03-16 14:48:29.499  1539  3983 D TheiaManager: KEY:logTypeVALUE:ApplicationFGCrash
+03-16 14:48:29.499  1539  3983 D TheiaManager: KEY:deadMomentVALUE:1678949309499
+03-16 14:48:29.499  1539  3983 D TheiaManager: KEY:appNameVALUE:NUP
+03-16 14:48:29.499  1539  3983 D TheiaManager: KEY:packageVersionVALUE:1.0
+03-16 14:48:29.499  1539  3983 D TheiaManager: KEY:packageNameVALUE:nup.z
+03-16 14:48:29.499  1539  3983 D TheiaCrashMonitor: nup.zcrash
+03-16 14:48:29.500  1539  3983 I ActivityManager: Process nup.z (pid 9739) has died: fg  TOP 
+03-16 14:48:29.500  1539  3983 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1177 com.android.server.am.OplusExtraActivityManagerService.setKeyLockModeNormal:51 com.android.server.am.ActivityManagerServiceExtImpl.setKeyLockModeNormal:803 com.android.server.am.ActivityManagerService.appDiedLocked:3421 com.android.server.am.ActivityManagerService$AppDeathRecipient.binderDied:1536 
+03-16 14:48:29.500  1539  5695 D TheiaSocketClient: TheiaSend receive content : 4298113028:ApplicationFGCrash:1678949309499
+03-16 14:48:29.500  1539  5695 D TheiaSocketClient: send message success
+03-16 14:48:29.500  1322  5930 I theia_socket: recv 4298113028:ApplicationFGCrash:1678949309499
+03-16 14:48:29.500  1322  5930 I theia_socket: nowEvent is not KeyEvent
+03-16 14:48:29.501   851   931 D RilUtility: notify_rild_crash_pid_set certPid:-1, crash:9739, scn:0x0
+03-16 14:48:29.501  4047  7932 V DeepThinker: ProcessManager: onProcessDied pid:9739, uid:10278
+03-16 14:48:29.502  1539  2770 I OplusHansManager : onUidGone(), 10278 nup.z exit SM
+03-16 14:48:29.502  1539  3983 D OplusStartingWindowManager: interceptRemoveStartingWindow activity.packageName=nup.z isSnapshot=false mStartingSurfaceRunnable=null
+03-16 14:48:29.502  1539  3983 D OplusSplitScreenManagerService: notifyRemoveStartingWindow mOplusSpiltScreenDnDUI is null, just return!
+03-16 14:48:29.503  1539  3983 I OplusHansManager : front pkg: com.android.launcher, uid: 10178, prev pkg: nup.z, prev uid: 10278
+03-16 14:48:29.503  2222  2948 I BufferQueueProducer: [ViewRootImpl[z]#87(BLAST Consumer)87](id:8ae0000006b,api:1,p:2222,c:2222) disconnect: api 1
+03-16 14:48:29.503  1539  2237 I Osense-DecisionMaker: notifySceneToPolicy...SCENE_LAUNCHER
+03-16 14:48:29.503  2222  2948 E BLASTBufferQueue: BLASTBufferItemConsumer::onDisconnect()
+03-16 14:48:29.503  2222  2358 D View    : [Warning] assignParent to null: this = android.widget.FrameLayout{e0d3fcc V.E...... ........ 0,0-1080,2400}
+03-16 14:48:29.503  1539  2237 D Osense-DecisionMaker: getCurrentSysStats, memMb: 6848
+03-16 14:48:29.503  1539  2770 I OplusHansManager : notifyAppGoForeground, uid=10178
+03-16 14:48:29.503  1539  2770 I OplusHansManager : notifyAppGoBackground, uid=10278
+03-16 14:48:29.504  2222  2358 V OplusZoomWindowDecorViewHelper: removeZoomView
+03-16 14:48:29.504  1539  2450 I OplusResourcePreloadManager: resume pkg: com.android.launcher, uid:10178, prev pkg: nup.z, prev uid: 10278
+03-16 14:48:29.504  2222  2358 I BLASTBufferQueue: [ViewRootImpl[z]#87] destructor()
+03-16 14:48:29.504  2222  2358 I BufferQueueConsumer: [ViewRootImpl[z]#87(BLAST Consumer)87](id:8ae0000006b,api:0,p:-1,c:2222) disconnect
+03-16 14:48:29.505  1539  3983 D TaskExtImpl: addColorModeOnResume resume=true pkg = com.android.launcher
+03-16 14:48:29.512  2488  2571 E Parcel  : Reading a NULL string not supported here.
+03-16 14:48:29.516  1539  3960 W InputManager-JNI: Input channel object '5c62770 Splash Screen nup.z (client)' was disposed without first being removed with the input manager!
+03-16 14:48:29.516  1539  3960 D WindowManager: setParent old=ActivityRecord{bb1ce27 u0 nup.z/.MainActivity t3763 f} isExiting},new=null,this window=Window{5c62770 u0 Splash Screen nup.z EXITING},callers=com.android.server.wm.WindowContainer.removeChild:634 com.android.server.wm.ActivityRecord.removeChild:4074 com.android.server.wm.ActivityRecord.removeChild:389 com.android.server.wm.WindowContainer.removeImmediately:686 com.android.server.wm.WindowState.removeImmediately:2518 com.android.server.wm.WindowState.removeIfPossible:2714 
+03-16 14:48:29.516  1539  3960 I WindowStateExtImpl: onSurfaceShowChange show = false mPackageName = nup.z parentPkgName = nup.z
+03-16 14:48:29.518  1539  3960 W WindowManager: Changing focus from null to Window{6b59f98 u0 com.android.launcher/com.android.launcher.Launcher} displayId=0 Callers=com.android.server.wm.RootWindowContainer.updateFocusedWindowLocked:492 com.android.server.wm.WindowManagerService.updateFocusedWindowLocked:6010 com.android.server.wm.WindowState.removeIfPossible:2723 com.android.server.wm.WindowState.removeIfPossible:2584 
+03-16 14:48:29.518  1539  3960 D Theia.NoFocusWindow: FocusWindowErrorScene cancelCheckFreezeScreen
+03-16 14:48:29.519  1539  3946 D OplusDisplayPolicy: com.android.launcher, change system app cutoutMode: oplus always
+03-16 14:48:29.519  2488  2571 E Parcel  : Reading a NULL string not supported here.
+03-16 14:48:29.524   851   870 I mtkpower@impl: [setMode] type:5, enabled:0
+03-16 14:48:29.525  1539  3960 I PowerHalWrapper: amsBoostStop AMS_BOOST_PACK_SWITCH:true, AMS_BOOST_ACT_SWITCH:false, AMS_BOOST_PROCESS_CREATE:true 
+03-16 14:48:29.527  1539  1691 I VRR [OPlusRefreshRateManager]: hasADFRFeature return false
+03-16 14:48:29.527  2488  2571 E Parcel  : Reading a NULL string not supported here.
+03-16 14:48:29.527  1539  1691 I DisplayManagerService: Comparing display specs: baseModeId=2 allowGroupSwitching=false primaryRefreshRateRange=[0 90] appRequestRefreshRateRange=[0 90] vrrPolicy=POLICY_DEFAULT, existing: baseModeId=1 allowGroupSwitching=false primaryRefreshRateRange=[0 90] appRequestRefreshRateRange=[0 90] vrrPolicy=POLICY_DEFAULT
+03-16 14:48:29.528   946   946 D OplusLayer: ~Layer() sequence=1956, name=Surface(name=2e9a99 NavigationBar0)/@0x8100a4 - animation-leash of insets_animation#1 0xb4000074faed4800
+03-16 14:48:29.528   946   946 D OplusLayer: ~Layer() sequence=1955, name=Surface(name=8e6b5fd StatusBar)/@0x41a9836 - animation-leash of insets_animation#1 0xb4000074faef1800
+03-16 14:48:29.528   946   946 D OplusLayer: ~Layer() sequence=1950, name=5c62770 Splash Screen nup.z#0 0xb4000074b724d000
+03-16 14:48:29.529  1539  2989 I FocusResolver: updateFocusedWindow, 6b59f98 com.android.launcher/com.android.launcher.Launcher on display 0, reason: Window became focusable. Previous reason: NO_WINDOW, result:   FocusedWindows:
+03-16 14:48:29.529  1539  2989 I FocusResolver:     displayId=0, name='6b59f98 com.android.launcher/com.android.launcher.Launcher'
+03-16 14:48:29.529   946   946 I BufferQueueDebug: [Splash Screen nup.z#0](this:0xb4000074b7268998,id:-1,api:0,p:-1,c:946) onDestructor()
+03-16 14:48:29.529   946   946 D OplusLayer: ~Layer() sequence=1951, name=Splash Screen nup.z#0 0xb4000074b7266000
+03-16 14:48:29.530  1539  3960 D InputMethodManagerService: isSecurity: attribute.packageName=com.android.launcher mCurMethodId=com.sohu.inputmethod.sogouoem/.SogouIME
+03-16 14:48:29.530  1539  3960 D InputMethodManagerService: isSecurity= false (  enable=true needShow=false inBlackList=false isExist=true )
+03-16 14:48:29.530  2580  4894 E AbnormalAppMonitor_service: findReport =  false
+03-16 14:48:29.531  2580  4894 E AbnormalAppMonitor_service: handleCrash, no info matched, try update!
+03-16 14:48:29.531  2222  4588 I BLASTBufferQueue: releaseBufferCallbackThunk bufferId:9543417332509 framenumber:1 blastBufferQueue is dead
+03-16 14:48:29.534  2488  2571 E Parcel  : Reading a NULL string not supported here.
+03-16 14:48:29.537   946   992 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredDisplayModeSpecs, from process 1539
+03-16 14:48:29.537   946   946 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredDisplayModeSpecsInternal: default mode ID: 1, allowGroupSwitching = 0, primary range: [0.00fps 90.00fps], app request range: [0.00fps 90.00fps]
+03-16 14:48:29.537   946   946 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredDisplayModeSpecsInternal: 1 (90.00fps)
+03-16 14:48:29.537   946   946 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredActiveMode: 90.00fps event: 1 
+03-16 14:48:29.537  1539  1737 D VRR [OPlusRefreshRateService]: onConfigChanged physicalDisplayId: 0 modeId: 1
+03-16 14:48:29.537   946   992 E HWComposer: getSupportedContentTypes: getSupportedContentTypes failed for display 0: Unsupported (8)
+03-16 14:48:29.539 24589 24887 W oaps_host: OapsProvider query, callingPkg = com.oplus.battery, callingPid = 2580, uriMap = {path=/support, scheme=oaps, sgtp=1, base_pkg=android, host=mk, tp=/dtd, enterId=38}
+03-16 14:48:29.551  1168  1168 I thermal_repeater: [recvMdThermalInfo] ret=32, strLen=127,  2, 32767, -127, 0, 32767, 10363
+03-16 14:48:29.622  1539  4477 V OplusZoomWindowManagerService: onAnimationFinished:  r = ActivityRecord{80da386 u0 com.android.launcher/.Launcher t5}
+03-16 14:48:29.622  1539  4477 I OplusAppSwitchManagerService:  handleAppVisible , r = ActivityRecord{80da386 u0 com.android.launcher/.Launcher t5}
+03-16 14:48:29.623  1539  4477 V OplusZoomWindowManagerService: onAnimationFinished:  r = ActivityRecord{bb1ce27 u0 nup.z/.MainActivity t3763 f} isExiting}
+03-16 14:48:29.625  1539  1691 I VRR [OPlusRefreshRateManager]: hasADFRFeature return false
+03-16 14:48:29.625  1539  1691 I DisplayManagerService: Comparing display specs: baseModeId=1 allowGroupSwitching=false primaryRefreshRateRange=[0 90] appRequestRefreshRateRange=[0 90] vrrPolicy=POLICY_DEFAULT, existing: baseModeId=2 allowGroupSwitching=false primaryRefreshRateRange=[0 90] appRequestRefreshRateRange=[0 90] vrrPolicy=POLICY_DEFAULT
+03-16 14:48:29.628   946  1600 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredDisplayModeSpecs, from process 1539
+03-16 14:48:29.628   946   946 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredDisplayModeSpecsInternal: default mode ID: 0, allowGroupSwitching = 0, primary range: [0.00fps 90.00fps], app request range: [0.00fps 90.00fps]
+03-16 14:48:29.628   946   946 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredDisplayModeSpecsInternal: 1 (90.00fps)
+03-16 14:48:29.628   946   946 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredActiveMode: 90.00fps event: 1 
+03-16 14:48:29.628  1539  1737 D VRR [OPlusRefreshRateService]: onConfigChanged physicalDisplayId: 0 modeId: 1
+03-16 14:48:29.628   946  1600 E HWComposer: getSupportedContentTypes: getSupportedContentTypes failed for display 0: Unsupported (8)
+03-16 14:48:29.629  1539  1692 D WindowManager: setParent old=Task{e0ac8e6 #3763 type=standard A=10278:nup.z U=0 visible=false mode=fullscreen translucent=true sz=0},new=null,this window=ActivityRecord{bb1ce27 u0 nup.z/.MainActivity t3763 f}},callers=com.android.server.wm.WindowContainer.removeChild:634 com.android.server.wm.Task.removeChild:1857 com.android.server.wm.Task.removeChild:1836 com.android.server.wm.WindowContainer.removeImmediately:686 com.android.server.wm.WindowToken.removeImmediately:376 com.android.server.wm.ActivityRecord.removeImmediately:3878 
+03-16 14:48:29.630  1539  1692 D OplusMirageWindowManagerService: onTaskRemoved displayid:0 taskId:3763 callers:com.android.server.wm.TaskDisplayArea.removeChildTask:425 com.android.server.wm.TaskDisplayArea.removeChild:414 com.android.server.wm.WindowContainer.removeImmediately:686 com.android.server.wm.Task.removeImmediately:3369 com.android.server.wm.Task.removeIfPossible:1049 
+03-16 14:48:29.630  1539  1692 I OplusScreenSecurityMask: onStackRemoved task = Task{e0ac8e6 #3763 type=standard A=10278:nup.z U=0 visible=false mode=fullscreen translucent=true sz=0} record = null displayId = 0
+03-16 14:48:29.630  1539  1692 D WindowManager: setParent old=DefaultTaskDisplayArea@38247582,new=null,this window=Task{e0ac8e6 #3763 type=standard A=10278:nup.z U=0 visible=false mode=fullscreen translucent=true sz=0},callers=com.android.server.wm.WindowContainer.removeChild:634 com.android.server.wm.TaskDisplayArea.removeChildTask:427 com.android.server.wm.TaskDisplayArea.removeChild:414 com.android.server.wm.WindowContainer.removeImmediately:686 com.android.server.wm.Task.removeImmediately:3369 com.android.server.wm.Task.removeIfPossible:1049 
+03-16 14:48:29.630  1539  1692 D TaskExtImpl: remove ActivityRecord{bb1ce27 u0 nup.z/.MainActivity t-1 f}} to mActivityRecordSum = Counter{ }
+03-16 14:48:29.631  1539  1692 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=3763 attached=false
+03-16 14:48:29.631  1539  1692 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=3763 attached=false
+03-16 14:48:29.633  1539  4477 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:29.633  1539  4477 D OplusAppListInterceptManager: shouldFilterTask::packageName = nup.z
+03-16 14:48:29.633  1539  4477 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:29.633  1539  4477 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.tencent.mm
+03-16 14:48:29.633  1539  4477 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:29.633  1539  4477 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.heytap.browser
+03-16 14:48:29.634  1539  1558 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:29.634  1539  1558 D OplusAppListInterceptManager: shouldFilterTask::packageName = nup.z
+03-16 14:48:29.634  1539  1558 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:29.634  1539  1558 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.tencent.mm
+03-16 14:48:29.634  1539  1558 D OplusAppListInterceptManager: shouldFilterTask
+03-16 14:48:29.634  1539  1558 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.heytap.browser
+03-16 14:48:29.641   946   946 D OplusLayer: ~Layer() sequence=1959, name=Task=3763#1 0xb4000074b7237800
+03-16 14:48:29.641   946   946 D OplusLayer: ~Layer() sequence=1949, name=ActivityRecord{bb1ce27 u0 nup.z/.MainActivity#0 0xb4000074d0313000
+03-16 14:48:29.728  1539  1737 D VRR [OPlusRefreshRateService]: handleConfigIdChange physicalDisplayId: 0 configId: 1
+03-16 14:48:29.783  1539  9616 W OplusSelfProtectManager: pkg[com.oplus.crashbox] not in policy list
+03-16 14:48:29.796  2580  2905 D AppSwitchListener: onAppEnter: Uid = 10278
+03-16 14:48:29.796  2580  2905 W AuthDialogHelper: checkNotificationSwitchFirst() called with: context = [com.oplus.notification.NotificationCenterService@600ae95], pkg = [nup.z], uid = [10278], userId = [0], init checker
+03-16 14:48:29.797  2580  2905 E AuthDialogHelper: CheckNotificationCanBeSetSecond: check nup.z , Notification master switch on, unable to pop dialog
+03-16 14:48:29.804  1539  1558 D ActivityManager: getProcessesInErrorState callingUid=10279, CallingPid=30213
+03-16 14:48:29.982  1539  1691 W ActivityTaskManager: Activity top resumed state loss timeout for ActivityRecord{bb1ce27 u0 nup.z/.MainActivity t-1 f}}
+03-16 14:48:29.982  1539  1691 I OplusJoystickManager: handleApplicationSwitch deprecated!
+03-16 14:48:29.983  1539  2620 D OplusEapManager: mTargetExitName :nup.z
+03-16 14:48:29.983  1539  2620 V DCSEX-AppSwitchManager: OnAppSwitchObserver: onAppExit, resuming = com.android.launcher, target = nup.z, is ResumingFirstStart =  false, is ResumingMultiApp =  false, extensionInfo =  Bundle[{taskId=5, uid=10178}]
+03-16 14:48:29.983  1539  1691 I PowerHalWrapper: amsBoostNotify pid:2488,activity:com.android.launcher.Launcher, package:com.android.launcher, mProcessCreatePacknup.z 
+03-16 14:48:29.983  1539  2620 D VRR [OPlusFrontAppManager]: OnAppSwitchObserver: onAppExit , info.targetName = nup.z
+03-16 14:48:29.983  1539  2620 D VRR [OPlusFrontAppManager]: packageName: null
+03-16 14:48:29.983  1539  1737 D VRR [OPlusRefreshRateService]: handleFrontAppChange pkgName: null
+03-16 14:48:29.984  1539  1737 D VRR [OPlusExternalRefreshRateManager]: setFrontPackageName pkgName: null CurPkgName: nup.z
+03-16 14:48:29.984  1539  1691 I PowerHalWrapper: state: 1 
+03-16 14:48:29.984  1539  5828 D DCSEX-AppLaunchEventRecorder: onAppSwitch from = nup.z to = com.android.launcher
+03-16 14:48:29.984  1539  1691 I PowerHalWrapper: amsBoostNotify AMS_BOOST_PROCESS_CREATE_BOOST:true 
+03-16 14:48:29.985   851   931 I libPowerHal: [perfNotifyAppState] foreground:com.android.launcher, pid:2488, uid:10178
+03-16 14:48:29.985  2580  5189 D AppSwitchListener: onAppExit() called !
+03-16 14:48:29.985  1539  2620 D OplusEapManager: mTargetEnterName :com.android.launcher
+03-16 14:48:29.985  1539  2620 V DCSEX-AppSwitchManager: OnAppSwitchObserver: onAppEnter, launchedFrom =  null, target =  com.android.launcher, is firstStart =  false, is multiApp =  false, extensionInfo =  Bundle[{taskId=5, pid=2488, uid=10178}]
+03-16 14:48:29.985  1539  2620 D VRR [OPlusFrontAppManager]: OnAppSwitchObserver: onAppEnter , info.targetName = com.android.launcher
+03-16 14:48:29.985  1539  2620 D VRR [OPlusFrontAppManager]: packageName: com.android.launcher
+03-16 14:48:29.985  2580  6625 W Battery : ThermalControlUtils: mForegroundPkg=com.android.launcher
+03-16 14:48:29.986  1539  1737 D VRR [OPlusRefreshRateService]: handleFrontAppChange pkgName: com.android.launcher
+03-16 14:48:29.986  1539  1737 D VRR [OPlusExternalRefreshRateManager]: setFrontPackageName pkgName: com.android.launcher CurPkgName: null
+03-16 14:48:29.986   851   931 I UxUtility: notifyForegroundApp pack:com.android.launcher, uid:10178
+03-16 14:48:29.986   851   931 I TouchUtility: notifyAppState error = NULL
+03-16 14:48:29.988 22986 23007 D ZoomAppController: ignore onAppEnter: mCurrentZoomInfo is null
+03-16 14:48:29.988  1539  1866 E AthenaService: MemoryGuardAction: handleAppChange
+03-16 14:48:29.988   851   869 I mtkpower@impl: [notifyAppState] pc:0, nup.z => com.android.launcher
+03-16 14:48:29.989 22940 28934 I obrain  : app forground called:com.android.launcher
+03-16 14:48:29.989   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.989   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.989   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.989   874   874 I CameraMidasService: The size of PowerFactor is 120 ,The size of PowerFactors is 0, The memory size of PowerFactors is 0
+03-16 14:48:29.989   588   588 I hwservicemanager: getTransport: Cannot find entry vendor.oplus.hardware.handlefactory@1.0::IHandleFactory/default in either framework or device VINTF manifest.
+03-16 14:48:29.990   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.990   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.990   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.990  1539  3946 D OplusPowerMonitor: OplusWakeLockInfo{binderhash=117959190flags=1, tag=*launch*, duration=231, starttime=258518761, packageName='android', uid=1000, pid=1539}
+03-16 14:48:29.990   874   874 I CameraMidasService: getExplorerInfo The size of ExplorerInfo is 200 ,The size of ExplorerInfo is 0, The memory size of ExplorerInfo is 0
+03-16 14:48:29.990   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.990   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.990   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.990 22940 28932 E HandleFactory: Failed to get IHandleFactory hal service, null
+03-16 14:48:29.991   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.991   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.991   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.991   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.991   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.991   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.991  3376  3403 D midasd  : rm 444, fcc 3928, pchq 842, reset 45, level 12, usb 475
+03-16 14:48:29.991   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.991   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.991   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.991   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.991   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.991   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.991   588   588 I hwservicemanager: getTransport: Cannot find entry vendor.oplus.hardware.handlefactory@1.0::IHandleFactory/default in either framework or device VINTF manifest.
+03-16 14:48:29.992   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.992   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.992   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.992 22940 28922 E HandleFactory: Failed to get IHandleFactory hal service, null
+03-16 14:48:29.992   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.992   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.992   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.992   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.992   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.992   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.992  2580  6625 W Battery : ThermalControllHandler: tempLevel=2,userMode=2,gameUserMode=-1,appType=-1,envTempType=0,appStates=[]
+03-16 14:48:29.992   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.992   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.992   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.992  1539  4477 D OplusGameRotationService: lockRotationInGame: change state to 0
+03-16 14:48:29.992  2580  6625 W Battery : ThermalControllHandler: tempGear=2,configItemName=common_config
+03-16 14:48:29.992   928   928 D vendor.oplus.hardware.rpmh@2.0-service: getPowerStateSubsystemSleepState
+03-16 14:48:29.992   928   928 D vendor.oplus.hardware.rpmh@2.0-service: file path: 
+03-16 14:48:29.992   928   928 E vendor.oplus.hardware.rpmh@2.0-service: file path is empty
+03-16 14:48:29.993  2580  4827 W Battery : ThermalControllHandler: MSG_THERMAL_CONTROL_CATEGORY_CHANGED
+03-16 14:48:29.993   588   588 I hwservicemanager: getTransport: Cannot find entry vendor.oplus.hardware.handlefactory@1.0::IHandleFactory/default in either framework or device VINTF manifest.
+03-16 14:48:29.993 22940 28932 E HandleFactory: Failed to get IHandleFactory hal service, null
+03-16 14:48:29.998  3377  3409 E oiface  : get gpu freq table failed
+03-16 14:48:30.000  3377  3409 E oiface  : get gpu freq table failed

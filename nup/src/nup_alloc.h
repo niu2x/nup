@@ -9,6 +9,6 @@
 #define NUP_NEW_ARRAY(T, count)         new T[count]
 #define NUP_DELETE(ptr)                 delete ptr
 #define NUP_DELETE_ARRAY(ptr, count)    delete[] ptr
-#define NUP_MAKE_PTR(T, ...)            Ptr<T>(new T(__VA_ARGS__))
+#define NUP_MAKE_PTR(T, ...)            nup::Ptr<T>(new T(__VA_ARGS__))
 
 #endif

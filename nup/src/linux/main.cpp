@@ -1,22 +1,17 @@
 #include "nup_core.h"
+#include "nup_demo.h"
 #include "nup_stream.h"
 
 int main()
 {
     nup::Core::create_instance();
     auto core = nup::Core::get();
+    core->setup();
+
+    core->set_app(NUP_MAKE_PTR(nup::Demo));
     core->run();
-    // auto ws
-    // = core->file_stream_factory()->create_file_write_stream("./test.txt");
-    // ws->write("hello world!", 12);
 
-    // auto file = nup::Core::get()->file_factory()->create_file(
-    //     "/home/niu2x/project/nup/Makefile");
-    // nup::FileReadStream stream(file);
-    // while (!stream.eof()) {
-    //     putchar(*stream.read_char());
-    // }
-
+    core->cleanup();
     nup::Core::destroy_instance();
     return 0;
 }

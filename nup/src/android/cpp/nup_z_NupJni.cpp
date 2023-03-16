@@ -1,7 +1,13 @@
 #include "nup_z_NupJni.h"
 #include "nup_type.h"
-#include <EGL/egl.h>
-#include "nup_opengl.h"
+#include "nup_android_window.h"
+#include "nup_core.h"
+
+namespace nup {
+
+IntSize android_window_size = { 0, 0 };
+
+}
 
 extern "C" {
 
@@ -10,18 +16,18 @@ extern "C" {
 JNIEXPORT void JNICALL Java_nup_z_NupJni_on_1gl_1surface_1created(
     JNIEnv*, jclass)
 {
-    gladLoadGLES2(eglGetProcAddress);
-    glClearColor(255, 0, 0, 1);
+    nup::Core::create_instance();
 }
 
 JNIEXPORT void JNICALL Java_nup_z_NupJni_on_1gl_1surface_1changed(
-    JNIEnv*, jclass, jint, jint)
+    JNIEnv*, jclass, jint w, jint h)
 {
+    nup::android_window_size = { w, h };
 }
 
 JNIEXPORT void JNICALL Java_nup_z_NupJni_on_1gl_1surface_1draw(JNIEnv*, jclass)
 {
-    glClear(GL_COLOR_BUFFER_BIT);
+    nup::Core::get()->step(1 / 60.0);
 }
 
 jint JNI_OnLoad(JavaVM* vm, void* reserved) { 
