@@ -43,6 +43,7 @@ endif()
 
 if(TARGET_PLATFORM STREQUAL "Android")
 	list(APPEND SOURCE_DIRECTORIES "src/android/cpp/*.cpp")
+	list(APPEND LIBS "EGL")
 endif()
 
 
