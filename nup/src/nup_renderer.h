@@ -3,6 +3,7 @@
 
 #include "nup_type.h"
 #include "nup_color.h"
+#include "nup_renderer_enum.h"
 
 namespace nup {
 
@@ -13,7 +14,7 @@ public:
 
     // protected:
     virtual void set_clear_color(const Color& c) = 0;
-    virtual void clear() = 0;
+    virtual void clear(BitFlags buffers) = 0;
 };
 
 } // namespace nup

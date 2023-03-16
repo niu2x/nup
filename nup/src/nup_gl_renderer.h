@@ -13,7 +13,7 @@ public:
     // protected:
 
     virtual void set_clear_color(const Color& c) override;
-    virtual void clear() override;
+    virtual void clear(BitFlags buffers) override;
 };
 
 } // namespace nup

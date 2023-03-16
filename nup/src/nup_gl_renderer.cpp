@@ -5,10 +5,22 @@ namespace nup {
 RendererGL::RendererGL() { }
 RendererGL::~RendererGL() { }
 
-void RendererGL::set_clear_color(const Color& c)
+void RendererGL::set_clear_color(const Color& color)
 {
-    glClearColor(c.r, c.g, c.b, c.a);
+    glClearColor(color.r, color.g, color.b, color.a);
 }
-void RendererGL::clear() { glClear(GL_COLOR_BUFFER_BIT); }
+
+void RendererGL::clear(BitFlags buffers)
+{
+    GLuint bits = 0;
+    if (buffers & BUFFER_COLOR)
+        bits |= GL_COLOR_BUFFER_BIT;
+    if (buffers & BUFFER_DEPTH)
+        bits |= GL_DEPTH_BUFFER_BIT;
+    if (buffers & BUFFER_COLOR)
+        bits |= GL_STENCIL_BUFFER_BIT;
+
+    glClear(bits);
+}
 
 } // namespace nup

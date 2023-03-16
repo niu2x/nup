@@ -1,0 +1,15 @@
+#ifndef NUP_RENDERER_ENUM_H
+#define NUP_RENDERER_ENUM_H
+
+namespace nup {
+
+enum {
+    BUFFER_COLOR = 1,
+    BUFFER_DEPTH = 2,
+    BUFFER_STENCIL = 4,
+    BUFFER_ALL = BUFFER_COLOR | BUFFER_DEPTH | BUFFER_STENCIL,
+};
+
+}
+
+#endif

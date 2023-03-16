@@ -7,7 +7,7 @@ void Demo::frame_callback(double delta)
 {
     unused(delta);
     Core::get()->renderer()->set_clear_color(Color::Blue);
-    Core::get()->renderer()->clear();
+    Core::get()->renderer()->clear(BUFFER_ALL);
 }
 
 } // namespace nup

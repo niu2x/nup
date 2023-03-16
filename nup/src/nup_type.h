@@ -38,6 +38,7 @@ void unused(Param param)
 
 using TimePoint = uint64_t;
 using TimeInterval = uint64_t;
+using BitFlags = uint64_t;
 
 using String = std::string;
 
