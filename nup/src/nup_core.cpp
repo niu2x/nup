@@ -8,6 +8,7 @@
 #include "nup_gl_shader.h"
 #include "nup_any.h"
 #include "nup_opengl.h"
+#include "nup_gl_renderer.h"
 
 namespace nup {
 
@@ -91,12 +92,16 @@ Core::Core()
     file_factory_ = NUP_MAKE_PTR(FileFactory);
     file_stream_factory_ = NUP_MAKE_PTR(FileStreamFactory, file_factory_);
 
+    renderer_ = NUP_MAKE_PTR(RendererGL);
+
     app_ = nullptr;
 }
 
 Core::~Core()
 {
     app_ = nullptr;
+
+    renderer_ = nullptr;
 
     file_stream_factory_ = nullptr;
     file_factory_ = nullptr;

@@ -6,6 +6,7 @@
 #include "nup_shader.h"
 #include "nup_file.h"
 #include "nup_stream.h"
+#include "nup_renderer.h"
 #include "nup_app.h"
 
 namespace nup {
@@ -23,6 +24,7 @@ public:
 
     NUP_INLINE auto file_factory() { return file_factory_; }
     NUP_INLINE auto file_stream_factory() { return file_stream_factory_; }
+    NUP_INLINE auto renderer() { return renderer_; }
 
     void set_app(Ptr<AppInterface> app) { app_ = app; }
 
@@ -31,6 +33,7 @@ private:
     Ptr<ShaderFactory> shader_factory_;
     Ptr<FileInterfaceFactory> file_factory_;
     Ptr<FileStreamFactory> file_stream_factory_;
+    Ptr<Renderer> renderer_;
 
     Ptr<Window> window_;
     Ptr<AppInterface> app_;

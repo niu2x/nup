@@ -1,6 +1,7 @@
 #include "nup_glfw_window.h"
 
 #include "nup_opengl.h"
+#include "nup_frame_timer.h"
 
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
@@ -39,10 +40,12 @@ GlfwWindow::GlfwWindow()
 
 void GlfwWindow::run()
 {
+    FrameTimer frame_timer;
+
     while (!glfwWindowShouldClose(native_window_)) {
         glfwPollEvents();
 
-        frame_callback_(0);
+        frame_callback_(frame_timer.time_delta());
 
         glfwSwapBuffers(native_window_);
     }

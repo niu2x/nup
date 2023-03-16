@@ -36,6 +36,9 @@ void unused(Param param)
     (void)param;
 }
 
+using TimePoint = uint64_t;
+using TimeInterval = uint64_t;
+
 using String = std::string;
 
 template <class T>
