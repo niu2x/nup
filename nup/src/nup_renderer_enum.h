@@ -32,6 +32,15 @@ enum class HardwareBufferUsage {
 
     COUNT,
 };
+
+enum class VertexAttribute {
+    POS,
+    NORMAL,
+    COLOR,
+    UV,
+
+    COUNT,
+};
 }
 
 #endif

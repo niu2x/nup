@@ -23,6 +23,7 @@
 #include "nup_alloc.h"
 
 #define NUP_INLINE BOOST_FORCEINLINE
+#define NUP_ENUM_COUNT(e) (int)(e::COUNT)
 
 namespace nup {
 
