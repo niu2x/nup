@@ -7,6 +7,7 @@
 
 #include <string>
 #include <map>
+#include <type_traits>
 #include <thread>
 #include <mutex>
 #include <functional>
@@ -26,6 +27,12 @@
 #define NUP_ENUM_COUNT(e) (int)(e::COUNT)
 
 namespace nup {
+
+template <bool B, class T>
+using enable_if_t = std::enable_if_t<B, T>;
+
+template <class B, class D>
+constexpr bool is_base_of_v = std::is_base_of_v<B, D>;
 
 using TYPE_INFO = const std::type_info&;
 
@@ -48,77 +55,57 @@ using Vector = std::vector<T>;
 
 using MemoryBlock = Vector<uint8_t>;
 
-class Interator {
+class BaseInterator {
+};
+
+template <class T>
+class Iterator : public BaseInterator {
 public:
-    Interator() { }
-    virtual ~Interator() { }
+    Iterator() { }
+    virtual ~Iterator() { }
+
+    virtual const T& value() const = 0;
     virtual void next() = 0;
     virtual bool has_value() const = 0;
+
+    operator bool() const { return has_value(); }
+    const T& operator*() const { return value(); }
 };
 
-template <class KEY, class VALUE>
-class KVIterator : public Interator {
+template <class T>
+enable_if_t<is_base_of_v<BaseInterator, T>, T&> operator++(T& iter)
+{
+    iter.next();
+    return iter;
+}
+
+template <class T>
+enable_if_t<is_base_of_v<BaseInterator, T>, T> operator++(T& iter, int)
+{
+    auto ret = iter;
+    iter.next();
+    return ret;
+}
+
+template <class T>
+class ArrayIterator : public Iterator<T> {
 public:
-    virtual const KEY& key() = 0;
-    virtual VALUE& value() = 0;
-};
+    ArrayIterator(const T* base, int nr)
+    : base_(base)
+    , nr_(nr)
+    , pos_(0)
+    {
+    }
+    virtual ~ArrayIterator() { }
 
-template <class VALUE>
-class VIterator : public Interator {
-public:
-    virtual VALUE& value() = 0;
-};
-
-template <class KEY, class VALUE>
-class Map {
-public:
-    class MapIterator : public KVIterator<KEY, VALUE> {
-    public:
-        using std_map_iterator = typename std::map<KEY, VALUE>::iterator;
-
-        MapIterator(Map* map)
-        {
-            it_ = map->begin();
-            end_ = map->end();
-        }
-
-        MapIterator(Map* map, std_map_iterator it)
-        {
-            it_ = it;
-            end_ = map->end();
-        }
-
-        virtual ~MapIterator() { }
-        virtual void next() override { ++it_; }
-
-        virtual bool has_value() const override { return it_ != end_; }
-
-        virtual KEY& key() override { return it_.first; }
-        virtual VALUE& value() override { return it_.second; }
-
-        void set(const KEY& key, const VALUE& value) { delegate_[key] = value; }
-
-        MapIterator lookup(const KEY& key)
-        {
-            return MapIterator(&delegate_, delegate_.find(key));
-        }
-
-        void remove(const KEY& key) { delegate_.erase(key); }
-
-    private:
-        std_map_iterator it_;
-        std_map_iterator end_;
-    };
-
-    Map() { }
-    virtual ~Map() { }
-
-    MapIterator iterator() { return MapIterator(&delegate_); }
-
-    friend class MapIterator;
+    virtual const T& value() const override { return base_[pos_]; }
+    virtual void next() override { pos_++; }
+    virtual bool has_value() const override { return pos_ < nr_; }
 
 private:
-    std::map<KEY, VALUE> delegate_;
+    const T* base_;
+    int nr_;
+    int pos_;
 };
 
 using offset_t = std::ptrdiff_t;

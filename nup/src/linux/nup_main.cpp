@@ -13,5 +13,6 @@ int main()
 
     core->cleanup();
     nup::Core::destroy_instance();
+
     return 0;
 }

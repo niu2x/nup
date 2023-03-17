@@ -21,8 +21,6 @@ private:
     GLFWwindow* native_window_;
     static int window_count_;
     NUP_MUTEX_DEFAULT;
-
-    // static Map<NUP_THREAD_ID, Ptr<GLFWwindow> > current_windows_;
 };
 
 class GlfwWindowFactory : public WindowFactory {

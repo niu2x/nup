@@ -36,7 +36,7 @@ void HardwardBufferGL::resize(size_t size)
 void HardwardBufferGL::update_date(offset_t offset, void* ptr, size_t size)
 {
     _bind();
-    update_date(offset, ptr, size);
+    _update_date(offset, ptr, size);
 }
 
 HardwardBufferGL::HardwardBufferGL(
