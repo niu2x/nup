@@ -120,6 +120,8 @@ private:
     std::map<KEY, VALUE> delegate_;
 };
 
+using offset_t = std::ptrdiff_t;
+
 template <class T>
 class Size {
 public:
