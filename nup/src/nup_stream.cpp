@@ -1,5 +1,4 @@
 #include "nup_stream.h"
-#include "nup_core.h"
 
 namespace nup {
 

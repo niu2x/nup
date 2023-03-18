@@ -41,6 +41,11 @@ enum class VertexAttribute {
 
     COUNT,
 };
+
+enum class RendererCommandType {
+    CLEAR,
+    SET_CLEAR_COLOR,
+};
 }
 
 #endif

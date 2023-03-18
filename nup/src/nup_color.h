@@ -40,6 +40,11 @@ public:
     {
     }
 
+    NUP_INLINE Color()
+    : rgba32(0)
+    {
+    }
+
     NUP_INLINE Color(const Color&) = default;
     NUP_INLINE Color& operator=(const Color&) = default;
 

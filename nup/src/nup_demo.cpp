@@ -6,8 +6,13 @@ namespace nup {
 void Demo::frame_callback(double delta)
 {
     unused(delta);
-    Core::get()->renderer()->set_clear_color(Color::Blue);
-    Core::get()->renderer()->clear(BUFFER_ALL);
+
+    static auto clear_cmd = RendererCommand::clear(BUFFER_ALL);
+    static auto set_clear_color_cmd
+        = RendererCommand::set_clear_color(Color::White);
+
+    Core::get()->renderer()->execute(set_clear_color_cmd);
+    Core::get()->renderer()->execute(clear_cmd);
 }
 
 } // namespace nup

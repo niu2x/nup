@@ -50,11 +50,6 @@ using BitFlags = uint64_t;
 
 using String = std::string;
 
-template <class T>
-using Vector = std::vector<T>;
-
-using MemoryBlock = Vector<uint8_t>;
-
 class BaseInterator {
 };
 
@@ -108,6 +103,32 @@ private:
     int pos_;
 };
 
+template <class T>
+class Vector {
+public:
+    Vector() { }
+    ~Vector() { }
+
+    T* data() { return delegate_.data(); }
+    const T* data() const { return delegate_.data(); }
+
+    void resize(size_t size) { delegate_.resize(size); }
+    void reserve(size_t size) { delegate_.reserve(size); }
+    size_t size() const { return delegate_.size(); }
+
+    ArrayIterator<T> iterator() const
+    {
+        return ArrayIterator<T>(data(), size());
+    };
+
+    void push_back(const T& t) { delegate_.push_back(t); }
+
+private:
+    std::vector<T> delegate_;
+};
+
+using MemoryBlock = Vector<uint8_t>;
+
 using offset_t = std::ptrdiff_t;
 
 template <class T>
@@ -117,6 +138,14 @@ public:
 };
 
 using IntSize = Size<int>;
+
+// class Point {
+// public:
+//     float x, y, z;
+// };
+//
+//
+using RGBA32 = uint32_t;
 
 template <class T>
 using Ptr = std::shared_ptr<T>;
