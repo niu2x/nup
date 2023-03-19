@@ -21,6 +21,8 @@
 #include <boost/noncopyable.hpp>
 #include <boost/preprocessor/cat.hpp>
 
+#include <Eigen/Dense>
+
 #include "nup_alloc.h"
 
 #define NUP_INLINE BOOST_FORCEINLINE
@@ -221,6 +223,9 @@ auto max(const T1& t1, const T2& t2)
 {
     return std::max(t1, t2);
 }
+
+using Matrix4f = Eigen::Matrix4f;
+using Transform = Matrix4f;
 
 } // namespace nup
 

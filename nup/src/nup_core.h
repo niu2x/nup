@@ -8,6 +8,7 @@
 #include "nup_stream.h"
 #include "nup_renderer.h"
 #include "nup_app.h"
+#include "nup_scene_manager.h"
 
 namespace nup {
 
@@ -25,6 +26,7 @@ public:
     NUP_INLINE auto file_factory() { return file_factory_; }
     NUP_INLINE auto file_stream_factory() { return file_stream_factory_; }
     NUP_INLINE auto renderer() { return renderer_; }
+    NUP_INLINE auto scene_manager() { return scene_manager_; }
 
     void set_app(Ptr<AppInterface> app) { app_ = app; }
 
@@ -34,6 +36,7 @@ private:
     Ptr<FileInterfaceFactory> file_factory_;
     Ptr<FileStreamFactory> file_stream_factory_;
     Ptr<Renderer> renderer_;
+    Ptr<SceneManager> scene_manager_;
 
     Ptr<Window> window_;
     Ptr<AppInterface> app_;

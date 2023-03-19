@@ -78,7 +78,11 @@ void Core::run()
 
 void Core::setup() { window_ = window_factory_->create_window(); }
 
-void Core::step(double ts) { app_->frame_callback(ts); }
+void Core::step(double ts)
+{
+    app_->frame_callback(ts);
+    scene_manager_->step(ts);
+}
 
 void Core::cleanup() { window_ = nullptr; }
 
@@ -93,6 +97,7 @@ Core::Core()
     file_stream_factory_ = NUP_MAKE_PTR(FileStreamFactory, file_factory_);
 
     renderer_ = NUP_MAKE_PTR(RendererGL);
+    scene_manager_ = nullptr;
 
     app_ = nullptr;
 }
@@ -100,6 +105,7 @@ Core::Core()
 Core::~Core()
 {
     app_ = nullptr;
+    scene_manager_ = nullptr;
 
     renderer_ = nullptr;
 

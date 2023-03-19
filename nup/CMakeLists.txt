@@ -36,6 +36,9 @@ if(NUP_USE_GLFW)
 endif()
 
 
+set(Eigen3_DIR "${PROJECT_BINARY_DIR}/external_deps/share/eigen3/cmake" CACHE PATH "" FORCE)
+find_package(Eigen3 REQUIRED)
+list(APPEND LIBS Eigen3::Eigen)
 
 if(TARGET_PLATFORM STREQUAL "Linux")
 	list(APPEND SOURCE_DIRECTORIES "src/linux/*.cpp")
