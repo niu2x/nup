@@ -20,7 +20,7 @@ struct Particle {
     highp float size;
     highp float age;
     highp float life;
-    highp float alive;
+    highp int alive;
 };
 
 layout(std140, binding = 0) buffer Particles {
@@ -28,14 +28,71 @@ layout(std140, binding = 0) buffer Particles {
 };
 
 uniform highp float delta_time;
-uniform uint particle_count;
+
+layout(std140) uniform Config
+{
+    highp vec4 velocity_over_lifetime;
+    highp vec4 limit_velocity_over_lifetime;
+    highp vec4 gravity_direction;
+    highp vec4 start_speed;
+
+    highp vec4 start_color;
+
+
+    highp float duration;
+    highp float start_delay;
+    highp float start_lifetime;
+    highp float size_over_lifetime;
+    highp float gravity;
+
+    highp uint max_particles;
+    highp int looping;
+    highp int start_size;
+} config;
+
+
+
+float random(vec2 st) {
+    const float a = 12.9898;
+    const float b = 78.233;
+    const float c = 43758.5453;
+    float dt = dot(st.xy, vec2(a,b));
+    float sn = mod(dt, 3.14);
+    return fract(sin(sn) * c);
+}
+
 
 void main() {
     uint id = gl_GlobalInvocationID.x;
+
+    if(id < config.max_particles) {
+
         Particle p = particles[id];
-        // 更新粒子状态
-        p.position.xyz = vec3(0.5, 0.5, 0.50);
+
+        if(p.alive > 0) {
+            p.velocity += config.gravity_direction * config.gravity ; 
+            p.position += p.velocity * delta_time;
+
+            p.age += delta_time;
+            if(p.age >= p.life) {
+                p.alive = 0;
+                p.age = random(vec2(gl_GlobalInvocationID.xy));
+            }
+        }
+        else {
+            p.age -= delta_time;
+            if(p.age <= 0.0){
+                p.alive = 1;
+                p.position = vec4(0.0, 0.0, 0.0, 0.0);
+                p.velocity = vec4(0.0, 0.0, 0.0, 0.0);
+                p.age = 0.0;
+                p.life = config.start_lifetime;
+            }
+        }
+
         particles[id] = p;
+
+    }
 }
 
 )RAW";
@@ -113,6 +170,7 @@ static GLuint link_program(GLuint shaders[])
     if (!success) {
         char info_log[512];
         glGetProgramInfoLog(shader_program, sizeof(info_log), NULL, info_log);
+        fprintf(stderr, "link error %s\n", info_log);
         glDeleteProgram(shader_program);
         return 0;
     }
@@ -128,7 +186,7 @@ struct Particle {
     float size;
     float age;
     float life;
-    float alive;
+    int alive;
 };
 
 struct System {
@@ -137,8 +195,9 @@ struct System {
     GLuint draw_program;
     GLuint particle_buffer;
     GLuint location_delta_time;
-    GLuint location_particle_count;
     GLuint vao;
+    GLuint uniform_buffer;
+    GLuint uniform_block_index;
     uint32_t particle_count;
 };
 
@@ -182,7 +241,6 @@ static bool system_init_gl_vao(System* self)
 static bool system_init_gl_program(System* self)
 {
     {
-
         auto compute_shader
             = compile_shader(GL_COMPUTE_SHADER, compute_shader_source);
         if (!compute_shader)
@@ -198,9 +256,13 @@ static bool system_init_gl_program(System* self)
         }
 
         self->compute_program = program;
-        self->location_delta_time = glGetUniformLocation(program, "delta_time");
-        self->location_particle_count
-            = glGetUniformLocation(program, "particle_count");
+
+#define GET_LOCATION(name)                                                     \
+    self->location_##name = glGetUniformLocation(program, #name)
+        GET_LOCATION(delta_time);
+
+        self->uniform_block_index = glGetUniformBlockIndex(program, "Config");
+        glUniformBlockBinding(program, self->uniform_block_index, 0);
     }
 
     {
@@ -241,6 +303,15 @@ static bool system_init_gl_buffer(System* self)
         GL_DYNAMIC_DRAW);
     self->particle_buffer = buffer;
     glBindBuffer(GL_SHADER_STORAGE_BUFFER, 0);
+
+    GLuint ubo;
+    glGenBuffers(1, &ubo);
+    glBindBuffer(GL_UNIFORM_BUFFER, ubo);
+    glBufferData(
+        GL_UNIFORM_BUFFER, sizeof(Config), &(self->config), GL_DYNAMIC_DRAW);
+    glBindBuffer(GL_UNIFORM_BUFFER, 0);
+    self->uniform_buffer = ubo;
+
     return true;
 }
 
@@ -253,8 +324,8 @@ static bool system_particle_buffer_init(System* self)
     if (!initial_particles)
         return false;
 
-    for (int i = 0; i < self->config.max_particles; i++) {
-        initial_particles[i].alive = false;
+    for (auto i = 0U; i < self->config.max_particles; i++) {
+        initial_particles[i].alive = 0;
         initial_particles[i].size = 16;
     }
 
@@ -280,26 +351,24 @@ System* system_create(const Config& config)
 
     self->config = config;
     if (!system_init_gl_program(self)) {
+        fprintf(stderr, "system_init_gl_program fail\n");
         goto error_handle;
     }
 
     if (!system_init_gl_buffer(self)) {
+        fprintf(stderr, "system_init_gl_buffer fail\n");
         goto error_handle;
     }
 
     if (!system_particle_buffer_init(self)) {
-        goto error_handle;
-    }
-
-    if (!system_init_gl_program(self)) {
+        fprintf(stderr, "system_particle_buffer_init fail\n");
         goto error_handle;
     }
 
     if (!system_init_gl_vao(self)) {
+        fprintf(stderr, "system_init_gl_vao fail\n");
         goto error_handle;
     }
-
-    self->particle_count = 4;
 
     return self;
 
@@ -307,10 +376,10 @@ error_handle:
     system_destroy(self);
     return nullptr;
 }
+
 void system_destroy(System* self)
 {
     if (self) {
-
         if (self->compute_program)
             glDeleteProgram(self->compute_program);
 
@@ -323,24 +392,31 @@ void system_destroy(System* self)
         if (self->vao)
             glDeleteVertexArrays(1, &(self->vao));
 
+        if (self->uniform_buffer)
+            glDeleteBuffers(1, &(self->uniform_buffer));
+
         free(self);
     }
 }
 void system_pre_draw(System* self) { (void)self; }
 void system_draw(System* self)
 {
-
     glEnable(GL_VERTEX_PROGRAM_POINT_SIZE);
 
     glUseProgram(self->compute_program);
-    glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, self->particle_buffer);
+
     glUniform1f(self->location_delta_time, 1 / 60.0f);
-    glUniform1ui(self->location_particle_count, self->particle_count);
-    glDispatchCompute((self->particle_count + 255) / 256, 1, 1);
+
+    glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, self->particle_buffer);
+    glBindBufferBase(GL_UNIFORM_BUFFER, 0, self->uniform_buffer);
+
+    glDispatchCompute((self->config.max_particles + 255) / 256, 1, 1);
+
+    glBindBufferBase(GL_UNIFORM_BUFFER, 0, 0);
 
     glUseProgram(self->draw_program);
     glBindVertexArray(self->vao);
-    glDrawArrays(GL_POINTS, 0, self->particle_count);
+    glDrawArrays(GL_POINTS, 0, self->config.max_particles);
 }
 
 } // namespace nup::particle_system

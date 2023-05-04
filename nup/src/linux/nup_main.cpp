@@ -47,7 +47,7 @@ int main()
 
     config.duration = 100;
     config.start_delay = 0;
-    config.start_lifetime = 10;
+    config.start_lifetime = 1;
     config.start_size = 10;
     config.start_speed = vec3(0, 0, 0);
     config.start_color = { 1, 1, 1, 1 };
@@ -57,6 +57,7 @@ int main()
     config.limit_velocity_over_lifetime = vec3(4, 4, 4);
     config.size_over_lifetime = 1;
     config.max_particles = 100;
+    config.gravity = 0.9;
 
     auto system = nup::particle_system::system_create(config);
     if (!system) {

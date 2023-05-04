@@ -1,6 +1,8 @@
 #ifndef NUP_PARTICLE_H
 #define NUP_PARTICLE_H
 
+#include <cstdint>
+
 namespace nup::particle_system {
 
 struct Vector {
@@ -15,22 +17,23 @@ struct Color {
 };
 
 struct Config {
-    float duration;
-
-    float start_delay;
-    float start_lifetime;
-    float start_size;
-    Vector start_speed;
-    Color start_color;
-
-    Vector gravity_direction;
-    bool looping;
 
     Vector velocity_over_lifetime;
     Vector limit_velocity_over_lifetime;
-    float size_over_lifetime;
+    Vector gravity_direction;
+    Vector start_speed;
 
-    int max_particles;
+    Color start_color;
+
+    float duration;
+    float start_delay;
+    float start_lifetime;
+    float size_over_lifetime;
+    float gravity;
+
+    uint32_t max_particles;
+    int looping;
+    int start_size;
 };
 
 struct System;
