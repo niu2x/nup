@@ -35,11 +35,6 @@ if(NUP_USE_GLFW)
 	list(APPEND LIBS glfw)
 endif()
 
-
-set(Eigen3_DIR "${PROJECT_BINARY_DIR}/external_deps/share/eigen3/cmake" CACHE PATH "" FORCE)
-find_package(Eigen3 REQUIRED)
-list(APPEND LIBS Eigen3::Eigen)
-
 if(TARGET_PLATFORM STREQUAL "Linux")
 	list(APPEND SOURCE_DIRECTORIES "src/linux/*.cpp")
 endif()
@@ -61,15 +56,10 @@ target_sources(${LIB_NAME} PRIVATE
 target_include_directories(${LIB_NAME} PRIVATE
 	src/
 	${CMAKE_CURRENT_BINARY_DIR}/include
-	${PROJECT_BINARY_DIR}/boost-prefix/src/boost
 )
 
-# find_package(OpenSSL 3.0 REQUIRED)
 target_link_libraries(${LIB_NAME} PRIVATE
-	# OpenSSL::Crypto
-	# OpenSSL::SSL
 	${LIBS}
 	
 )
 
-configure_file(src/nup_config.h.in include/nup_config.h @ONLY)
