@@ -27,6 +27,7 @@ struct Config {
     Color start_color;
     Color final_color;
 
+    float emit_interval;
     float duration;
     float start_delay;
     float start_lifetime;
@@ -36,6 +37,7 @@ struct Config {
     float start_speed;
 
     uint32_t max_particles;
+    int emit_count;
     int looping;
 };
 

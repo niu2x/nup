@@ -23,6 +23,7 @@ layout(std140) uniform Config
     highp vec4 start_color;
     highp vec4 final_color;
 
+    highp float emit_interval;
     highp float duration;
     highp float start_delay;
     highp float start_lifetime;
@@ -32,6 +33,7 @@ layout(std140) uniform Config
     highp float start_speed;
 
     highp uint max_particles;
+    highp int emit_count;
     highp int looping;
 } config;
 
@@ -65,6 +67,13 @@ layout(std140, binding = 0) buffer Particles {
     Particle particles[];
 };
 
+layout(std140, binding = 1) buffer AtomicContext {
+    coherent uint particle_count;
+    coherent uint emit_retain_count;
+    float next_emit_timepoint;
+}atomic_context;
+
+
 uniform highp float delta_time;
 
 float random(vec2 st) {
@@ -80,7 +89,7 @@ float random(vec2 st) {
 void main() {
     uint id = gl_GlobalInvocationID.x;
 
-    if(id < config.max_particles) {
+    if(id < config.max_particles ) {
 
         Particle p = particles[id];
 
@@ -246,11 +255,17 @@ struct Particle {
     int alive;
 };
 
+struct AtomicContext {
+    uint32_t particle_count;
+};
+
 struct System {
     Config config;
+    AtomicContext atomic_context;
     GLuint compute_program;
     GLuint draw_program;
     GLuint particle_buffer;
+    GLuint atomic_buffer;
     GLuint location_delta_time;
     GLuint vao;
     GLuint uniform_buffer;
@@ -386,13 +401,27 @@ static bool system_init_gl_buffer(System* self)
     if (!system_reinit_gl_particle_buffer(self))
         return false;
 
-    GLuint ubo;
-    glGenBuffers(1, &ubo);
-    glBindBuffer(GL_UNIFORM_BUFFER, ubo);
-    glBufferData(
-        GL_UNIFORM_BUFFER, sizeof(Config), &(self->config), GL_DYNAMIC_DRAW);
-    glBindBuffer(GL_UNIFORM_BUFFER, 0);
-    self->uniform_buffer = ubo;
+    {
+
+        GLuint ubo;
+        glGenBuffers(1, &ubo);
+        glBindBuffer(GL_UNIFORM_BUFFER, ubo);
+        glBufferData(GL_UNIFORM_BUFFER, sizeof(Config), &(self->config),
+            GL_DYNAMIC_DRAW);
+        glBindBuffer(GL_UNIFORM_BUFFER, 0);
+        self->uniform_buffer = ubo;
+    }
+
+    {
+
+        GLuint ubo;
+        glGenBuffers(1, &ubo);
+        glBindBuffer(GL_SHADER_STORAGE_BUFFER, ubo);
+        glBufferData(GL_SHADER_STORAGE_BUFFER, sizeof(AtomicContext),
+            &(self->atomic_context), GL_DYNAMIC_DRAW);
+        glBindBuffer(GL_SHADER_STORAGE_BUFFER, 0);
+        self->atomic_buffer = ubo;
+    }
 
     return true;
 }
@@ -440,6 +469,8 @@ System* system_create(const Config& config)
     self->config = config;
     normalize_config(self->config);
 
+    self->atomic_context.particle_count = 0;
+
     if (!system_init_gl_program(self)) {
         fprintf(stderr, "system_init_gl_program fail\n");
         goto error_handle;
@@ -479,6 +510,9 @@ void system_destroy(System* self)
         if (self->particle_buffer)
             glDeleteBuffers(1, &(self->particle_buffer));
 
+        if (self->atomic_buffer)
+            glDeleteBuffers(1, &(self->atomic_buffer));
+
         if (self->vao)
             glDeleteVertexArrays(1, &(self->vao));
 
@@ -516,9 +550,11 @@ void system_draw(System* self)
     glUniform1f(self->location_delta_time, 1 / 60.0f);
 
     glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, self->particle_buffer);
+    glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 1, self->atomic_buffer);
     glBindBufferBase(GL_UNIFORM_BUFFER, 0, self->uniform_buffer);
     glDispatchCompute((self->config.max_particles + 255) / 256, 1, 1);
     glBindBufferBase(GL_UNIFORM_BUFFER, 0, 0);
+    glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 1, 0);
 
     glUseProgram(self->draw_program);
     glBindVertexArray(self->vao);
