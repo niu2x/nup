@@ -8,9 +8,45 @@
 
 #include "gl_4.3/gl.h"
 
-static const auto* compute_shader_source = R"RAW(
+static const auto* common_shader = R"RAW(
+
+layout(std140) uniform Config
+{
+    highp mat4 mvp;
+
+    highp vec4 velocity_over_lifetime;
+    highp vec4 limit_velocity_over_lifetime;
+    highp vec4 gravity_direction;
+    highp vec4 start_speed;
+
+    highp vec4 start_color;
+    highp vec4 final_color;
+
+    highp float duration;
+    highp float start_delay;
+    highp float start_lifetime;
+    highp float size_over_lifetime;
+    highp float gravity;
+    highp float start_size;
+
+    highp uint max_particles;
+    highp int looping;
+} config;
+
+)RAW";
+
+static const char* compute_shader_source[] = { R"RAW(
 
 #version 310 es
+
+)RAW",
+
+    common_shader,
+
+    R"RAW(
+
+
+
 layout (local_size_x = 256) in;
 
 struct Particle {
@@ -28,29 +64,6 @@ layout(std140, binding = 0) buffer Particles {
 };
 
 uniform highp float delta_time;
-
-layout(std140) uniform Config
-{
-    highp vec4 velocity_over_lifetime;
-    highp vec4 limit_velocity_over_lifetime;
-    highp vec4 gravity_direction;
-    highp vec4 start_speed;
-
-    highp vec4 start_color;
-
-
-    highp float duration;
-    highp float start_delay;
-    highp float start_lifetime;
-    highp float size_over_lifetime;
-    highp float gravity;
-
-    highp uint max_particles;
-    highp int looping;
-    highp int start_size;
-} config;
-
-
 
 float random(vec2 st) {
     const float a = 12.9898;
@@ -72,10 +85,12 @@ void main() {
         if(p.alive > 0) {
             p.velocity += config.gravity_direction * config.gravity ; 
             p.position += p.velocity * delta_time;
+            p.size += config.size_over_lifetime * delta_time;
+            p.color = mix(config.start_color, config.final_color, p.age/p.life);
 
             p.age += delta_time;
             if(p.age >= p.life) {
-                p.alive = 0;
+                p.alive = -1;
                 p.age = random(vec2(gl_GlobalInvocationID.xy));
             }
         }
@@ -84,9 +99,11 @@ void main() {
             if(p.age <= 0.0){
                 p.alive = 1;
                 p.position = vec4(0.0, 0.0, 0.0, 0.0);
-                p.velocity = vec4(0.0, 0.0, 0.0, 0.0);
+                p.velocity = config.start_speed;
                 p.age = 0.0;
+                p.size = config.start_size;
                 p.life = config.start_lifetime;
+                p.color = config.start_color;
             }
         }
 
@@ -95,49 +112,65 @@ void main() {
     }
 }
 
-)RAW";
+)RAW" };
 
-static const auto* vertex_shader_source = R"RAW(
+static const char* vertex_shader_source[] = { R"RAW(
 
 #version 300 es
+
+)RAW",
+    common_shader,
+    R"RAW(
 layout (location = 0) in highp vec3 inPosition;
 layout (location = 1) in highp vec3 inVelocity;
 layout (location = 2) in highp vec4 inColor;
 layout (location = 3) in highp float inSize;
 layout (location = 4) in highp float inAge;
 layout (location = 5) in highp float inLife;
-
+layout (location = 6) in highp int alive;
+    
 out vec4 vColor;
 
-uniform mat4 modelViewProjectionMatrix;
-
 void main() {
-    vColor = inColor;
-    gl_Position = vec4(inPosition, 1.0);
-    gl_PointSize = inSize;
+    if(alive < 0) {
+        gl_Position = vec4(10.0, 10.0, 10.0, 10.0);
+    }
+    else {
+        vColor = inColor;
+        gl_Position = config.mvp * vec4(inPosition, 1.0);
+        gl_PointSize = inSize;
+    }
+
 }
 
-)RAW";
+)RAW" };
 
-static const auto* fragment_shader_source = R"RAW(
+static const char* fragment_shader_source[] = { R"RAW(
 
 #version 300 es
 in highp vec4 vColor;
 out highp vec4 fragColor;
 
 void main() {
-    fragColor = vec4(1.0, 1.0, 1.0, 1.0);
+    fragColor = vColor;
 }
 
-)RAW";
+)RAW" };
 
-static GLuint compile_shader(GLuint type, const char* source)
+template <typename T, std::size_t N>
+static inline std::size_t array_size(const T (&array)[N])
+{
+    (void)array;
+    return N;
+}
+
+static GLuint compile_shader(GLuint type, const char* source[], int count)
 {
     GLuint shader = glCreateShader(type);
     if (!shader)
         return 0;
 
-    glShaderSource(shader, 1, &source, NULL);
+    glShaderSource(shader, count, source, NULL);
     glCompileShader(shader);
     GLint success;
     glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
@@ -145,7 +178,10 @@ static GLuint compile_shader(GLuint type, const char* source)
         char info_log[512];
         glGetShaderInfoLog(shader, sizeof(info_log), NULL, info_log);
         fprintf(stderr, "compile_shader fail: %s\n", info_log);
-        fprintf(stderr, "compile_shader source: %s\n", source);
+        fprintf(stderr, "compile_shader source: \n");
+        for (int i = 0; i < count; i++)
+            fprintf(stderr, "%s", source[i]);
+
         glDeleteShader(shader);
         return 0;
     }
@@ -197,7 +233,6 @@ struct System {
     GLuint location_delta_time;
     GLuint vao;
     GLuint uniform_buffer;
-    GLuint uniform_block_index;
     uint32_t particle_count;
 };
 
@@ -230,6 +265,10 @@ static bool system_init_gl_vao(System* self)
     glVertexAttribPointer(5, 1, GL_FLOAT, GL_FALSE, sizeof(Particle),
         (void*)offsetof(Particle, life));
 
+    glEnableVertexAttribArray(6);
+    glVertexAttribPointer(6, 1, GL_FLOAT, GL_FALSE, sizeof(Particle),
+        (void*)offsetof(Particle, alive));
+
     glBindVertexArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -241,8 +280,8 @@ static bool system_init_gl_vao(System* self)
 static bool system_init_gl_program(System* self)
 {
     {
-        auto compute_shader
-            = compile_shader(GL_COMPUTE_SHADER, compute_shader_source);
+        auto compute_shader = compile_shader(GL_COMPUTE_SHADER,
+            compute_shader_source, array_size(compute_shader_source));
         if (!compute_shader)
             return false;
 
@@ -261,15 +300,15 @@ static bool system_init_gl_program(System* self)
     self->location_##name = glGetUniformLocation(program, #name)
         GET_LOCATION(delta_time);
 
-        self->uniform_block_index = glGetUniformBlockIndex(program, "Config");
-        glUniformBlockBinding(program, self->uniform_block_index, 0);
+        auto uniform_block_index = glGetUniformBlockIndex(program, "Config");
+        glUniformBlockBinding(program, uniform_block_index, 0);
     }
 
     {
-        auto vertex_shader
-            = compile_shader(GL_VERTEX_SHADER, vertex_shader_source);
-        auto fragment_shader
-            = compile_shader(GL_FRAGMENT_SHADER, fragment_shader_source);
+        auto vertex_shader = compile_shader(GL_VERTEX_SHADER,
+            vertex_shader_source, array_size(vertex_shader_source));
+        auto fragment_shader = compile_shader(GL_FRAGMENT_SHADER,
+            fragment_shader_source, array_size(fragment_shader_source));
 
         if ((!vertex_shader) || (!fragment_shader)) {
             if (vertex_shader)
@@ -289,6 +328,9 @@ static bool system_init_gl_program(System* self)
             return false;
         }
         self->draw_program = program;
+
+        auto uniform_block_index = glGetUniformBlockIndex(program, "Config");
+        glUniformBlockBinding(program, uniform_block_index, 0);
     }
 
     return true;
@@ -399,9 +441,27 @@ void system_destroy(System* self)
     }
 }
 void system_pre_draw(System* self) { (void)self; }
+
+#define BACKUP_GL_SWITCH(name) auto old_##name = glIsEnabled(name)
+#define REVERT_GL_SWITCH(name)                                                 \
+    if (old_##name) {                                                          \
+        glEnable(name);                                                        \
+    } else {                                                                   \
+        glDisable(name);                                                       \
+    }
+
 void system_draw(System* self)
 {
+    glBlendEquation(GL_FUNC_ADD);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+    BACKUP_GL_SWITCH(GL_VERTEX_PROGRAM_POINT_SIZE);
+    BACKUP_GL_SWITCH(GL_BLEND);
+    BACKUP_GL_SWITCH(GL_DEPTH_TEST);
+
     glEnable(GL_VERTEX_PROGRAM_POINT_SIZE);
+    glEnable(GL_BLEND);
+    glDisable(GL_DEPTH_TEST);
 
     glUseProgram(self->compute_program);
 
@@ -409,14 +469,18 @@ void system_draw(System* self)
 
     glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, self->particle_buffer);
     glBindBufferBase(GL_UNIFORM_BUFFER, 0, self->uniform_buffer);
-
     glDispatchCompute((self->config.max_particles + 255) / 256, 1, 1);
-
     glBindBufferBase(GL_UNIFORM_BUFFER, 0, 0);
 
     glUseProgram(self->draw_program);
     glBindVertexArray(self->vao);
+    glBindBufferBase(GL_UNIFORM_BUFFER, 0, self->uniform_buffer);
     glDrawArrays(GL_POINTS, 0, self->config.max_particles);
+    glBindBufferBase(GL_UNIFORM_BUFFER, 0, 0);
+
+    REVERT_GL_SWITCH(GL_DEPTH_TEST);
+    REVERT_GL_SWITCH(GL_BLEND);
+    REVERT_GL_SWITCH(GL_VERTEX_PROGRAM_POINT_SIZE);
 }
 
 } // namespace nup::particle_system

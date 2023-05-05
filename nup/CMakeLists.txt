@@ -56,6 +56,7 @@ target_sources(${LIB_NAME} PRIVATE
 target_include_directories(${LIB_NAME} PRIVATE
 	src/
 	${CMAKE_CURRENT_BINARY_DIR}/include
+	../3rd/
 )
 
 target_link_libraries(${LIB_NAME} PRIVATE

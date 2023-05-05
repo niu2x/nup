@@ -18,22 +18,24 @@ struct Color {
 
 struct Config {
 
+    float mvp[16];
+
     Vector velocity_over_lifetime;
     Vector limit_velocity_over_lifetime;
     Vector gravity_direction;
     Vector start_speed;
-
     Color start_color;
+    Color final_color;
 
     float duration;
     float start_delay;
     float start_lifetime;
     float size_over_lifetime;
     float gravity;
+    float start_size;
 
     uint32_t max_particles;
     int looping;
-    int start_size;
 };
 
 struct System;
