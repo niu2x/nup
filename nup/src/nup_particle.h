@@ -23,7 +23,7 @@ struct Config {
     Vector velocity_over_lifetime;
     Vector limit_velocity_over_lifetime;
     Vector gravity_direction;
-    Vector start_speed;
+    Vector start_speed_direction;
     Color start_color;
     Color final_color;
 
@@ -33,6 +33,7 @@ struct Config {
     float size_over_lifetime;
     float gravity;
     float start_size;
+    float start_speed;
 
     uint32_t max_particles;
     int looping;
@@ -40,9 +41,11 @@ struct Config {
 
 struct System;
 System* system_create(const Config& config);
+void system_set_config(System* self, const Config& config);
 void system_destroy(System* self);
 void system_pre_draw(System* self);
 void system_draw(System* self);
+void system_restart(System* self);
 
 } // namespace nup::particle_system
 

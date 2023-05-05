@@ -5,6 +5,7 @@
 #include <string.h>
 
 #include <cstddef>
+#include <cmath>
 
 #include "gl_4.3/gl.h"
 
@@ -17,7 +18,7 @@ layout(std140) uniform Config
     highp vec4 velocity_over_lifetime;
     highp vec4 limit_velocity_over_lifetime;
     highp vec4 gravity_direction;
-    highp vec4 start_speed;
+    highp vec4 start_speed_direction;
 
     highp vec4 start_color;
     highp vec4 final_color;
@@ -28,6 +29,7 @@ layout(std140) uniform Config
     highp float size_over_lifetime;
     highp float gravity;
     highp float start_size;
+    highp float start_speed;
 
     highp uint max_particles;
     highp int looping;
@@ -91,7 +93,7 @@ void main() {
             p.age += delta_time;
             if(p.age >= p.life) {
                 p.alive = -1;
-                p.age = random(vec2(gl_GlobalInvocationID.xy));
+                p.age = 0.0;
             }
         }
         else {
@@ -99,7 +101,7 @@ void main() {
             if(p.age <= 0.0){
                 p.alive = 1;
                 p.position = vec4(0.0, 0.0, 0.0, 0.0);
-                p.velocity = config.start_speed;
+                p.velocity = config.start_speed * config.start_speed_direction;
                 p.age = 0.0;
                 p.size = config.start_size;
                 p.life = config.start_lifetime;
@@ -162,6 +164,25 @@ static inline std::size_t array_size(const T (&array)[N])
 {
     (void)array;
     return N;
+}
+
+static float magnitude(const float vec[], int count)
+{
+    float sum = 0;
+    for (int i = 0; i < count; i++) {
+        sum += vec[i];
+    }
+    return std::sqrt(sum);
+}
+
+static void normalize(float vec[], int count)
+{
+    auto len = magnitude(vec, count);
+    if (len > 0) {
+        for (int i = 0; i < count; i++) {
+            vec[i] /= len;
+        }
+    }
 }
 
 static GLuint compile_shader(GLuint type, const char* source[], int count)
@@ -236,11 +257,10 @@ struct System {
     uint32_t particle_count;
 };
 
-static bool system_init_gl_vao(System* self)
+static void system_init_gl_vertex_attributes(System* self)
 {
-    GLuint vao;
-    glGenVertexArrays(1, &vao);
-    glBindVertexArray(vao);
+
+    glBindVertexArray(self->vao);
     glBindBuffer(GL_ARRAY_BUFFER, self->particle_buffer);
 
     glEnableVertexAttribArray(0);
@@ -271,8 +291,15 @@ static bool system_init_gl_vao(System* self)
 
     glBindVertexArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
 
+static bool system_init_gl_vao(System* self)
+{
+    GLuint vao;
+    glGenVertexArrays(1, &vao);
     self->vao = vao;
+
+    system_init_gl_vertex_attributes(self);
 
     return true;
 }
@@ -335,7 +362,8 @@ static bool system_init_gl_program(System* self)
 
     return true;
 }
-static bool system_init_gl_buffer(System* self)
+
+static bool system_reinit_gl_particle_buffer(System* self)
 {
     GLuint buffer;
     glGenBuffers(1, &buffer);
@@ -343,8 +371,20 @@ static bool system_init_gl_buffer(System* self)
     glBufferData(GL_SHADER_STORAGE_BUFFER,
         sizeof(Particle) * self->config.max_particles, nullptr,
         GL_DYNAMIC_DRAW);
+
+    if (self->particle_buffer) {
+        glDeleteBuffers(1, &(self->particle_buffer));
+    }
+
     self->particle_buffer = buffer;
     glBindBuffer(GL_SHADER_STORAGE_BUFFER, 0);
+    return true;
+}
+
+static bool system_init_gl_buffer(System* self)
+{
+    if (!system_reinit_gl_particle_buffer(self))
+        return false;
 
     GLuint ubo;
     glGenBuffers(1, &ubo);
@@ -357,7 +397,7 @@ static bool system_init_gl_buffer(System* self)
     return true;
 }
 
-static bool system_particle_buffer_init(System* self)
+static bool system_init_particles(System* self)
 {
     auto particle_count = self->config.max_particles;
 
@@ -381,6 +421,12 @@ static bool system_particle_buffer_init(System* self)
     return true;
 }
 
+static void normalize_config(Config& config)
+{
+    normalize((float*)&config.gravity_direction, 3);
+    normalize((float*)&config.start_speed_direction, 3);
+}
+
 System* system_create(const Config& config)
 {
     (void)config;
@@ -392,6 +438,8 @@ System* system_create(const Config& config)
     memset(self, 0, sizeof(System));
 
     self->config = config;
+    normalize_config(self->config);
+
     if (!system_init_gl_program(self)) {
         fprintf(stderr, "system_init_gl_program fail\n");
         goto error_handle;
@@ -402,8 +450,8 @@ System* system_create(const Config& config)
         goto error_handle;
     }
 
-    if (!system_particle_buffer_init(self)) {
-        fprintf(stderr, "system_particle_buffer_init fail\n");
+    if (!system_init_particles(self)) {
+        fprintf(stderr, "system_init_particles fail\n");
         goto error_handle;
     }
 
@@ -482,5 +530,27 @@ void system_draw(System* self)
     REVERT_GL_SWITCH(GL_BLEND);
     REVERT_GL_SWITCH(GL_VERTEX_PROGRAM_POINT_SIZE);
 }
+
+void system_set_config(System* self, const Config& config)
+{
+    auto old_max_particles = self->config.max_particles;
+    self->config = config;
+    normalize_config(self->config);
+
+    if (old_max_particles < self->config.max_particles) {
+        if (!system_reinit_gl_particle_buffer(self)) {
+            self->config.max_particles = old_max_particles;
+        } else {
+            system_init_particles(self);
+            system_init_gl_vertex_attributes(self);
+        }
+    }
+
+    glBindBuffer(GL_UNIFORM_BUFFER, self->uniform_buffer);
+    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(Config), &(self->config));
+    glBindBuffer(GL_UNIFORM_BUFFER, 0);
+}
+
+void system_restart(System* self) { system_init_particles(self); }
 
 } // namespace nup::particle_system
